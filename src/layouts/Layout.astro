@@ -11,7 +11,7 @@ import Footer from "../components/navigation/Footer.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
@@ -20,11 +20,18 @@ import Footer from "../components/navigation/Footer.astro";
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="drawer drawer-end">
+    <body class="drawer drawer-end h-full">
         <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
             <Navbar />
-            <slot />
+            <div class="flex-1">
+                <main
+                    style="max-width: min(100ch, 100% - 4rem)"
+                    class="mx-auto"
+                >
+                    <slot />
+                </main>
+            </div>
             <Footer />
         </div>
         <div class="drawer-side">
