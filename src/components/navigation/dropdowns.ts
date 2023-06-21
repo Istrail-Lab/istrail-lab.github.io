@@ -7,20 +7,6 @@ interface Dropdown {
 
 export const dropdowns: Dropdown[] = [
     {
-        dropdownName: "Lectures",
-        dropdownItems: {
-            "John von Neumann Lectures": {
-                "Brown University Symposium 2010": "",
-                "Brown University Symposium 2015": "",
-                "Donald Knuth at Brown": "",
-            },
-            "Solomon Marcus Lectures": {
-                "Lectures 1 - 8": "",
-                "Lectures 1 - 4": "",
-            },
-        },
-    },
-    {
         dropdownName: "Research",
         dropdownItems: {
             "Statistical Physics": {
@@ -46,6 +32,20 @@ export const dropdowns: Dropdown[] = [
         },
     },
     {
+        dropdownName: "Lectures",
+        dropdownItems: {
+            "John von Neumann Lectures": {
+                "Brown University Symposium 2010": "",
+                "Brown University Symposium 2015": "",
+                "Donald Knuth at Brown": "",
+            },
+            "Solomon Marcus Lectures": {
+                "Lectures 1 - 8": "",
+                "Lectures 1 - 4": "",
+            },
+        },
+    },
+    {
         dropdownName: "Sorin's Essays",
         dropdownItems: {
             "John von Neumann's Axioms": "",
@@ -63,6 +63,7 @@ export const dropdowns: Dropdown[] = [
             "Father-In-Law vs Pajamas": "",
         },
     },
+
     {
         dropdownName: "Memoriam",
         dropdownItems: {
