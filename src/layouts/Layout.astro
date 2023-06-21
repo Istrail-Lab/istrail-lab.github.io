@@ -8,6 +8,7 @@ const { title } = Astro.props;
 import Navbar from "../components/navigation/Navbar.astro";
 import Sidebar from "../components/navigation/Sidebar.astro";
 import Footer from "../components/navigation/Footer.astro";
+import { Worker } from "@react-pdf-viewer/core";
 ---
 
 <!DOCTYPE html>
@@ -32,11 +33,11 @@ import Footer from "../components/navigation/Footer.astro";
                     <slot />
                 </main>
             </div>
-            <Footer />
         </div>
-        <div class="drawer-side">
-            <label for="nav-drawer" class="drawer-overlay"></label>
-            <Sidebar />
-        </div>
+        <Footer />
     </body>
+    <div class="drawer-side">
+        <label for="nav-drawer" class="drawer-overlay"></label>
+        <Sidebar />
+    </div>
 </html>

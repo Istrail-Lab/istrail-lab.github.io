@@ -35,8 +35,8 @@ export const dropdowns: Dropdown[] = [
         dropdownName: "Lectures",
         dropdownItems: {
             "John von Neumann Lectures": {
+                "Brown University Symposium 2015": "/lectures/von-neumann-2015",
                 "Brown University Symposium 2010": "",
-                "Brown University Symposium 2015": "",
                 "Donald Knuth at Brown": "",
             },
             "Solomon Marcus Lectures": {

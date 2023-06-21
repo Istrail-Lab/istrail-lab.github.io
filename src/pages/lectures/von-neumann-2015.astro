@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import poster1 from "../../assets/posters/2015_poster_final-1.png";
+import poster2 from "../../assets/posters/2015_poster_final-2.png";
+---
+
+<Layout title="Istrail Lab | John von Neumann Lectures">
+    <h1 class="font-bold text-center text-3xl">John von Neumann Lectures</h1>
+    <h2 class="font-bold text-center text-2xl">
+        Brown University Symposium 2015
+    </h2>
+    <div class="flex flex-row gap-10">
+        <div class="basis-1/2 carousel rounded-box">
+            <div class="carousel-item w-full">
+                <img src={poster1} class="w-full" />
+            </div>
+            <div class="carousel-item w-full">
+                <img src={poster2} class="w-full" />
+            </div>
+        </div>
+        <div class="basis-1/2">
+            <h3>Sweatbox Q&A</h3>
+            <p>
+                Funded by the National Science Foundation as a workshop called
+                "Q&A Boot Camp at Brown University: Asking Tough Scientific
+                Questions," the "Sweatbox" session as a didactic concept was
+                inspired by the famous 8-week "Summer Course/Boot Camp on
+                Embryology" at the Marine Biological Laboratory, Woods Hall, MA
+                and the director of the course for 15 years, Professor Eric
+                Davidson of the Division of Biology at California Institute of
+                Technology. The story goes that invited speakers at this course
+                would talk in the laboratory's Warm Room and would be subjected
+                there to tough scientific questions about their scientific
+                findings and their claims. Professor Davidson,
+                professor-in-chief of developmental gene regulatory network
+                biology and a beacon of critical discourse, has mentored about
+                300 PhDs, postdocs and faculty in his laboratory. Basing his
+                work on causality-focused and genomics-based systems, and with
+                insights from experimental biology, biochemistry, physics and
+                engineering, he has been bringing together all us biologists,
+                physicists, biochemists, engineers, mathematicians,
+                statisticians and computer scientists in a renaissance research
+                quest for the functional meaning of DNA. The resulting symbiosis
+                of insights is von Neumannesque in spirit and fits well with von
+                Neumann's unfinished research towards a new logical and
+                computational model for the biological cell by unifying
+                continuous and discrete mathematics via a concept of
+                thermodynamic error. Our “Sweatbox” is so named to honor
+                Professor Davidson's academic legacy.
+            </p>
+        </div>
+    </div>
+</Layout>
