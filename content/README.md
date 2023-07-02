@@ -14,7 +14,7 @@ To open a file from the explorer double click its name. You can expand and colla
 
 If the Markdown Preview Pane is not open, you can open it once you have a Markdown file open. With a Markdown file open press the keys `CMD + SHIFT + P`. Then type and select `Markdown: Open Preview to the Side`.
 
-To commit your changes use the three buttoned icon underneath the explorer on the left hand side. This will open Git source control. Add a message to your commit and then press `Commit`.
+To commit your changes use the three buttoned icon underneath the explorer on the left hand side. This will open Git source control. Add a message to your commit and then press `Commit`. Then press `Sync Changes`.
 
 ## Markdown Guide
 
