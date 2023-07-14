@@ -41,3 +41,8 @@ You can make a number list by using the number followed by a dot such as:
 1. one
 2. two
 3. three
+
+To format equations using LaTeX you can surround them using `$`. In-line equations use a single `$` while equations on a seperate line use two `$`.
+
+For example: $e^{i\pi} = -1$ and
+$$ \int x^2 \ dx = \frac{1}{3}x^3 + C $$
