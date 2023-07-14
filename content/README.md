@@ -4,9 +4,9 @@
 
 Open VSCode either by using the icon on the dock or using the desktop shortcut.
 
-Once VSCode is open you want to be sure you have the `istrail-website` folder open. You can do this by pressing `File > Open Folder` and then using the new dialog box to navigate to the `istrail-website` folder on your computer. With the folder press `Open`.
+Once VSCode is open you want to be sure you have the `istrail-lab.github.io` folder open. You can do this by pressing `File > Open Folder` and then using the new dialog box to navigate to the `istrail-lab.github.io` folder on your computer. With the folder press `Open`.
 
-When the `istrail-website` folder is opened in VSCode you should have all the files/folders in the folder listed on the left hand side when the explorer (the icon just under the magnifying glass on the left) is expanded. All the markdown files you make should be placed in the `content/` folder, located in the root of `istrail-website`.
+When the `istrail-lab.github.io` folder is opened in VSCode you should have all the files/folders in the folder listed on the left hand side when the explorer (the icon just under the magnifying glass on the left) is expanded. All the markdown files you make should be placed in the `content/` folder, located in the root of `istrail-lab.github.io`.
 
 To make a new markdown file select the `content/` folder by pressing on it in the file explorer. Then click the button at the top of the explorer (page with a little plus icon) to make a new file. You'll be asked to enter a name for the file. To make sure its a markdown file be sure that this name ends in `.md`. To add a new folder is very similar, except you use the new folder button (folder icon with a plus icon).
 
