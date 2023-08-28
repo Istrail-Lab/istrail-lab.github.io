@@ -1,6 +1,4 @@
 import type { Publication } from "./publications";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 const PDFLink = ({ pdf }: { pdf: string }) => {
     return (
