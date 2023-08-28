@@ -1,5 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Publication } from "./publications";
-import { FaRegFilePdf } from "react-icons/fa";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 const PDFLink = ({ pdf }: { pdf: string }) => {
     return (
@@ -9,7 +10,7 @@ const PDFLink = ({ pdf }: { pdf: string }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <FaRegFilePdf />
+            <FontAwesomeIcon icon={faFilePdf} />{" "}
         </a>
     );
 };
