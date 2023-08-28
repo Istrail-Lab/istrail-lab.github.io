@@ -1,4 +1,4 @@
-interface Publication {
+export interface Publication {
     authors: string[];
     title: string;
     journal?: string;
@@ -310,17 +310,6 @@ export const publications: Publication[] = [
         year: 2007,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1-s2.0-S0012160607012547-main.pdf",
         doi: "http://dx.doi.org/10.1016/j.ydbio.2007.08.009",
-    },
-    {
-        authors: ["Roded Sharan", "Bjarni V Halldorsson", "Sorin Istrail"],
-        title: "Islands of Tractability for Parsimony Haplotyping",
-        journal:
-            "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
-        volume: "3",
-        number: "3",
-        pages: "303-311",
-        year: 2006,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/01668028.pdf",
     },
     {
         authors: [
@@ -1246,25 +1235,6 @@ export const publications: Publication[] = [
         year: 1989,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/an arithmetical hierarchy in propositional dynamic logic.pdf",
         doi: "10.1016/0890-5401(89)90030-3",
-    },
-    {
-        authors: ["Sorin Istrail"],
-        title: "An arithmetical hierarchy in propositional dynamic logic",
-        journal: "Information and Computation",
-        volume: "81",
-        number: "3",
-        pages: "280-289",
-        year: 1989,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/an arithmetical hierarchy in propositional dynamic logic.pdf",
-        doi: "10.1016/0890-5401(89)90030-3",
-    },
-    {
-        authors: ["Sorin Istrail"],
-        title: "On the complexity of unpredictability",
-        publisher: "Wesleyan University",
-        year: 1988,
-        pdf: "",
-        doi: "",
     },
     {
         authors: ["Sorin Istrail"],

@@ -1,7 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PublicationList from "../components/publicationList/PublicationList";
+import { publications } from "../components/publicationList/publications";
 ---
 
 <Layout title="Istrail Lab | Publications">
-    <h1>Publications</h1>
+    <h1
+        class="flex items-center justify-center text-center text-4xl font-bold mt-10"
+    >
+        Publications
+    </h1>
+    <PublicationList publications={publications} />
 </Layout>
