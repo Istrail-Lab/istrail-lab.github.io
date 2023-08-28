@@ -15,7 +15,7 @@ export const publications: Publication[] = [
     {
         authors: ["Derek Aguiar", "Wendy SW Wong", "Sorin Istrail"],
         title: "Tumor haplotype assembly algorithms for cancer genomics",
-        journal: "Pacific Symposuium on Biocomputing",
+        journal: "Pacific Symposium on Biocomputing",
         year: 2014,
         volume: "19",
         pages: "3-14",

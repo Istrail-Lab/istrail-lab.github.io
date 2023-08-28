@@ -65,6 +65,12 @@ const DOILink = ({ doi }: { doi: string }) => {
 };
 
 const PublicationCard = ({ publication }: { publication: Publication }) => {
+    const paperLocation = [
+        publication.volume && `vol. ${publication.volume}`,
+        publication.number && `no. ${publication.number}`,
+        publication.pages && `pg. ${publication.pages}`,
+    ];
+
     return (
         <div className="border-2 p-4 shadow-lg">
             <div className="flex gap-6 justify-between">
@@ -83,15 +89,14 @@ const PublicationCard = ({ publication }: { publication: Publication }) => {
                     <p>
                         {publication.journal && (
                             <span>
-                                In <i>{publication.journal}</i>,{" "}
+                                In <i>{publication.journal}</i>
                             </span>
                         )}
-                        {publication.volume && `vol. ${publication.volume}, `}
-                        {publication.number && `no. ${publication.number}, `}
-                        {publication.pages && `pg. ${publication.pages}`}
+                        {paperLocation.filter((x) => x).length > 0 &&
+                            `, ${paperLocation.filter((x) => x).join(", ")}`}
                     </p>
                 </div>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-4 items-center">
                     {publication.doi && <DOILink doi={publication.doi} />}
                     {publication.pdf && <PDFLink pdf={publication.pdf} />}
                 </div>
