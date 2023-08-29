@@ -20,6 +20,7 @@ export const publications: Publication[] = [
         volume: "19",
         pages: "3-14",
         pdf: "http://www.worldscientific.com/doi/pdf/10.1142/9789814583220_0002",
+        doi: "https://doi.org/10.1142/9789814583220_0002",
     },
     {
         authors: ["Derek Aguiar", "Eric Morrow", "Sorin Istrail"],
@@ -28,6 +29,7 @@ export const publications: Publication[] = [
         year: 2014,
         pages: "158-173",
         pdf: "https://link.springer.com/chapter/10.1007/978-3-319-05269-4_1",
+        doi: "https://doi.org/10.1007/978-3-319-05269-4_1",
     },
     {
         authors: [
@@ -47,6 +49,7 @@ export const publications: Publication[] = [
         journal: "American Journal of Human Genetics",
         volume: "vol. 93, no. 1, pp. 103-109",
         year: 2013,
+        pdf: "https://www.sciencedirect.com/science/article/pii/S0002929713002723?via%3Dihub",
         doi: "https://doi.org/10.1016/j.ajhg.2013.06.004",
     },
     {
@@ -73,6 +76,7 @@ export const publications: Publication[] = [
         number: "16",
         year: 2013,
         pdf: "http://www.evodevojournal.com/content/4/1/16/abstract",
+        doi: "https://doi.org/10.1186/2041-9139-4-16",
     },
     {
         authors: ["Derek Aguiar", "Sorin Istrail"],
@@ -93,7 +97,7 @@ export const publications: Publication[] = [
         number: "6",
         pages: "577-590",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/hapcompass_jcb_draft.pdf",
+        pdf: "https://www.liebertpub.com/doi/epdf/10.1089/cmb.2012.0084",
         doi: "http://dx.doi.org/doi:10.1089/cmb.2012.0084",
     },
     {
@@ -112,7 +116,7 @@ export const publications: Publication[] = [
         volume: "2012",
         pages: "bar069",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/bar069.pdf",
+        pdf: "https://watermark.silverchair.com/bar069.pdf",
         doi: "http://dx.doi.org/10.1093/database/bar069",
     },
     {
@@ -132,21 +136,22 @@ export const publications: Publication[] = [
         title: "OCR-based Image Features for Biomedical Image and Article Classification: Identifying Documents Relevant to Cis-Regulatory Elements",
         journal: "ACM BCB",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/ACMBCB2012SubmitCameraReady.pdf",
+        pdf: "https://dl.acm.org/doi/pdf/10.1145/2382936.2382949",
+        doi: "https://doi.org/10.1145/2382936.2382949",
     },
     {
         authors: ["Sorin Istrail"],
         title: "Computer Science Through Urn Games: An Unified Framework for a Hierarchy of Solvable and Unsolvable Problems",
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/CS Through Urn Games - An Unified Approach.pdf",
+        pdf: "/papers/CS Through Urn Games - An Unified Approach.pdf",
     },
     {
         authors: ["Sorin Istrail", "Solomon Marcus"],
         title: "Turing and von Neumann's Brains and their Computers",
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Istrail-Marcus012912FINAL.pdf",
+        pdf: "/papers/Istrail-Marcus012912FINAL.pdf",
     },
     {
         authors: [
@@ -163,14 +168,15 @@ export const publications: Publication[] = [
         number: "5",
         pages: "505-517",
         year: 2012,
-        pdf: "http://www.futuremedicine.com/action/showCitFormats?doi=10.2217%2Ffvl.12.37",
+        pdf: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3400699/pdf/nihms384443.pdf",
+        doi: "https://doi.org/10.2217/fvl.12.37",
     },
     {
         authors: ["Leon N Cooper", "Sorin Istrail"],
         title: "Mental Experience and the Turing Test: This Double Face is the Face of Mathematics",
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Cooper-Istrail012912FINAL.pdf",
+        pdf: "/papers/Cooper-Istrail012912FINAL.pdf",
     },
     {
         authors: [
@@ -185,7 +191,7 @@ export const publications: Publication[] = [
         number: "12",
         pages: "i154-i162",
         year: 2012,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Aguiar.245.pdf",
+        pdf: "https://watermark.silverchair.com/bioinformatics_28_12_i154.pdf",
         doi: "http://dx.doi.org/10.1093/bioinformatics/bts234",
     },
     {
@@ -196,7 +202,7 @@ export const publications: Publication[] = [
         volume: "6577",
         pages: "468-482",
         year: 2011,
-        pdf: "http://dx.doi.org/10.1007/978-3-642-20036-6_42",
+        doi: "http://dx.doi.org/10.1007/978-3-642-20036-6_42",
     },
     {
         authors: [
@@ -211,7 +217,7 @@ export const publications: Publication[] = [
         publisher: "IEEE",
         pages: "130-136",
         year: 2011,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/06112365.pdf",
+        pdf: "/papers/06112365.pdf",
     },
     {
         authors: [
@@ -226,8 +232,8 @@ export const publications: Publication[] = [
         number: "3",
         pages: "323-333",
         year: 2011,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/clarkphaseablejournal.pdf",
-        doi: "http://dx.doi.org/citeulike-article-id:9029749",
+        pdf: "https://www.liebertpub.com/doi/10.1089/cmb.2010.0288",
+        doi: "https://doi.org/10.1089/cmb.2010.0288",
     },
     {
         authors: ["Bjarni Halldorsson", "Derek Aguiar", "Sorin Istrail"],
@@ -235,8 +241,8 @@ export const publications: Publication[] = [
         journal: "Pac Symp Biocomput.",
         pages: "88-99",
         year: 2011,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/9789814335058_0010.pdf",
-        doi: "http://dx.doi.org/citeulike-article-id:10540409",
+        pdf: "https://www.worldscientific.com/doi/epdf/10.1142/9789814335058_0010",
+        doi: "https://doi.org/10.1142/9789814335058_0010",
     },
     {
         authors: [
