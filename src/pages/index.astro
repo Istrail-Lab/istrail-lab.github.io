@@ -6,6 +6,7 @@ import "../styles/globals.css";
 
 import genomeAssemblies from "../assets/journals/pnas_101_7.gif";
 import cisReg from "../assets/journals/pnas_102_14.gif";
+import immunePeptidomics from "../assets/journals/pnas_101_36.gif";
 import humanGenome from "../assets/journals/science_291_5507.gif";
 import seaUrchinGenome from "../assets/journals/science_314_5801.gif";
 ---
@@ -26,9 +27,12 @@ import seaUrchinGenome from "../assets/journals/science_314_5801.gif";
 
     <div class="w-full h-72 bg-red-500"></div>
 
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-4 py-8">
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-5 py-8">
         <JournalCard img={humanGenome} title="The Human Genome" />
         <JournalCard img={genomeAssemblies} title="Genome Assemblies" />
+        <div class="hidden md:block">
+            <JournalCard img={immunePeptidomics} title="Immune Peptidomics" />
+        </div>
         <JournalCard img={seaUrchinGenome} title="The Sea Urchin Genome" />
         <JournalCard img={cisReg} title="cis-Regulatory Code" />
     </div>
