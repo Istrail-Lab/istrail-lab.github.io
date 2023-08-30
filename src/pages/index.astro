@@ -1,15 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ResearchAccordion from "../components/ResearchAccordion";
+import JournalCard from "../components/JournalCard";
 import "../styles/globals.css";
+
+import genomeAssemblies from "../assets/journals/pnas_101_7.gif";
+import cisReg from "../assets/journals/pnas_102_14.gif";
+import humanGenome from "../assets/journals/science_291_5507.gif";
+import seaUrchinGenome from "../assets/journals/science_314_5801.gif";
 ---
 
 <Layout title="Istrail Lab">
-    <h2 class="font-bold text-3xl text-center p-8">
+    <h2 class="text-xl font-bold md:text-3xl text-center p-8">
         Welcome to the Istrail Laboratory
     </h2>
 
-    <p class="text-lg pb-4">
+    <p class="text-sm md:text-lg pb-4">
         The Istrail Lab is a computational biology and computer science research
         group in the Department of Computer Science at Brown University. It is
         part of the Center for Computational Molecular Biology at Brown
@@ -20,8 +26,12 @@ import "../styles/globals.css";
 
     <div class="w-full h-72 bg-red-500"></div>
 
-    <div class="flex gap-10 py-8">
-        <ResearchAccordion client:load />
-        <!-- <div class="basis-full w-full h-96 bg-green-500"></div> -->
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4 py-8">
+        <JournalCard img={humanGenome} title="The Human Genome" />
+        <JournalCard img={genomeAssemblies} title="Genome Assemblies" />
+        <JournalCard img={seaUrchinGenome} title="The Sea Urchin Genome" />
+        <JournalCard img={cisReg} title="cis-Regulatory Code" />
     </div>
+
+    <ResearchAccordion client:load />
 </Layout>
