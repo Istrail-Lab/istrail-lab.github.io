@@ -1,5 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ResearchAccordion from "../components/ResearchAccordion";
+import "../styles/globals.css";
 ---
 
-<Layout title="Istrail Lab" />
+<Layout title="Istrail Lab">
+    <h2 class="font-bold text-3xl text-center p-8">
+        Welcome to the Istrail Laboratory
+    </h2>
+
+    <p class="text-lg pb-4">
+        The Istrail Lab is a computational biology and computer science research
+        group in the Department of Computer Science at Brown University. It is
+        part of the Center for Computational Molecular Biology at Brown
+        University. Sorin Istrail is the Julie Nguyen Brown Professor of
+        Computational and Mathematical Sciences and Professor of Computer
+        Science at Brown University.
+    </p>
+
+    <div class="w-full h-72 bg-red-500"></div>
+
+    <div class="flex gap-10 py-8">
+        <ResearchAccordion client:load />
+        <div class="basis-full w-full h-96 bg-green-500"></div>
+    </div>
+</Layout>
