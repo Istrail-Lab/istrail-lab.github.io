@@ -46,25 +46,6 @@ export const dropdowns: Dropdown[] = [
         },
     },
     {
-        dropdownName: "Sorin's Essays",
-        dropdownItems: {
-            "John von Neumann's Axioms": "",
-            "Edger Dijkstra's Axioms": "",
-            "Eric Davidson's Axioms": "",
-            "Mike Waterman's Axioms": "",
-            "Solomon Marcus' Axioms": "",
-        },
-    },
-    {
-        dropdownName: "Sorin's Games",
-        dropdownItems: {
-            "Computer Science Through Urn Games": "",
-            "The 3-Einstein": "",
-            "Father-In-Law vs Pajamas": "",
-        },
-    },
-
-    {
         dropdownName: "Memoriam",
         dropdownItems: {
             "Paul Erdos": "",

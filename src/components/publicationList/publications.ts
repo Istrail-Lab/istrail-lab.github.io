@@ -151,7 +151,7 @@ export const publications: Publication[] = [
         title: "Turing and von Neumann's Brains and their Computers",
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
-        pdf: "/papers/Istrail-Marcus012912FINAL.pdf",
+        pdf: "/papers/Turing and von Neumann's Brains and their Computers.pdf",
     },
     {
         authors: [
@@ -176,7 +176,7 @@ export const publications: Publication[] = [
         title: "Mental Experience and the Turing Test: This Double Face is the Face of Mathematics",
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
-        pdf: "/papers/Cooper-Istrail012912FINAL.pdf",
+        pdf: "/papers/Mental Experience and the Turing Test.pdf",
     },
     {
         authors: [
@@ -217,7 +217,7 @@ export const publications: Publication[] = [
         publisher: "IEEE",
         pages: "130-136",
         year: 2011,
-        pdf: "/papers/06112365.pdf",
+        pdf: "/papers/QColors.pdf",
     },
     {
         authors: [

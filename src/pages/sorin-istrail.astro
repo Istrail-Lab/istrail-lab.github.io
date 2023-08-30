@@ -6,7 +6,6 @@ import PositionCard from "@/components/PositionCard";
 import EssayCard from "@/components/EssayCard";
 import HonorRollList from "@/components/honorRoll/HonorRollList";
 import { students } from "@/components/honorRoll/honorRoll";
-import "../styles/globals.css";
 
 import istrail from "../assets/istrail.jpg";
 import ccmb from "../assets/positions/ccmb_web_small.png";
@@ -51,6 +50,7 @@ const essays = [
         authors: ["Sorin Istrail"],
         title: "Ode to Computational Biology: A letter in support of awarding the National Medal of Science to Professor Michael Waterman",
         year: 2012,
+        pdf: "papers/Ode to Computational Biology.pdf",
     },
     {
         authors: ["Sorin Istrail"],
@@ -58,6 +58,7 @@ const essays = [
         year: 2011,
         journal:
             "Meetings with Marcus: 85th Birthday Celebration of Professor Solomon Marcus Editurea Academiei Romane",
+        pdf: "papers/MarcusAxioms.pdf",
     },
     {
         authors: ["Sorin Istrail"],
@@ -65,6 +66,7 @@ const essays = [
         journal: "Conduit",
         volume: "19.1",
         year: 2010,
+        pdf: "papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
     },
     {
         authors: ["Sorin Istrail"],
@@ -72,6 +74,7 @@ const essays = [
         journal: "Conduit",
         volume: "17.2",
         year: 2008,
+        pdf: "papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
     },
 ];
 ---
@@ -184,7 +187,10 @@ const essays = [
         {grants.map((grant) => <GrantCard grant={grant} />)}
     </div>
 
-    <h2 class="text-2xl font-bold pt-8">Recent Essays</h2>
+    <div class="flex items-baseline">
+        <h2 class="flex-1 text-2xl font-bold pt-8">Featured Essays</h2>
+        <a href="/essays">Read more</a>
+    </div>
     <div class="grid gap-4 py-4">
         {essays.map((essay) => <EssayCard publication={essay} />)}
     </div>
