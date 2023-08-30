@@ -4,6 +4,8 @@ import BlockQuote from "@/components/BlockQuote";
 import GrantCard from "@/components/GrantCard";
 import PositionCard from "@/components/PositionCard";
 import EssayCard from "@/components/EssayCard";
+import HonorRollList from "@/components/honorRoll/HonorRollList";
+import { students } from "@/components/honorRoll/honorRoll";
 import "../styles/globals.css";
 
 import istrail from "../assets/istrail.jpg";
@@ -186,4 +188,7 @@ const essays = [
     <div class="grid gap-4 py-4">
         {essays.map((essay) => <EssayCard publication={essay} />)}
     </div>
+
+    <h2 class="text-2xl font-bold pt-8 pb-4">Sorin's Honor Roll Students</h2>
+    <HonorRollList students={students} />
 </Layout>
