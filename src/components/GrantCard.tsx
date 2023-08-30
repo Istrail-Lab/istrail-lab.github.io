@@ -23,7 +23,7 @@ const GrantCard = ({ grant }: { grant: Grant }) => {
             >
                 {grant.title}
             </p>
-            <p className="text-mdpt-4">{grant.role}</p>
+            <p className="text-md pt-4">{grant.role}</p>
         </div>
     );
 };

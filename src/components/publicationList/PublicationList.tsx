@@ -1,6 +1,6 @@
 import type { Publication } from "./publications";
 
-const PDFLink = ({ pdf }: { pdf: string }) => {
+export const PDFLink = ({ pdf }: { pdf: string }) => {
     return (
         <a
             className="text-2xl hover:fill-red-500"
@@ -19,7 +19,7 @@ const PDFLink = ({ pdf }: { pdf: string }) => {
     );
 };
 
-const DOILink = ({ doi }: { doi: string }) => {
+export const DOILink = ({ doi }: { doi: string }) => {
     return (
         <a
             className="grayscale hover:grayscale-0"

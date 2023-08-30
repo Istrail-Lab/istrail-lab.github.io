@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import BlockQuote from "@/components/BlockQuote";
 import GrantCard from "@/components/GrantCard";
 import PositionCard from "@/components/PositionCard";
+import EssayCard from "@/components/EssayCard";
 import "../styles/globals.css";
 
 import istrail from "../assets/istrail.jpg";
@@ -40,6 +41,35 @@ const grants = [
         role: "Co-Principal Investigator",
         year: "2014",
         title: "Autism Genomics Research",
+    },
+];
+
+const essays = [
+    {
+        authors: ["Sorin Istrail"],
+        title: "Ode to Computational Biology: A letter in support of awarding the National Medal of Science to Professor Michael Waterman",
+        year: 2012,
+    },
+    {
+        authors: ["Sorin Istrail"],
+        title: "Professor Solomon Marcus' Axioms",
+        year: 2011,
+        journal:
+            "Meetings with Marcus: 85th Birthday Celebration of Professor Solomon Marcus Editurea Academiei Romane",
+    },
+    {
+        authors: ["Sorin Istrail"],
+        title: "Storytelling about Lighthouses: When Professor Dijkstra Slapped Me in the Quest for Beautiful Code",
+        journal: "Conduit",
+        volume: "19.1",
+        year: 2010,
+    },
+    {
+        authors: ["Sorin Istrail"],
+        title: "Storytelling about Lighthouses: Criticizing Professor Dijkstra Considered Harmless",
+        journal: "Conduit",
+        volume: "17.2",
+        year: 2008,
     },
 ];
 ---
@@ -88,8 +118,8 @@ const grants = [
     <p class="p-2">
         Before joining Brown, he was the Senior Director and Head of Informatics
         Research at Celera Genomics, where his group played a central role in
-        the construction of the sequence of the human genome; they co-authored
-        the 2001 Science paper "The Sequence of the Human Genome", which, with
+        the construction of the sequence of the human genome; they co-authorsed[
+        the 2001 Scienc]e paper "The Sequence of the Human Genome", which, with
         over 12,000 citations to date, is one of the most cited scientific
         paper. His group at Celera Genomics also built a powerful suite of
         genome-wide algorithms that was used for the comparison of all human
@@ -150,5 +180,10 @@ const grants = [
     <h2 class="text-2xl font-bold">Grants</h2>
     <div class="grid gap-4 py-4">
         {grants.map((grant) => <GrantCard grant={grant} />)}
+    </div>
+
+    <h2 class="text-2xl font-bold pt-8">Recent Essays</h2>
+    <div class="grid gap-4 py-4">
+        {essays.map((essay) => <EssayCard publication={essay} />)}
     </div>
 </Layout>
