@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import essayPicture from "@/assets/posters/father-in-law-pajamas.png";
+import EssayCard from "@/components/EssayCard";
+import type { Publication } from "@/components/publicationList/publications";
+
+const paper: Publication = {
+    authors: ["Sorin Istrail"],
+    title: "Father-in-law vs. Pajamas",
+    journal: "Conduit",
+    volume: "19.1",
+    year: 2010,
+    pdf: "/papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
+};
+---
+
+<Layout title="Istrail Lab | Father-in-law vs Pajamas">
+    <h3 class="text-2xl font-bold py-4">Father-in-law vs. Pajamas</h3>
+    <div class="flex justify-center items-center py-4">
+        <img src={essayPicture} />
+    </div>
+    <EssayCard publication={paper} />
+</Layout>
