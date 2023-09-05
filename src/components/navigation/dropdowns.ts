@@ -10,7 +10,8 @@ export const dropdowns: Dropdown[] = [
         dropdownName: "Research",
         dropdownItems: {
             "Statistical Physics": {
-                "3D Ising Model and Statistical Mechanics": "",
+                "3D Ising Model and Statistical Mechanics":
+                    "research/ising-model",
             },
             Biology: {
                 "Protein Folding": "",
