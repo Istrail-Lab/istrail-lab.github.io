@@ -1,6 +1,7 @@
 ---
 import EssayCard from "@/components/EssayCard";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
+import BlockQuote from "@/components/BlockQuote";
 import type { Publication } from "@/components/publicationList/publications";
 
 const relevantPaper: Publication = {
@@ -76,10 +77,13 @@ const relevantPaper: Publication = {
             intractable across lattices."
         </p>
     </div>
-    <p slot="quote">
-        How famous physicists and mathematicians commented in the 1950-1960s on
-        an NP-complete problem before the concept of NP-completeness was
-        discovered in 1971 by Stephen Cook and Leonid Levin.
-    </p>
+    <BlockQuote slot="quote" author="Sorin Istrail" journal="">
+        <p>
+            How famous physicists and mathematicians commented in the 1950-1960s
+            on an NP-complete problem before the concept of NP-completeness was
+            discovered in 1971 by Stephen Cook and Leonid Levin.
+        </p>
+    </BlockQuote>
+
     <EssayCard slot="relevant-papers" publication={relevantPaper} />
 </ResearchLayout>
