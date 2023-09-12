@@ -11,25 +11,32 @@ export const dropdowns: Dropdown[] = [
         dropdownItems: {
             "Statistical Physics": {
                 "3D Ising Model and Statistical Mechanics":
-                    "research/ising-model",
+                    "/research/ising-model",
             },
             Biology: {
-                "Protein Folding": "",
-                "Gene Regulatory Networks": "",
-                "SNPs and Haplotypes": "",
+                "Genome Assemblies": "/research/assemblies",
+                "Bioinformatics & GWAS": "/research/bioinformatics-gwas",
+                "Protein Folding": "/research/protein-folding",
+                "Gene Regulatory Networks": "/research/regulatory-genome",
+                "SNPs and Haplotypes": "/research/snp-haplotypes",
+                "Viruses, Viral Genomics, and Immunopeptidomics":
+                    "/research/viruses",
             },
             "Computer Science": {
-                "Universal Traversal Sequence": "",
-                "Bisimulation and Semantics of Concurrent Programs": "",
-                "Chomsky Grammars and Formal Languages": "",
-                "Graph Theory and Book Embeddings": "",
+                "Universal Traversal Sequence":
+                    "/research/universal-traversing-sequence",
+                "Bisimulation and Semantics of Concurrent Programs":
+                    "/research/bisimulation",
+                "Chomsky Grammars and Formal Languages":
+                    "/research/formal-languages",
+                "Graph Theory and Book Embeddings": "/research/graph-theory",
             },
-            "Number Theory": {
-                "Context-Free Characterization of Algebraic Numbers": "",
-            },
-            Economics: {
-                "An Arrow Impossibility Theorem for Protein Folding": "",
-            },
+        },
+    },
+    {
+        dropdownName: "Games",
+        dropdownItems: {
+            "Father-in-law vs Pajamas": "/games/father-in-law-vs-pajamas",
         },
     },
     {

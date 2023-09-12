@@ -123,27 +123,11 @@ const essays: Publication[] = [
         tags: [],
     },
 ];
-
-const games: Publication[] = [
-    {
-        authors: ["Sorin Istrail"],
-        title: "Computer Science Through Urn Games: An Unified Framework for a Hierarchy of Solvable and Unsolvable Problems",
-        year: 2012,
-        journal: "Proceedings of the Turin Centenary Conference",
-        pdf: "/papers/CS Through Urn Games - An Unified Approach.pdf",
-        tags: [],
-    },
-];
 ---
 
 <Layout title="Istrail Lab | Essays">
     <h2 class="flex-1 text-3xl font-bold pt-8">Essays</h2>
     <div class="grid gap-4 py-4">
         {essays.map((essay) => <EssayCard publication={essay} />)}
-    </div>
-
-    <h2 class="flex-1 text-3xl font-bold pt-8">Games</h2>
-    <div class="grid gap-4 py-4">
-        {games.map((game) => <EssayCard publication={game} />)}
     </div>
 </Layout>
