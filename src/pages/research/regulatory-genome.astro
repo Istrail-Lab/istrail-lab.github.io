@@ -1,0 +1,36 @@
+---
+import EssayCard from "@/components/EssayCard";
+import ResearchLayout from "@/layouts/ResearchLayout.astro";
+import BlockQuote from "@/components/BlockQuote";
+import { publications } from "@/components/publicationList/publications";
+
+const relevantPapers = publications.filter((paper) =>
+    paper.tags.includes("gene-regulatory")
+);
+---
+
+<ResearchLayout
+    title="Istrail Lab | The Regulatory Genome, Gene Regulatory Networks and Transcriptomics"
+>
+    <div slot="abstract" class="grid gap-2">
+        <p>Coming soon!</p>
+    </div>
+
+    <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">
+        <p>
+            How famous physicists and mathematicians commented in the 1950-1960s
+            on an NP-complete problem before the concept of NP-completeness was
+            discovered in 1971 by Stephen Cook and Leonid Levin.
+        </p>
+    </BlockQuote> -->
+
+    <ul slot="relevant-papers" class="grid gap-4">
+        {
+            relevantPapers.map((paper) => (
+                <li>
+                    <EssayCard publication={paper} />
+                </li>
+            ))
+        }
+    </ul>
+</ResearchLayout>

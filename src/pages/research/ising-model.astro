@@ -2,17 +2,11 @@
 import EssayCard from "@/components/EssayCard";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
 import BlockQuote from "@/components/BlockQuote";
-import type { Publication } from "@/components/publicationList/publications";
+import { publications } from "@/components/publicationList/publications";
 
-const relevantPaper: Publication = {
-    authors: ["Sorin Istrail"],
-    title: "Statistical Mechanics, Three-Dimensionality and NP-completeness I. Universality of Intractability for the Partition Function of the Ising Model Across Non-Planar Lattices",
-    year: 2000,
-    journal: "32nd ACM Symposium on the Theory of Computing",
-    publisher: "ACM Press, Portland, Oregon",
-    pages: "87-96",
-    pdf: "/papers/Statistical Mechanics, Three-Dimensionality and NP-completeness.pdf",
-};
+const relevantPapers = publications.filter((paper) =>
+    paper.tags.includes("ising-model")
+);
 ---
 
 <ResearchLayout title="Istrail Lab | 3D Ising Model">
@@ -85,5 +79,13 @@ const relevantPaper: Publication = {
         </p>
     </BlockQuote>
 
-    <EssayCard slot="relevant-papers" publication={relevantPaper} />
+    <ul slot="relevant-papers" class="grid gap-4">
+        {
+            relevantPapers.map((paper) => (
+                <li>
+                    <EssayCard publication={paper} />
+                </li>
+            ))
+        }
+    </ul>
 </ResearchLayout>

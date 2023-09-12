@@ -9,9 +9,62 @@ export interface Publication {
     year: number;
     pdf?: string;
     doi?: string;
+    tags: string[];
 }
 
 export const publications: Publication[] = [
+    {
+        authors: [
+            "Bert Alpay",
+            "Pinar Demetci",
+            "Sorin Istrail",
+            "Derek Aguiar",
+        ],
+        title: "Combinatorial and Statistical Predictions of Gene Expression from Haplotype Sequence",
+        journal: "Bioinformatics",
+        year: 2020,
+        doi: "https://doi.org/10.1093/bioinformatics/btaa318",
+        tags: ["snp"],
+    },
+    {
+        authors: ["Sorin Istrail"],
+        title: "Eric Davidson's Regulatory Genome for Computer Science: Causality, Logic, and Proof Principles of the Genomic cis-Regulatory Code",
+        journal: "Journal of Computational Biology",
+        volume: "26",
+        number: "7",
+        year: 2019,
+        doi: "https://doi.org/10.1089/cmb.2019.0144",
+        pdf: "https://www.liebertpub.com/doi/epub/10.1089/cmb.2019.0144",
+        tags: ["gene-regulatory"],
+    },
+    {
+        authors: ["Sorin Istrail", "Isabelle S. Peter"],
+        title: "How Does the Regulatory Genome Work?",
+        journal: "Journal of Computational Biology",
+        volume: "26",
+        number: "7",
+        pages: "685-695",
+        year: 2019,
+        doi: "https://doi.org/10.1089/cmb.2019.0097",
+        pdf: "https://www.liebertpub.com/doi/epub/10.1089/cmb.2019.0097",
+        tags: ["gene-regulatory"],
+    },
+    {
+        authors: [
+            "Ian C. McDowell",
+            "Chamilani Nikapitiya",
+            "Derek Aguiar",
+            "Christopher E. Lane",
+            "Sorin Istrail",
+            "Marta Gomez-Chiarri",
+        ],
+        title: "Transcriptome of American oysters, Crassostrea virginica, in response to bacterial challenge: Insights into potential mechanisms of disease resistance",
+        journal: "PLOS One",
+        year: 2014,
+        doi: "https://doi.org/10.1371/journal.pone.0105097",
+        pdf: "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0105097&type=printable",
+        tags: ["assemblies"],
+    },
     {
         authors: ["Derek Aguiar", "Wendy SW Wong", "Sorin Istrail"],
         title: "Tumor haplotype assembly algorithms for cancer genomics",
@@ -21,6 +74,7 @@ export const publications: Publication[] = [
         pages: "3-14",
         pdf: "http://www.worldscientific.com/doi/pdf/10.1142/9789814583220_0002",
         doi: "https://doi.org/10.1142/9789814583220_0002",
+        tags: ["gwas", "snp"],
     },
     {
         authors: ["Derek Aguiar", "Eric Morrow", "Sorin Istrail"],
@@ -30,6 +84,7 @@ export const publications: Publication[] = [
         pages: "158-173",
         pdf: "https://link.springer.com/chapter/10.1007/978-3-319-05269-4_1",
         doi: "https://doi.org/10.1007/978-3-319-05269-4_1",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -51,6 +106,7 @@ export const publications: Publication[] = [
         year: 2013,
         pdf: "https://www.sciencedirect.com/science/article/pii/S0002929713002723?via%3Dihub",
         doi: "https://doi.org/10.1016/j.ajhg.2013.06.004",
+        tags: ["gwas"],
     },
     {
         authors: [
@@ -67,6 +123,7 @@ export const publications: Publication[] = [
         year: 2013,
         pdf: "http://www.sciencedirect.com/science/article/pii/S0888754312002455",
         doi: "http://dx.doi.org/10.1016/j.ygeno.2012.12.005",
+        tags: ["snp"],
     },
     {
         authors: ["Sarah Tulin", "Derek Aguiar", "Sorin Istrail", "Joel Smith"],
@@ -77,6 +134,7 @@ export const publications: Publication[] = [
         year: 2013,
         pdf: "http://www.evodevojournal.com/content/4/1/16/abstract",
         doi: "https://doi.org/10.1186/2041-9139-4-16",
+        tags: ["gwas", "assemblies", "gene-regulatory"],
     },
     {
         authors: ["Derek Aguiar", "Sorin Istrail"],
@@ -88,6 +146,7 @@ export const publications: Publication[] = [
         year: 2013,
         pdf: "http://bioinformatics.oxfordjournals.org/content/29/13/i352.abstract",
         doi: "http://dx.doi.org/10.1093/bioinformatics/btt213",
+        tags: ["gwas", "snp"],
     },
     {
         authors: ["Derek Aguiar", "Sorin Istrail"],
@@ -99,6 +158,7 @@ export const publications: Publication[] = [
         year: 2012,
         pdf: "https://www.liebertpub.com/doi/epdf/10.1089/cmb.2012.0084",
         doi: "http://dx.doi.org/doi:10.1089/cmb.2012.0084",
+        tags: ["assemblies", "snp"],
     },
     {
         authors: [
@@ -118,6 +178,7 @@ export const publications: Publication[] = [
         year: 2012,
         pdf: "https://watermark.silverchair.com/bar069.pdf",
         doi: "http://dx.doi.org/10.1093/database/bar069",
+        tags: ["gwas"],
     },
     {
         authors: [
@@ -138,6 +199,7 @@ export const publications: Publication[] = [
         year: 2012,
         pdf: "https://dl.acm.org/doi/pdf/10.1145/2382936.2382949",
         doi: "https://doi.org/10.1145/2382936.2382949",
+        tags: ["gene-regulatory"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -145,6 +207,7 @@ export const publications: Publication[] = [
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
         pdf: "/papers/CS Through Urn Games - An Unified Approach.pdf",
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail", "Solomon Marcus"],
@@ -152,6 +215,7 @@ export const publications: Publication[] = [
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
         pdf: "/papers/Turing and von Neumann's Brains and their Computers.pdf",
+        tags: ["formal-languages"],
     },
     {
         authors: [
@@ -170,6 +234,7 @@ export const publications: Publication[] = [
         year: 2012,
         pdf: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3400699/pdf/nihms384443.pdf",
         doi: "https://doi.org/10.2217/fvl.12.37",
+        tags: ["snp"],
     },
     {
         authors: ["Leon N Cooper", "Sorin Istrail"],
@@ -177,6 +242,7 @@ export const publications: Publication[] = [
         journal: "Proceedings of the Turing Centenary Conference",
         year: 2012,
         pdf: "/papers/Mental Experience and the Turing Test.pdf",
+        tags: [],
     },
     {
         authors: [
@@ -193,16 +259,18 @@ export const publications: Publication[] = [
         year: 2012,
         pdf: "https://watermark.silverchair.com/bioinformatics_28_12_i154.pdf",
         doi: "http://dx.doi.org/10.1093/bioinformatics/bts234",
+        tags: ["gwas", "snp"],
     },
     {
         authors: ["Ryan Tarpine", "Fumei Lam", "Sorin Istrail"],
-        title: "Conservative Extensions of Linkage Disequilibrium Measures from Pairwise to Multi-loci and Algorithms for Optimal Tagging SNP Selection",
+        title: "Conservative Extensions of Linkage Disequilibrium Measures from Pairwise to Multi-loci and Algorithms for Optimal tagsging SNP Selection",
         journal: "Research in Computational Molecular Biology",
         publisher: "Springer Berlin / Heidelberg",
         volume: "6577",
         pages: "468-482",
         year: 2011,
         doi: "http://dx.doi.org/10.1007/978-3-642-20036-6_42",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -218,6 +286,7 @@ export const publications: Publication[] = [
         pages: "130-136",
         year: 2011,
         pdf: "/papers/QColors.pdf",
+        tags: ["gwas", "viral", "snp"],
     },
     {
         authors: [
@@ -234,6 +303,7 @@ export const publications: Publication[] = [
         year: 2011,
         pdf: "https://www.liebertpub.com/doi/10.1089/cmb.2010.0288",
         doi: "https://doi.org/10.1089/cmb.2010.0288",
+        tags: ["snp"],
     },
     {
         authors: ["Bjarni Halldorsson", "Derek Aguiar", "Sorin Istrail"],
@@ -243,6 +313,7 @@ export const publications: Publication[] = [
         year: 2011,
         pdf: "https://www.worldscientific.com/doi/epdf/10.1142/9789814335058_0010",
         doi: "https://doi.org/10.1142/9789814335058_0010",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -260,6 +331,7 @@ export const publications: Publication[] = [
         year: 2010,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/PNAS-2010-Nam-3930-5.pdf",
         doi: "http://dx.doi.org/10.1073/pnas.1000147107",
+        tags: ["gene-regulatory"],
     },
     {
         authors: ["Fumei Lam", "Ryan Tarpine", "Sorin Istrail"],
@@ -270,6 +342,7 @@ export const publications: Publication[] = [
         pages: "767-781",
         year: 2010,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/impancestralrecomb.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -286,6 +359,7 @@ export const publications: Publication[] = [
         year: 2010,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/praccompmethods.pdf",
         doi: "http://dx.doi.org/citeulike-article-id:10540401",
+        tags: ["gene-regulatory"],
     },
     {
         authors: [
@@ -301,6 +375,7 @@ export const publications: Publication[] = [
         year: 2010,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/clarkphaseable.pdf",
         doi: "http://dx.doi.org/citeulike-article-id:10541015",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -316,6 +391,7 @@ export const publications: Publication[] = [
         year: 2007,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1-s2.0-S0012160607012547-main.pdf",
         doi: "http://dx.doi.org/10.1016/j.ydbio.2007.08.009",
+        tags: ["gene-regulatory"],
     },
     {
         authors: [
@@ -335,6 +411,7 @@ export const publications: Publication[] = [
         year: 2006,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/transcSeaUrchin.pdf",
         doi: "http://dx.doi.org/10.1126/science.1131898",
+        tags: ["assemblies", "gene-regulatory"],
     },
     {
         authors: ["Bjarni V Halldorsson", "Roded Sharan", "Sorin Istrail"],
@@ -342,6 +419,7 @@ export const publications: Publication[] = [
         journal: "Stanford Computational Systems Biology",
         year: 2006,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/10.1.1.86.9375.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -454,6 +532,7 @@ export const publications: Publication[] = [
         year: 2006,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/sci.pdf",
         doi: "http://dx.doi.org/10.1126/science.1133609",
+        tags: ["assemblies", "gene-regulatory", "snp"],
     },
     {
         authors: ["Sorin Istrail", "Eric Davidson"],
@@ -464,6 +543,7 @@ export const publications: Publication[] = [
         pages: "4954-4959",
         year: 2005,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/PNAS-2005-Istrail-4954-9.pdf",
+        tags: ["gene-regulatory"],
     },
     {
         authors: [
@@ -490,6 +570,7 @@ export const publications: Publication[] = [
         pages: "54-66",
         year: 2005,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Genome Res.-2005-Florea-54-66.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -530,6 +611,7 @@ export const publications: Publication[] = [
         pages: "454-462",
         year: 2005,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Genome Res.-2005-De La Vega-454-62.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -545,6 +627,7 @@ export const publications: Publication[] = [
         publisher: "ACM Press",
         year: 2004,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/findingAnchors.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -592,6 +675,7 @@ export const publications: Publication[] = [
         pages: "1916-1921",
         year: 2004,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/PNAS-2004-Istrail-1916-21.pdf",
+        tags: ["assemblies", "snp"],
     },
     {
         authors: [
@@ -611,6 +695,7 @@ export const publications: Publication[] = [
         pages: "13268-13272",
         year: 2004,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/PNAS-2004-Istrail-13268-72.pdf",
+        tags: ["gwas", "viral"],
     },
     {
         authors: [
@@ -622,13 +707,14 @@ export const publications: Publication[] = [
             "Andrew G. Clark",
             "Sorin Istrail",
         ],
-        title: "Optimal haplotype block free selection of tagging SNPs for genome-wide association studies",
+        title: "Optimal haplotype block free selection of tagsging SNPs for genome-wide association studies",
         journal: "Genome Research",
         volume: "14",
         number: "8",
         pages: "1633-1640",
         year: 2004,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Genome Res.-2004-Halldorsson-1633-40.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -646,6 +732,7 @@ export const publications: Publication[] = [
         year: 2004,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1001-JCB.pdf",
         doi: "http://dx.doi.org/citeulike-article-id:165612",
+        tags: ["protein-folding"],
     },
     {
         authors: [
@@ -659,6 +746,7 @@ export const publications: Publication[] = [
         journal: "Journal of Computational Biology",
         year: 2003,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/jcb-03.pdf",
+        tags: ["snp"],
     },
     {
         authors: ["Russell Schwartz", "Andrew G. Clark", "Sorin Istrail"],
@@ -668,6 +756,7 @@ export const publications: Publication[] = [
         publisher: "Springer",
         year: 2003,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/infpiecewise.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -685,6 +774,7 @@ export const publications: Publication[] = [
         pages: "26-47",
         year: 2003,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/IstrailSurvey.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -702,6 +792,7 @@ export const publications: Publication[] = [
         pages: "26-47",
         year: 2003,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/10.1.1.123.4929.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -719,6 +810,7 @@ export const publications: Publication[] = [
         pages: "17-26",
         year: 2003,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/paper119.pdf",
+        tags: ["gwas", "viral"],
     },
     {
         authors: [
@@ -732,6 +824,7 @@ export const publications: Publication[] = [
         title: "A Computational Pipeline for High-Throughput T-Cell Epitope Prediction",
         publisher: "Celera Genomics",
         year: 2003,
+        tags: ["gwas", "viral"],
     },
     {
         authors: [
@@ -748,6 +841,7 @@ export const publications: Publication[] = [
         pages: "19-27",
         year: 2003,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/informativeSNP.pdf",
+        tags: ["snp"],
     },
     {
         authors: ["Russell Schwartz", "Andrew G. Clark", "Sorin Istrail"],
@@ -757,6 +851,7 @@ export const publications: Publication[] = [
         pages: "44-59",
         year: 2002,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/methodsinfblock.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -771,6 +866,7 @@ export const publications: Publication[] = [
         pages: "29-43",
         year: 2002,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/pracAlgsSnpHaplo.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -786,12 +882,14 @@ export const publications: Publication[] = [
         pages: "1-9",
         year: 2002,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Brief Bioinform-2002-Lippert-23-31.pdf",
+        tags: ["snp"],
     },
     {
         authors: ["Sorin Istrail"],
         title: "The Haplotype Phasing Problem",
         publisher: "Celera Genomics",
         year: 2002,
+        tags: [],
     },
     {
         authors: [
@@ -903,6 +1001,13 @@ export const publications: Publication[] = [
         pages: "1304-1351",
         year: 2001,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Science_2001_VenterThe_sequence_of_the_human.pdf",
+        tags: [
+            "assemblies",
+            "viral",
+            "protein-folding",
+            "gene-regulatory",
+            "snp",
+        ],
     },
     {
         authors: [
@@ -928,6 +1033,13 @@ export const publications: Publication[] = [
         pages: "7-18",
         year: 2001,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/p7-turner.pdf",
+        tags: [
+            "gwas",
+            "assemblies",
+            "viral",
+            "protein-folding",
+            "gene-regulatory",
+        ],
     },
     {
         authors: ["Russell Schwartz", "Sorin Istrail", "Jonathan King"],
@@ -937,6 +1049,7 @@ export const publications: Publication[] = [
         pages: "1023-1031",
         year: 2001,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/101023_ftp.pdf",
+        tags: ["protein-folding"],
     },
     {
         authors: [
@@ -949,6 +1062,7 @@ export const publications: Publication[] = [
         title: "Haplotype Reconstruction from SNP Alignment",
         publisher: "Celera Genomics",
         year: 2001,
+        tags: [],
     },
     {
         authors: [
@@ -963,6 +1077,7 @@ export const publications: Publication[] = [
         pages: "201-211",
         year: 2001,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/101%20optimal.pdf",
+        tags: ["protein-folding"],
     },
     {
         authors: [
@@ -979,6 +1094,7 @@ export const publications: Publication[] = [
         pages: "182-193",
         year: 2001,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/snpproblems.pdf",
+        tags: ["snp"],
     },
     {
         authors: [
@@ -994,6 +1110,7 @@ export const publications: Publication[] = [
         publisher: "Sandia Labs",
         year: 2000,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/10.1.1.134.9581.pdf",
+        tags: ["protein-folding"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1003,6 +1120,7 @@ export const publications: Publication[] = [
         pages: "87-96",
         year: 2000,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/p87-istrail.pdf",
+        tags: ["ising-model"],
     },
     {
         authors: [
@@ -1017,18 +1135,21 @@ export const publications: Publication[] = [
         publisher: "ACM Press",
         year: 2000,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/p275-goldman.pdf",
+        tags: ["gwas"],
     },
     {
         authors: ["Russell Schwartz", "Sorin Istrail", "Jonathan King"],
         title: "Insights Into the Association of Partially Folded Chains Derived From Lattice Simulation Models",
         publisher: "Sandia Labs",
         year: 1999,
+        tags: ["gwas", "protein-folding"],
     },
     {
         authors: ["Ross A. Lippert", "Sorin Istrail", "Alan Hurd"],
         title: "Prediction of Energetic Tiles Self-Assembly",
         publisher: "Sandia Labs",
         year: 1999,
+        tags: ["protein-folding"],
     },
     {
         authors: ["Sorin Istrail", "Russell Schwartz", "Jonathan King"],
@@ -1038,6 +1159,7 @@ export const publications: Publication[] = [
         number: "2",
         year: 1999,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/latticesim.pdf",
+        tags: ["protein-folding"],
     },
     {
         authors: [
@@ -1050,18 +1172,21 @@ export const publications: Publication[] = [
         publisher: "IEEE Computer Society Press",
         year: 1999,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/00814624.pdf",
+        tags: ["protein-folding"],
     },
     {
         authors: ["John H. Conway", "Sorin Istrail"],
         title: "Mathematics of Self-Assembly",
         publisher: "Sandia Labs",
         year: 1999,
+        tags: ["protein-folding"],
     },
     {
         authors: ["Robert Carr", "Giuseppe Lancia", "Sorin Istrail"],
         title: "Branch-and-Bound LP-algorithms for Protein Structure Alignment Based on Contact Map Overlap",
         publisher: "Sandia Labs",
         year: 1999,
+        tags: ["protein-folding"],
     },
     {
         authors: ["Serafim Batzoglou", "Sorin Istrail"],
@@ -1070,28 +1195,32 @@ export const publications: Publication[] = [
         publisher: "Springer",
         year: 1999,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/Physical mapping with repeated probes.pdf",
+        tags: ["snp"],
     },
     {
         authors: ["Sorin Istrail", "R. Ravi"],
         title: "What is a Good Objective for Multiple Sequence Alignment?",
         journal: "Sandia Labs",
         year: 1998,
+        tags: ["snp"],
     },
     {
         authors: ["Sorin Istrail"],
         title: "Multiple Sequence Alignment and Voting Paradoxes",
         journal: "Sandia Labs",
         year: 1998,
+        tags: [],
     },
     {
         authors: ["William E. Hart", "Sorin Istrail"],
         title: "Robust Proofs of NP-Hardness for Protein Folding: General Lattices and Energy Potentials",
-        journal: "In Journal of Computational Biology",
+        journal: "Journal of Computational Biology",
         year: 1997,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/robustproofs.pdf",
         volume: "4",
         number: "1",
         pages: "1-22",
+        tags: ["protein-folding"],
     },
     {
         authors: ["William E. Hart", "Sorin Istrail"],
@@ -1102,12 +1231,14 @@ export const publications: Publication[] = [
         year: 1997,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1997/p137-hart.pdf",
         pages: "137-146",
+        tags: ["protein-folding"],
     },
     {
         authors: ["Sorin Istrail"],
         title: "Approximations Algorithms on Matroids Based on Cycle-Bases and Applications",
         journal: "Sandia Labs",
         year: 1996,
+        tags: [],
     },
     {
         authors: ["William E. Hart", "Sorin Istrail"],
@@ -1118,6 +1249,7 @@ export const publications: Publication[] = [
         volume: "3",
         number: "1",
         pages: "53-96",
+        tags: [],
     },
     {
         authors: ["William E. Hart", "Sorin Istrail"],
@@ -1127,6 +1259,7 @@ export const publications: Publication[] = [
         year: 1996,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/fulltext.pdf",
         pages: "288-303",
+        tags: ["protein-folding"],
     },
     {
         authors: ["William E. Hart", "Sorin Istrail"],
@@ -1137,12 +1270,14 @@ export const publications: Publication[] = [
         year: 1995,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/10.1.1.110.3139.pdf",
         pages: "157-168",
+        tags: ["protein-folding"],
     },
     {
         authors: ["William E. Hart", "Sorin Istrail"],
         title: "Crystallographical universal approximation: A complexity theory of protein folding algorithms for crystal lattices",
         journal: "Sandia Labs",
         year: 1995,
+        tags: ["protein-folding"],
     },
     {
         authors: ["David Greenberg", "Sorin Istrail"],
@@ -1152,6 +1287,7 @@ export const publications: Publication[] = [
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/10.1.1.50.8961.pdf",
         volume: "2",
         pages: "219-274",
+        tags: [],
     },
     {
         authors: ["Bard Bloom", "Sorin Istrail", "Albert R. Meyer"],
@@ -1163,6 +1299,7 @@ export const publications: Publication[] = [
         year: 1995,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/p232-bloom.pdf",
         doi: "10.1145/201019.201022",
+        tags: ["bisimulation"],
     },
     {
         authors: ["Dejan Zivkovic", "Sorin Istrail"],
@@ -1174,6 +1311,7 @@ export const publications: Publication[] = [
         year: 1994,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1-s2.0-0020019094000360-main.pdf",
         doi: "10.1016/0020-0190(94)00036-0",
+        tags: [],
     },
     {
         authors: ["David Greenberg", "Sorin Istrail"],
@@ -1184,7 +1322,7 @@ export const publications: Publication[] = [
         pages: "207-220",
         year: 1994,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/The chimeric mapping problem.pdf",
-        doi: "",
+        tags: ["assemblies", "snp"],
     },
     {
         authors: ["Sorin Istrail", "Dejan Zivkovic"],
@@ -1196,6 +1334,7 @@ export const publications: Publication[] = [
         year: 1993,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/A non-probabilistic switching lemma for the Sipser function.pdf",
         doi: "",
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1204,6 +1343,7 @@ export const publications: Publication[] = [
         year: 1993,
         pdf: "",
         doi: "",
+        tags: ["snp"],
     },
     {
         authors: ["J Zipoli", "Sorin Istrail"],
@@ -1212,6 +1352,7 @@ export const publications: Publication[] = [
         year: 1991,
         pdf: "",
         doi: "",
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1222,6 +1363,7 @@ export const publications: Publication[] = [
         year: 1990,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/00089564.pdf",
         doi: "",
+        tags: ["universal-traversing-sequnece"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1230,6 +1372,7 @@ export const publications: Publication[] = [
         year: 1990,
         pdf: "",
         doi: "",
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1241,6 +1384,7 @@ export const publications: Publication[] = [
         year: 1989,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/an arithmetical hierarchy in propositional dynamic logic.pdf",
         doi: "10.1016/0890-5401(89)90030-3",
+        tags: ["bisimulation"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1252,6 +1396,7 @@ export const publications: Publication[] = [
         year: 1988,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1-s2.0-0304397582900809-main.pdf",
         doi: "10.1016/0304-3975(88)90063-5",
+        tags: ["graph-theory"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1261,6 +1406,7 @@ export const publications: Publication[] = [
         pages: "453-491",
         year: 1988,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/p491-istrail.pdf",
+        tags: ["universal-traversing-sequnece"],
     },
     {
         authors: ["Lenwood S. Heath", "Sorin Istrail"],
@@ -1270,6 +1416,7 @@ export const publications: Publication[] = [
         pages: "388-397",
         year: 1987,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/TR-90-21.pdf",
+        tags: ["graph-theory"],
     },
     {
         authors: ["Cristian Masalagiu", "Sorin Istrail"],
@@ -1279,6 +1426,7 @@ export const publications: Publication[] = [
         pages: "83-103",
         year: 1983,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1-s2.0-0304397583900804-main.pdf",
+        tags: ["formal-languages"],
     },
     {
         authors: ["Cristian Masalagiu", "Sorin Istrail"],
@@ -1288,6 +1436,7 @@ export const publications: Publication[] = [
         volume: "159",
         pages: "255-268",
         year: 1983,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Nguyen Xuan My", "Sorin Istrail"],
@@ -1297,6 +1446,7 @@ export const publications: Publication[] = [
         number: "3",
         pages: "241-249",
         year: 1982,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1306,6 +1456,7 @@ export const publications: Publication[] = [
         pages: "341-349",
         year: 1982,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/1-s2.0-0304397582900809-main.pdf",
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1314,6 +1465,7 @@ export const publications: Publication[] = [
         volume: "18",
         pages: "333-341",
         year: 1982,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Cristian Masalagiu", "Sorin Istrail"],
@@ -1322,6 +1474,7 @@ export const publications: Publication[] = [
         publisher: "Polytechnic Institute of Bucharest",
         pages: "306-312",
         year: 1981,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1330,6 +1483,7 @@ export const publications: Publication[] = [
         volume: "Inst. de Mat., vol. 38 Increst",
         pages: "20",
         year: 1981,
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1341,6 +1495,7 @@ export const publications: Publication[] = [
         pages: "333-347",
         year: 1981,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/chomsky-schut.pdf",
+        tags: ["formal-languages"],
     },
     {
         authors: ["L Olaru", "Sorin Istrail"],
@@ -1349,6 +1504,7 @@ export const publications: Publication[] = [
             "Artificial Intelligence and Information Control Systems of Robots",
         pages: "83-85",
         year: 1980,
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1358,6 +1514,7 @@ export const publications: Publication[] = [
         number: "6",
         pages: "861-869",
         year: 1980,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1367,6 +1524,7 @@ export const publications: Publication[] = [
         number: "3",
         pages: "283-289",
         year: 1979,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1376,6 +1534,7 @@ export const publications: Publication[] = [
         number: "1",
         pages: "19-26",
         year: 1979,
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1387,6 +1546,7 @@ export const publications: Publication[] = [
         pages: "289-303",
         year: 1979,
         pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/afixedpoint",
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail", "Dan Simovici"],
@@ -1397,6 +1557,7 @@ export const publications: Publication[] = [
         number: "1",
         pages: "33-48",
         year: 1978,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1406,6 +1567,7 @@ export const publications: Publication[] = [
         number: "3",
         pages: "287-294",
         year: 1978,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1415,6 +1577,7 @@ export const publications: Publication[] = [
         number: "4",
         pages: "401-408",
         year: 1978,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1424,6 +1587,7 @@ export const publications: Publication[] = [
         number: "2",
         pages: "177-191",
         year: 1978,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1433,6 +1597,7 @@ export const publications: Publication[] = [
         number: "3-4",
         pages: "301-308",
         year: 1977,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1442,6 +1607,7 @@ export const publications: Publication[] = [
         number: "9",
         pages: "1235-1239",
         year: 1977,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1451,6 +1617,7 @@ export const publications: Publication[] = [
         number: "2",
         pages: "419-422",
         year: 1977,
+        tags: ["formal-languages"],
     },
     {
         authors: ["Sorin Istrail"],
@@ -1460,5 +1627,6 @@ export const publications: Publication[] = [
         number: "1",
         pages: "111-121",
         year: 1976,
+        tags: ["formal-languages"],
     },
 ];
