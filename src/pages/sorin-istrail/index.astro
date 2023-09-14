@@ -5,6 +5,7 @@ import PositionCard from "@/components/PositionCard";
 import EssayCard from "@/components/EssayCard";
 import HonorRollList from "@/components/honorRoll/HonorRollList";
 import { students } from "@/components/honorRoll/honorRoll";
+import { type Award, AwardCard } from "@/components/AwardCard";
 
 import istrail from "@/assets/istrail.jpg";
 import ccmb from "@/assets/positions/ccmb_web_small.png";
@@ -45,6 +46,74 @@ const essays = [
         year: 2008,
         pdf: "papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
         tags: [],
+    },
+];
+
+const awards: Award[] = [
+    {
+        title: "Honorary Citizen",
+        year: 2023,
+        desc: "Municipality of Iasi, Romania",
+    },
+    {
+        title: "20 Years Test of Time Award",
+        year: 2021,
+        desc: "European Symposium of Algorithms",
+    },
+    {
+        title: "Fellow",
+        year: 2021,
+        desc: "International Society for Computational Biology",
+    },
+    {
+        title: "Professor Honoris Causa",
+        year: 2010,
+        desc: "Alexandru Ioan Cuza University, Iasi, Romania",
+    },
+    {
+        title: "Julie Nguyen Brown Professor of Computational and Mathematical Sciences",
+        year: 2006,
+        desc: "Brown University, Providence, Rhode Island",
+    },
+    {
+        title: "Applied Biosystems Science Fellow",
+        year: 2003,
+        desc: "Highest distinction for scientific achievement in Applied Biosystems",
+    },
+    {
+        title: "Manager of the Celera Subteam",
+        year: 2002,
+        desc: "Winner of the ACM KDD Cup",
+    },
+    {
+        title: "Work on the Computational Complexity of the Three-Dimensional Ising Model",
+        year: 2001,
+        desc: "Top 100 Most Important Discoveries of the U.S. Department of Energy's first 25 years",
+    },
+    {
+        title: "Graduation Speaker",
+        year: 2000,
+        desc: "Mathematics and Physics Class of 2000, University of New Mexico",
+    },
+    {
+        title: "ACM Service Recognition",
+        year: 2000,
+        desc: "ACM General Chair of the RECOMB Conference",
+    },
+    {
+        title: "Keynote Speaker",
+        year: 1999,
+        desc: "New Mexico Mathematics Olympiad Finalists",
+    },
+    {
+        title: 'Scientific American "Best of 1998"',
+        year: 1998,
+        desc: "Supercomputing Simulation of Protein Misfolding Project",
+    },
+    {
+        title: "Sandia National Laboratories Award for Excellence",
+        year: 1995,
+        desc: "The first protein folding prediction algorithm with guaranteed error bounds",
     },
 ];
 ---
@@ -169,6 +238,13 @@ const essays = [
             location="Sandia National Laboratories"
             time="1992 — 2000"
         />
+    </div>
+
+    <div class="flex items-baseline">
+        <h2 class="flex-1 text-2xl font-bold pt-8">Honors and Awards</h2>
+    </div>
+    <div class="grid gap-4 py-4">
+        {awards.map((award) => <AwardCard award={award} />)}
     </div>
 
     <div class="flex items-baseline">
