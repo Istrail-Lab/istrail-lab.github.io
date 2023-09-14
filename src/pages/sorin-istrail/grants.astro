@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import GrantCard from "@/components/GrantCard";
+import QuickLinks from "@/components/QuickLinks";
 
 const grants = [
     {
@@ -37,20 +38,7 @@ const grants = [
 ---
 
 <Layout title="Istrail Lab | Sorin Istrail">
-    <aside class="xl:flex flex-col gap-4 py-20 fixed hidden left-[5%] w-48">
-        <h3 class="text-lg font-bold">Quick Links</h3>
-        <a class="underline hover:text-blue-400" href="/publications"
-            >Publications</a
-        >
-        <a class="underline hover:text-blue-400" href="/sorin-istrail/grants"
-            >Grants</a
-        >
-        <a class="underline hover:text-blue-400" href="/essays">Essays</a>
-        <a
-            class="underline hover:text-blue-400"
-            href="/sorin-istrail/geneaology">Advisor Geneaology</a
-        >
-    </aside>
+    <QuickLinks />
     <h2 class="text-3xl font-bold pt-4">Grants</h2>
     <div class="grid gap-4 py-4">
         {grants.map((grant) => <GrantCard grant={grant} />)}

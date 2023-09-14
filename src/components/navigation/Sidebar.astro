@@ -1,14 +1,9 @@
 ---
-import NavDropdown from "./NavDropdown.astro";
+import { NavDropdown } from "./NavDropdown";
+import NavLinks from "./NavLinks";
 import { dropdowns } from "./dropdowns";
 ---
 
 <ul class="menu bg-base-300 h-full z-10 w-5/6 overflow-x-auto">
-    <li>
-        <a href="/sorin-istrail">Sorin Istrail</a>
-    </li>
-    {dropdowns.map((dropdown) => <NavDropdown {...dropdown} />)}
-    <li>
-        <a>Papers</a>
-    </li>
+    <NavLinks />
 </ul>
