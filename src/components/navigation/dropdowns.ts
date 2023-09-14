@@ -42,7 +42,7 @@ export const dropdowns: Dropdown[] = [
         },
     },
     {
-        dropdownName: "Lectures",
+        dropdownName: "Distinguished Lecture Series",
         dropdownItems: {
             "John von Neumann Lectures": {
                 "Brown University Symposium 2015": "/lectures/von-neumann-2015",
