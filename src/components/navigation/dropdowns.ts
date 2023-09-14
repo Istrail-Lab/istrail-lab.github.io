@@ -14,8 +14,10 @@ export const dropdowns: Dropdown[] = [
                     "/research/ising-model",
             },
             Biology: {
-                "Genome Assemblies": "/research/assemblies",
-                "Bioinformatics & GWAS": "/research/bioinformatics-gwas",
+                "Genome Assembly and Comparisons, Haplotype Assembly, and Transcriptome Assembly ":
+                    "/research/assemblies",
+                "Medical Bioinformatics and Genome-Wide Association Studies ":
+                    "/research/bioinformatics-gwas",
                 "Protein Folding": "/research/protein-folding",
                 "Gene Regulatory Networks": "/research/regulatory-genome",
                 "SNPs and Haplotypes": "/research/snp-haplotypes",
