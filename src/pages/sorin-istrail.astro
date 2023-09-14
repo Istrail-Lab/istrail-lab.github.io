@@ -51,6 +51,7 @@ const essays = [
         title: "Ode to Computational Biology: A letter in support of awarding the National Medal of Science to Professor Michael Waterman",
         year: 2012,
         pdf: "papers/Ode to Computational Biology.pdf",
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -59,6 +60,7 @@ const essays = [
         journal:
             "Meetings with Marcus: 85th Birthday Celebration of Professor Solomon Marcus Editurea Academiei Romane",
         pdf: "papers/MarcusAxioms.pdf",
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -67,6 +69,7 @@ const essays = [
         volume: "19.1",
         year: 2010,
         pdf: "papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
+        tags: [],
     },
     {
         authors: ["Sorin Istrail"],
@@ -75,6 +78,7 @@ const essays = [
         volume: "17.2",
         year: 2008,
         pdf: "papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
+        tags: [],
     },
 ];
 ---
@@ -162,12 +166,17 @@ const essays = [
     </p>
 
     <div class="p-8 flex flex-wrap gap-4 md:flex-nowrap justify-around">
-        <PositionCard
-            img={ccmb}
-            position="Director, Center of Computational Biology"
-            location="Brown University"
-            time="2006 — 2011"
-        />
+        <a
+            class="hover:ring-2"
+            href="https://www.brown.edu/Research/Istrail_Lab/CCMB/index.htm"
+        >
+            <PositionCard
+                img={ccmb}
+                position="Director, Center of Computational Biology"
+                location="Brown University"
+                time="2006 — 2011"
+            />
+        </a>
         <PositionCard
             img={celera}
             position="Senior Director and Head of Informatics"
