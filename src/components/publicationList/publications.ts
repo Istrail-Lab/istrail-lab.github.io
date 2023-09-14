@@ -1119,7 +1119,7 @@ export const publications: Publication[] = [
         publisher: "ACM Press",
         pages: "87-96",
         year: 2000,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/papers/p87-istrail.pdf",
+        pdf: "/papers/Statistical Mechanics, Three-Dimensionality and NP-completeness.pdf",
         tags: ["ising-model"],
     },
     {
