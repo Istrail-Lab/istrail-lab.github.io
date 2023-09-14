@@ -1,7 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import BlockQuote from "@/components/BlockQuote";
-import GrantCard from "@/components/GrantCard";
 import PositionCard from "@/components/PositionCard";
 import EssayCard from "@/components/EssayCard";
 import HonorRollList from "@/components/honorRoll/HonorRollList";
@@ -11,39 +10,6 @@ import istrail from "@/assets/istrail.jpg";
 import ccmb from "@/assets/positions/ccmb_web_small.png";
 import celera from "@/assets/positions/science_291_5507.gif";
 import sandia from "@/assets/positions/proFoldingProtein.gif";
-
-const grants = [
-    {
-        name: "NSF Grant",
-        role: "Principal Investigator",
-        year: "",
-        title: "Sweat-Box Sessions: Training in the Art of Asking Tough Scientific Questions",
-    },
-    {
-        name: "NSF Grant",
-        role: "Principal Investigator",
-        year: "2010",
-        title: "Genome-Wide Algorithms for Haplotype Reconstruction and Beyond: A Combined Haplotype Assembly and Identical-by-Descent Tracts Approach",
-    },
-    {
-        name: "NSF Grant",
-        role: "Co-Principal Investigator",
-        year: "2010",
-        title: "IGERT - Reverse Ecology: Computational Integration of Genomes, Organisms, and Environments",
-    },
-    {
-        name: "Brown University First Translational Seed Grant Award",
-        role: "Co-Principal Investigator",
-        year: "2013",
-        title: "",
-    },
-    {
-        name: "Brown University Seed Grant Award",
-        role: "Co-Principal Investigator",
-        year: "2014",
-        title: "Autism Genomics Research",
-    },
-];
 
 const essays = [
     {
@@ -86,16 +52,16 @@ const essays = [
 <Layout title="Istrail Lab | Sorin Istrail">
     <aside class="xl:flex flex-col gap-4 py-20 fixed hidden left-[5%] w-48">
         <h3 class="text-lg font-bold">Quick Links</h3>
-        <a class="underline hover:text-blue-400" href=" publications"
+        <a class="underline hover:text-blue-400" href="/publications"
             >Publications</a
         >
-        <a class="underline hover:text-blue-400" href=" sorin-istrail grants"
+        <a class="underline hover:text-blue-400" href="/sorin-istrail/grants"
             >Grants</a
         >
-        <a class="underline hover:text-blue-400" href=" essays">Essays</a>
+        <a class="underline hover:text-blue-400" href="/essays">Essays</a>
         <a
             class="underline hover:text-blue-400"
-            href=" sorin-istrail geneaology">Advisor Geneaology</a
+            href="/sorin-istrail/geneaology">Advisor Geneaology</a
         >
     </aside>
     <div class="grid md:grid-cols-2 p-4">
@@ -203,11 +169,6 @@ const essays = [
             location="Sandia National Laboratories"
             time="1992 — 2000"
         />
-    </div>
-
-    <h2 class="text-2xl font-bold">Grants</h2>
-    <div class="grid gap-4 py-4">
-        {grants.map((grant) => <GrantCard grant={grant} />)}
     </div>
 
     <div class="flex items-baseline">
