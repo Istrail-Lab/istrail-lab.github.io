@@ -39,6 +39,15 @@ export const dropdowns: Dropdown[] = [
         dropdownName: "Games",
         dropdownItems: {
             "Father-in-law vs Pajamas": "/games/father-in-law-vs-pajamas",
+            'On Dijkstra\'s "Silly Game" With Balls in an Urn':
+                "/games/dijkstras-silly-game",
+            "A Chinese Math Olympiad Game": "/games/chinese-math-olympiad",
+            "The Achilles-Turtoise-Riemann Game": "/games/achilles-turtoise",
+            "How to Take a Random Walk Deterministically":
+                "/games/deterministic-random-walk",
+            "The Gold Bug: A Metaphor for Bioinformatics": "/games/gold-bug",
+            "The Suffix Tree: A Billion Year Old Biological Innovation":
+                "/games/suffix-tree",
         },
     },
     {
