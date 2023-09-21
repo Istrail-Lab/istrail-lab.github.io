@@ -3,6 +3,7 @@ import EssayCard from "@/components/EssayCard";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
 import BlockQuote from "@/components/BlockQuote";
 import { publications } from "@/components/publicationList/publications";
+import Abstract from "@/components/Abstract";
 
 const relevantPapers = publications.filter((paper) =>
     paper.tags.includes("viral")
@@ -11,7 +12,145 @@ const relevantPapers = publications.filter((paper) =>
 
 <ResearchLayout title="Viruses, Viral Genomics, and Immunopeptidomics">
     <div slot="abstract" class="grid gap-2">
-        <p>Coming soon!</p>
+        <Abstract
+            client:load
+            title="QColors: An Algorithm for Conservative Viral Quasispecies Reconstruction from Short and Non-Contiguous Next-Generation Sequencing Reads"
+            blurb={`Next generation sequencing technologies have recently been
+            applied to characterize mutational spectra of the heterogeneous
+            population of viral genotypes (known as a quasispecies) within
+            HIV-infected patients. Such information is clinically relevant
+            because minority genetic subpopulations of HIV within patients
+            enable viral escape from selection pressures such as the immune
+            response and antiretroviral therapy. However, methods for
+            quasispecies sequence reconstruction from next generation
+            sequencing reads are not yet widely used and remains an emerging
+            area of research.`}
+        >
+            <p>
+                Next generation sequencing technologies have recently been
+                applied to characterize mutational spectra of the heterogeneous
+                population of viral genotypes (known as a quasispecies) within
+                HIV-infected patients. Such information is clinically relevant
+                because minority genetic subpopulations of HIV within patients
+                enable viral escape from selection pressures such as the immune
+                response and antiretroviral therapy. However, methods for
+                quasispecies sequence reconstruction from next generation
+                sequencing reads are not yet widely used and remains an emerging
+                area of research. Furthermore, the majority of research
+                methodology in HIV has focused on 454 sequencing, while many
+                next-generation sequencing platforms used in practice are
+                limited to shorter read lengths relative to 454 sequencing.
+                Little work has been done in determining how best to address the
+                read length limitations of other platforms.
+            </p><p>
+                The approach described here incorporates graph representations
+                of both read differences and read overlap to conservatively
+                determine the regions of the sequence with sufficient
+                variability to separate quasispecies sequences. Within these
+                tractable regions of quasispecies inference, we use constraint
+                programming to solve for an optimal quasispecies subsequence
+                determination via vertex coloring of the conflict graph, a
+                representation which also lends itself to data with
+                non-contiguous reads such as paired-end sequencing. We
+                demonstrate the utility of the method by applying it to
+                simulations based on actual intra-patient clonal HIV-1
+                sequencing data.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="Comparative immunopeptidomics of humans and their pathogens"
+            blurb={`Major histocompatibility complex class I molecules present peptides of 8-10 residues to CD8+ T cells. We used 19 predicted proteomes to determine the influence of CD8+ T cell immune surveillance on protein evolution in humans and microbial `}
+        >
+            Major histocompatibility complex class I molecules present peptides
+            of 8-10 residues to CD8+ T cells. We used 19 predicted proteomes to
+            determine the influence of CD8+ T cell immune surveillance on
+            protein evolution in humans and microbial pathogens by predicting
+            immunopeptidomes, i.e., sets of class I binding peptides present in
+            proteomes. We find that class I peptide binding specificities (i)
+            have had little, if any, influence on the evolution of
+            immunopeptidomes and (ii) do not take advantage of biases in amino
+            acid distribution in proteins other than the concentration of
+            hydrophobic residues in NH2-terminal leader sequences.
+        </Abstract>
+        <Abstract
+            client:load
+            title="Epitope prediction algorithms for peptide-based vaccine design"
+            blurb={`Peptide-based vaccines, in which small peptides derived from target
+                proteins (eptiopes) are used to provoke an immune reaction, have
+                attracted considerable attention recently as a potential means both
+                of treating infectious diseases and promoting the destruction of
+                cancerous cells by a patient's own immune system. With the
+                availability of large sequence databases and computers fast enough
+                for rapid processing of large numbers of peptides`}
+        >
+            Peptide-based vaccines, in which small peptides derived from target
+            proteins (eptiopes) are used to provoke an immune reaction, have
+            attracted considerable attention recently as a potential means both
+            of treating infectious diseases and promoting the destruction of
+            cancerous cells by a patient's own immune system. With the
+            availability of large sequence databases and computers fast enough
+            for rapid processing of large numbers of peptides, computer aided
+            design of peptide-based vaccines has emerged as a promising approach
+            to screening among billions of possible immune-active peptides to
+            find those likely to provoke an immune response to a particular cell
+            type. In this paper, we describe the development of three novel
+            classes of methods for the prediction problem. We present a
+            quadratic programming approach that can be trained on quantitative
+            as well as qualitative data. The second method uses linear
+            programming to counteract the fact that our training data contains
+            mostly positive examples. The third class of methods uses sequence
+            profiles obtained by clustering known epitopes to score candidate
+            peptides. By integrating these methods, using a simple voting
+            heuristic, we achieve improved accuracy over the state of the art.
+        </Abstract>
+        <Abstract
+            client:load
+            title="The Sequence of the Human Genome"
+            blurb="A 2.91-billion base pair (bp) consensus sequence of the euchromatic portion of the human genome was generated by the whole-genome shotgun sequencing method. The 14.8-billion bp DNA sequence was generated over 9 months from 27,271,853 high-quality sequence reads (5.11-fold coverage of the genome) from both ends of plasmid clones made from the DNA of five individuals. Two assembly strategies-a whole-genome assembly and a regional chromosome assembly-were used, each combining sequence data from Celera and the publicly funded genome effort."
+        >
+            A 2.91-billion base pair (bp) consensus sequence of the euchromatic
+            portion of the human genome was generated by the whole-genome
+            shotgun sequencing method. The 14.8-billion bp DNA sequence was
+            generated over 9 months from 27,271,853 high-quality sequence reads
+            (5.11-fold coverage of the genome) from both ends of plasmid clones
+            made from the DNA of five individuals. Two assembly strategies-a
+            whole-genome assembly and a regional chromosome assembly-were used,
+            each combining sequence data from Celera and the publicly funded
+            genome effort. The public data were shredded into 550-bp segments to
+            create a 2.9-fold coverage of those genome regions that had been
+            sequenced, without including biases inherent in the cloning and
+            assembly procedure used by the publicly funded group. This brought
+            the effective coverage in the assemblies to eightfold, reducing the
+            number and size of gaps in the final assembly over what would be
+            obtained with 5.11-fold coverage. The two assembly strategies
+            yielded very similar results that largely agree with independent
+            mapping data. The assemblies effectively cover the euchromatic
+            regions of the human chromosomes. More than 90% of the genome is in
+            scaffold assemblies of 100,000 bp or more, and 25% of the genome is
+            in scaffolds of 10 million bp or larger. Analysis of the genome
+            sequence revealed 26,588 protein-encoding transcripts for which
+            there was strong corroborating evidence and an additional
+            approximately 12,000 computationally derived genes with mouse
+            matches or other weak supporting evidence. Although gene-dense
+            clusters are obvious, almost half the genes are dispersed in low G+C
+            sequence separated by large tracts of apparently noncoding sequence.
+            Only 1.1% of the genome is spanned by exons, whereas 24% is in
+            introns, with 75% of the genome being intergenic DNA. Duplications
+            of segmental blocks, ranging in size up to chromosomal lengths, are
+            abundant throughout the genome and reveal a complex evolutionary
+            history. Comparative genomic analysis indicates vertebrate
+            expansions of genes associated with neuronal function, with
+            tissue-specific developmental regulation, and with the hemostasis
+            and immune systems. DNA sequence comparisons between the consensus
+            sequence and publicly funded genome data provided locations of 2.1
+            million single-nucleotide polymorphisms (SNPs). A random pair of
+            human haploid genomes differed at a rate of 1 bp per 1250 on
+            average, but there was marked heterogeneity in the level of
+            polymorphism across the genome. Less than 1% of all SNPs resulted in
+            variation in proteins, but the task of determining which SNPs have
+            functional consequences remains an open challenge.
+        </Abstract>
     </div>
 
     <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">

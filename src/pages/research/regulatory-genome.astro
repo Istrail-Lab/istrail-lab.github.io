@@ -3,6 +3,7 @@ import EssayCard from "@/components/EssayCard";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
 import BlockQuote from "@/components/BlockQuote";
 import { publications } from "@/components/publicationList/publications";
+import Abstract from "@/components/Abstract";
 
 const relevantPapers = publications.filter((paper) =>
     paper.tags.includes("gene-regulatory")
@@ -13,7 +14,174 @@ const relevantPapers = publications.filter((paper) =>
     title="The Regulatory Genome, Gene Regulatory Networks and Transcriptomics"
 >
     <div slot="abstract" class="grid gap-2">
-        <p>Coming soon!</p>
+        <Abstract
+            client:load
+            title="Eric Davidson's Regulatory Genome for Computer Science: Causality, Logic, and Proof Principles of the Genomic cis-Regulatory Code"
+            blurb={`In this article, we discuss several computer science problems,
+                inspired by our 15-year-long collaboration with Prof. Eric Davidson,
+                focusing on computer science contributions to the study of the
+                regulatory genome. Our joint study was inspired by his lifetime
+                trailblazing research program rooted in causal gene regulatory
+                networks (GRNs), system completeness, genomic Boolean logic, and
+                genomically encoded regulatory information. We present first four
+                inspiring questions that Eric Davidson asked, and the follow-up,
+                namely, seven technical problems,`}
+        >
+            <p>
+                In this article, we discuss several computer science problems,
+                inspired by our 15-year-long collaboration with Prof. Eric
+                Davidson, focusing on computer science contributions to the
+                study of the regulatory genome. Our joint study was inspired by
+                his lifetime trailblazing research program rooted in causal gene
+                regulatory networks (GRNs), system completeness, genomic Boolean
+                logic, and genomically encoded regulatory information. We
+                present first four inspiring questions that Eric Davidson asked,
+                and the follow-up, namely, seven technical problems, fully or
+                partially resolved with the methods of computer science. At the
+                center, and unifying the intellectual backbone of those
+                technical challenges, stands “Causality.” Our collaboration
+                produced the causality-inferred cisGRN-Lexicon database,
+                containing the cis-regulatory architecture (CRA) of 600+
+                transcription factor (TF)-encoding genes and other regulatory
+                genes, in eight species: human, mouse, fruit fly, sea urchin,
+                nematode, rat, chicken, and zebrafish. These CRAs are
+                causality-inferred regulatory regions of genes, derived
+                experimentally through the experimental method called
+                “cis-regulatory analysis” (also known as the “Davidson
+                criteria”). In this research program, causality challenges for
+                computer science show up in two components: (1) how to define
+                data structures that represent the causality-inferred, by the
+                Davidson criteria, DNA structure data and to define a versatile
+                software system to host them; and (2) how to identify by
+                automated software for text analysis the experimental technical
+                articles applying the Davidson criteria to the analysis to
+                genes. We next present the cisGRN-Lexicon Meta-Analysis (Part
+                I). We conclude the article with some reflections on
+                epistemology and philosophy themes concerning the role of
+                causality, logic, and proof in the emerging elegant mathematical
+                theory and practice of the regulatory genome.
+            </p>
+            <p>
+                It is challenging to explain what “explanation” is, and to
+                understand what “understanding” is, when the technical task is
+                to “prove” system-level causality completeness of a 50-gene
+                causal GRN. Within the Peter-Davidson Boolean GRN model, the
+                Peter-Davidson completeness “theorem” provides a seminal answer:
+                Experimental causality system completeness = Computational exact
+                prediction completeness.
+            </p>
+            <p>
+                The article is organized as follows. Section 2 is dedicated to
+                our Prof. Eric Davidson. Section 3 gives a brief introduction
+                for computer scientists to the regulatory genome and its
+                information processing operations in terms similar to the
+                electronic computer. Section 4 proposes to honor Eric Davidson's
+                life-long scientific work on the regulatory genome by naming a
+                most fundamental time unit constant after him. Section 5
+                presents four grand challenge questions that Eric Davidson
+                asked, and seven follow-up problems inspired by the first two
+                questions, which we fully or partially solved together. Central
+                to the mentioned solutions is our construction of the
+                cisGRN-Lexcion, the database of causally inferred CRA of 600+
+                regulatory genes in eight species. Section 6 presents Part I of
+                the cisGRN-Lexcion Meta-Analysis, coached as “rules” of the
+                genomic cis-regulatory code. Section 7 is devoted to reflections
+                on epistemological and philosophical themes: causality, logic,
+                and proof in the elegant mathematical modeling of the regulatory
+                genome. We present here the “Davidsonian Causal Systems Biology
+                Axioms,” which guide us toward understanding of the meaning of
+                “proving” causality completeness, for a complex experimental
+                system, by exact computational predictions.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="How Does the Regulatory Genome Work?"
+            blurb={`The regulatory genome controls genome activity throughout the life
+            of an organism. This requires that complex information processing
+            functions are encoded in, and operated by, the regulatory genome.
+            Although much remains to be learned about how the regulatory genome
+            works, we here discuss two cases where regulatory functions have
+            been experimentally dissected in great detail and at the systems
+            level, and formalized by computational logic models.`}
+        >
+            <p>
+                The regulatory genome controls genome activity throughout the
+                life of an organism. This requires that complex information
+                processing functions are encoded in, and operated by, the
+                regulatory genome. Although much remains to be learned about how
+                the regulatory genome works, we here discuss two cases where
+                regulatory functions have been experimentally dissected in great
+                detail and at the systems level, and formalized by computational
+                logic models. Both examples derive from the sea urchin embryo,
+                but assess two distinct organizational levels of genomic
+                information processing. The first example shows how the
+                regulatory system of a single gene, endo16, executes logic
+                operations through individual transcription factor binding sites
+                and cis-regulatory modules that control the expression of this
+                gene. The second example shows information processing at the
+                gene regulatory network (GRN) level. The GRN controlling
+                development of the sea urchin endomesoderm has been
+                experimentally explored at an almost complete level. A Boolean
+                logic model of this GRN suggests that the modular logic
+                functions encoded at the single-gene level show compositionality
+                and suffice to account for integrated function at the network
+                level. We discuss these examples both from a
+                biological-experimental point of view and from a computer
+                science-informational point of view, as both illuminate
+                principles of how the regulatory genome works.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="OCR-based image features for biomedical image and article classification: identifying documents relevant to cis-regulatory elements"
+            blurb={`Images form a significant and useful source of information in
+            published biomedical articles, which is still under-utilized in
+            biomedical document classification and retrieval. Much current
+            work on biomedical image retrieval and classification employs
+            simple, standard image features such as gray scale histograms
+            and edge direction to represent and classify images. We have
+            used such features as well to classify images in our early work
+            [5], where we used image-class-tags to represent and classify
+            articles.`}
+        >
+            <p>
+                Images form a significant and useful source of information in
+                published biomedical articles, which is still under-utilized in
+                biomedical document classification and retrieval. Much current
+                work on biomedical image retrieval and classification employs
+                simple, standard image features such as gray scale histograms
+                and edge direction to represent and classify images. We have
+                used such features as well to classify images in our early work
+                [5], where we used image-class-tags to represent and classify
+                articles.
+            </p>
+            <p>
+                In the work presented here we focus on a different literature
+                classification task, motivated by the need to identify articles
+                discussing cis-regulatory elements and modules in the context of
+                understanding complex gene-networks. The curators who try to
+                identify such articles in the vast literature use as a major cue
+                a certain type of image in which the conserved cis-regulatory
+                region on the DNA is shown. Our experiments show that
+                automatically identifying such images using common image
+                features (like those mentioned above) can be highly error prone.
+                However, using Optical Character Recognition (OCR) to extract
+                alphabet characters from images, calculating character
+                distribution and using the distribution parameters as image
+                features, allows us to form a novel representation of images,
+                and identify DNA-content in images with high precision and
+                recall (over 0.9). Utilizing the occurrence of such DNA-rich
+                images within articles, we train a classifier that identifies
+                articles pertaining to cis-regulatory elements with a similarly
+                high precision and recall. The use of OCR-based image features
+                has much potential beyond the current task, to identify other
+                types of biomedical sequence-based images showing DNA, RNA and
+                proteins. Moreover, the ability to automatically identify such
+                images has much potential to be widely applicable in other
+                important biomedical document classification tasks.
+            </p>
+        </Abstract>
     </div>
 
     <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">

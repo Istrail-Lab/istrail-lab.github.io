@@ -23,6 +23,7 @@ export const publications: Publication[] = [
         title: "Combinatorial and Statistical Predictions of Gene Expression from Haplotype Sequence",
         journal: "Bioinformatics",
         year: 2020,
+        pdf: "https://academic.oup.com/bioinformatics/article/36/Supplement_1/i194/5870481",
         doi: "https://doi.org/10.1093/bioinformatics/btaa318",
         tags: ["snp"],
     },

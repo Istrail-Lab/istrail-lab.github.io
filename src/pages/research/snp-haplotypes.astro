@@ -1,17 +1,170 @@
 ---
-import EssayCard from "@/components/EssayCard";
-import ResearchLayout from "@/layouts/ResearchLayout.astro";
+import Abstract from "@/components/Abstract";
 import BlockQuote from "@/components/BlockQuote";
+import EssayCard from "@/components/EssayCard";
 import { publications } from "@/components/publicationList/publications";
+import ResearchLayout from "@/layouts/ResearchLayout.astro";
 
-const relevantPapers = publications.filter((paper) =>
+export const relevantPapers = publications.filter((paper) =>
     paper.tags.includes("snp")
 );
 ---
 
 <ResearchLayout title="SNPs and Haplotypes">
-    <div slot="abstract" class="grid gap-2">
-        <p>Coming soon!</p>
+    <div slot="abstract" class="grid gap-4">
+        <Abstract
+            client:load
+            title="Combinatorial and statistical prediction of gene expression from haplotype sequence"
+            blurb={`Genome-wide association studies (GWAS) have discovered thousands
+            of significant genetic effects on disease phenotypes. By
+            considering gene expression as the intermediary between genotype
+            and disease phenotype, expression quantitative trait loci
+            studies have interpreted many of these variants by their
+            regulatory effects on gene expression. However, there remains a
+            considerable gap between genotype-to-gene expression association
+            and genotype-to-gene expression prediction. Accurate prediction
+            of gene expression enables gene-based association studies to be
+            performed post hoc for existing GWAS, reduces multiple testing
+            burden, and can prioritize genes for subsequent experimental
+            investigation.`}
+        >
+            <p>
+                Genome-wide association studies (GWAS) have discovered thousands
+                of significant genetic effects on disease phenotypes. By
+                considering gene expression as the intermediary between genotype
+                and disease phenotype, expression quantitative trait loci
+                studies have interpreted many of these variants by their
+                regulatory effects on gene expression. However, there remains a
+                considerable gap between genotype-to-gene expression association
+                and genotype-to-gene expression prediction. Accurate prediction
+                of gene expression enables gene-based association studies to be
+                performed post hoc for existing GWAS, reduces multiple testing
+                burden, and can prioritize genes for subsequent experimental
+                investigation.
+            </p>
+            <p>
+                In this work, we develop gene expression prediction methods that
+                relax the independence and additivity assumptions between
+                genetic markers. First, we consider gene expression prediction
+                from a regression perspective and develop the HAPLEXR algorithm
+                which combines haplotype clusterings with allelic dosages.
+                Second, we introduce the new gene expression classification
+                problem, which focuses on identifying expression groups rather
+                than continuous measurements; we formalize the selection of an
+                appropriate number of expression groups using the principle of
+                maximum entropy. Third, we develop the HAPLEXD algorithm that
+                models haplotype sharing with a modified suffix tree data
+                structure and computes expression groups by spectral clustering.
+                In both models, we penalize model complexity by prioritizing
+                genetic clusters that indicate significant effects on
+                expression. We compare HAPLEXR and HAPLEXD with three
+                state-of-the-art expression prediction methods and two novel
+                logistic regression approaches across five GTEx v8 tissues.
+                HAPLEXD exhibits significantly higher classification accuracy
+                overall; HAPLEXR shows higher prediction accuracy on
+                approximately half of the genes tested and the largest number of
+                best predicted genes (⁠r2>0.1 ⁠) among all methods. We show that
+                variant and haplotype features selected by HAPLEXR are smaller
+                in size than competing methods (and thus more interpretable) and
+                are significantly enriched in functional annotations related to
+                gene regulation. These results demonstrate the importance of
+                explicitly modeling non-dosage dependent and intragenic
+                epistatic effects when predicting expression.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="Tumor Haplotype Assembly Algorithms for Cancer Genomics"
+            blurb="The growing availability of inexpensive high-throughput sequence data is enabling researchers to sequence tumor populations within a single individual at high coverage. But, cancer genome sequence evolution and mutational phenomena like driver mutations and gene fusions are difficult to investigate without first reconstructing tumor haplotype sequences. Haplotype assembly of single individual tumor populations is an exceedingly difficult task complicated by tumor haplotype heterogeneity, tumor or normal cell sequence contamination, polyploidy, and complex patterns of variation. While computational and experimental haplotype phasing of diploid genomes has seen much progress in recent years, haplotype assembly in cancer genomes remains uncharted territory."
+        >
+            <p>
+                The growing availability of inexpensive high-throughput sequence
+                data is enabling researchers to sequence tumor populations
+                within a single individual at high coverage. But, cancer genome
+                sequence evolution and mutational phenomena like driver
+                mutations and gene fusions are difficult to investigate without
+                first reconstructing tumor haplotype sequences. Haplotype
+                assembly of single individual tumor populations is an
+                exceedingly difficult task complicated by tumor haplotype
+                heterogeneity, tumor or normal cell sequence contamination,
+                polyploidy, and complex patterns of variation. While
+                computational and experimental haplotype phasing of diploid
+                genomes has seen much progress in recent years, haplotype
+                assembly in cancer genomes remains uncharted territory.
+            </p>
+            <p>
+                In this work, we describe HapCompass-Tumor a computational
+                modeling and algorithmic framework for haplotype assembly of
+                copy number variable cancer genomes containing haplotypes at
+                different frequencies and complex variation. We extend our
+                polyploid haplotype assembly model and present novel algorithms
+                for (1) complex variations, including copy number changes, as
+                varying numbers of disjoint paths in an associated graph, (2)
+                variable haplotype frequencies and contamination, and (3)
+                computation of tumor haplotypes using simple cycles of the
+                compass graph which constrain the space of haplotype assembly
+                solutions. The model and algorithm are implemented in the
+                software package HapCompass-Tumor which is available for
+                download from http://www.brown.edu/Research/Istrail_Lab/.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="Tractatus: An Exact and Subquadratic Algorithm for Inferring Identical-by-Descent Multi-shared Haplotype Tracts"
+            blurb={`In this work we present graph theoretic algorithms for the
+            identification of all identical-by-descent (IBD) multi-shared
+            haplotype tracts for an m × n haplotype matrix. We introduce
+            Tractatus, an exact algorithm for computing all IBD haplotype tracts
+            in time linear in the size of the input, O(mn).`}
+        >
+            In this work we present graph theoretic algorithms for the
+            identification of all identical-by-descent (IBD) multi-shared
+            haplotype tracts for an m × n haplotype matrix. We introduce
+            Tractatus, an exact algorithm for computing all IBD haplotype tracts
+            in time linear in the size of the input, O(mn). Tractatus resolves a
+            long standing open problem, breaking optimally the (worst-case)
+            quadratic time barrier of O(m 2 n) of previous methods often cited
+            as a bottleneck in haplotype analysis of genome-wide association
+            study-sized data. This advance in algorithm efficiency makes an
+            impact in a number of areas of population genomics rooted in the
+            seminal Li-Stephens framework for modeling multi-loci linkage
+            disequilibrium (LD) patterns with applications to the estimation of
+            recombination rates, imputation, haplotype-based LD mapping, and
+            haplotype phasing. We extend the Tractatus algorithm to include
+            computation of haplotype tracts with allele mismatches and shared
+            homozygous haplotypes in a set of genotypes. Lastly, we present a
+            comparison of algorithmic runtime, power to infer IBD tracts, and
+            false positive rates for simulated data and computations of
+            homozygous haplotypes in genome-wide association study data of
+            autism. The Tractatus algorithm is available for download at
+            http://www.brown.edu/Research/Istrail_Lab/ .
+        </Abstract>
+        <Abstract
+            client:load
+            title="Pathway-based genetic analysis of preterm birth"
+            blurb={`Preterm birth in the United States is now 12%. Multiple genes, gene
+            networks, and variants have been associated with this disease. Using
+            a custom database for preterm birth (dbPTB) with a refined set of
+            genes extensively curated from literature and biological databases,
+            we analyzed GWAS of preterm birth for complete genotype data on
+            nearly 2000 preterm and term mothers.`}
+        >
+            Preterm birth in the United States is now 12%. Multiple genes, gene
+            networks, and variants have been associated with this disease. Using
+            a custom database for preterm birth (dbPTB) with a refined set of
+            genes extensively curated from literature and biological databases,
+            we analyzed GWAS of preterm birth for complete genotype data on
+            nearly 2000 preterm and term mothers. We used both the curated genes
+            and a genome-wide approach to carry out a pathway-based analysis.
+            There were 19 significant pathways, which withstood FDR correction
+            for multiple testing that were identified using both the curated
+            genes and the genome-wide approach. The analysis based on the
+            curated genes was more significant than genome-wide in 15 out of 19
+            pathways. This approach demonstrates the use of a validated set of
+            genes, in the analysis of otherwise unsuccessful GWAS data, to
+            identify gene–gene interactions in a way that enhances statistical
+            power and discovery.
+        </Abstract>
     </div>
 
     <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">

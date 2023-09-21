@@ -3,6 +3,7 @@ import EssayCard from "@/components/EssayCard";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
 import BlockQuote from "@/components/BlockQuote";
 import { publications } from "@/components/publicationList/publications";
+import Abstract from "@/components/Abstract";
 
 const relevantPapers = publications.filter((paper) =>
     paper.tags.includes("gwas")
@@ -10,8 +11,163 @@ const relevantPapers = publications.filter((paper) =>
 ---
 
 <ResearchLayout title="Bioinformatics and GWAS">
-    <div slot="abstract" class="grid gap-2">
-        <p>Coming soon!</p>
+    <div slot="abstract" class="grid gap-4">
+        <Abstract
+            client:load
+            title="Tumor Haplotype Assembly Algorithms for Cancer Genomics"
+            blurb="The growing availability of inexpensive high-throughput sequence data is enabling researchers to sequence tumor populations within a single individual at high coverage. But, cancer genome sequence evolution and mutational phenomena like driver mutations and gene fusions are difficult to investigate without first reconstructing tumor haplotype sequences. Haplotype assembly of single individual tumor populations is an exceedingly difficult task complicated by tumor haplotype heterogeneity, tumor or normal cell sequence contamination, polyploidy, and complex patterns of variation. While computational and experimental haplotype phasing of diploid genomes has seen much progress in recent years, haplotype assembly in cancer genomes remains uncharted territory."
+        >
+            <p>
+                The growing availability of inexpensive high-throughput sequence
+                data is enabling researchers to sequence tumor populations
+                within a single individual at high coverage. But, cancer genome
+                sequence evolution and mutational phenomena like driver
+                mutations and gene fusions are difficult to investigate without
+                first reconstructing tumor haplotype sequences. Haplotype
+                assembly of single individual tumor populations is an
+                exceedingly difficult task complicated by tumor haplotype
+                heterogeneity, tumor or normal cell sequence contamination,
+                polyploidy, and complex patterns of variation. While
+                computational and experimental haplotype phasing of diploid
+                genomes has seen much progress in recent years, haplotype
+                assembly in cancer genomes remains uncharted territory.
+            </p>
+            <p>
+                In this work, we describe HapCompass-Tumor a computational
+                modeling and algorithmic framework for haplotype assembly of
+                copy number variable cancer genomes containing haplotypes at
+                different frequencies and complex variation. We extend our
+                polyploid haplotype assembly model and present novel algorithms
+                for (1) complex variations, including copy number changes, as
+                varying numbers of disjoint paths in an associated graph, (2)
+                variable haplotype frequencies and contamination, and (3)
+                computation of tumor haplotypes using simple cycles of the
+                compass graph which constrain the space of haplotype assembly
+                solutions. The model and algorithm are implemented in the
+                software package HapCompass-Tumor which is available for
+                download from http://www.brown.edu/Research/Istrail_Lab/.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="Intellectual Disability Is Associated with Increased Runs of Homozygosity in Simplex Autism"
+            blurb={`Intellectual disability (ID), often attributed to
+            autosomal-recessive mutations, occurs in 40% of autism spectrum
+            disorders (ASDs). For this reason, we conducted a genome-wide
+            analysis of runs of homozygosity (ROH) in simplex ASD-affected
+            families consisting of a proband diagnosed with ASD and at least one
+            unaffected sibling.`}
+        >
+            Intellectual disability (ID), often attributed to
+            autosomal-recessive mutations, occurs in 40% of autism spectrum
+            disorders (ASDs). For this reason, we conducted a genome-wide
+            analysis of runs of homozygosity (ROH) in simplex ASD-affected
+            families consisting of a proband diagnosed with ASD and at least one
+            unaffected sibling. In these families, probands with an IQ ≤ 70 show
+            more ROH than their unaffected siblings, whereas probands with an IQ
+            > 70 do not show this excess. Although ASD is far more common in
+            males than in females, the proportion of females increases with
+            decreasing IQ. Our data do support an association between ROH burden
+            and autism diagnosis in girls; however, we are not able to show that
+            this effect is independent of low IQ. We have also discovered
+            several autism candidate genes on the basis of finding (1) a single
+            gene that is within an ROH interval and that is recurrent in autism
+            or (2) a gene that is within an autism ROH block and that harbors a
+            homozygous, rare deleterious variant upon analysis of
+            exome-sequencing data. In summary, our data suggest a distinct
+            genetic architecture for participants with autism and co-occurring
+            intellectual disability and that this architecture could involve a
+            role for recessively inherited loci for this autism subgroup.
+        </Abstract>
+        <Abstract
+            client:load
+            title="A quantitative reference transcriptome for Nematostella vectensis earlyembryonic development: a pipeline for de novo assembly in emergingmodel systems"
+            blurb="The de novo assembly of transcriptomes from short shotgun sequencesraises challenges due to random and non-random sequencing biases andinherent transcript complexity. We sought to define a pipeline for denovo transcriptome assembly to aid researchers working withemerging model systems where well annotated genome assemblies are notavailable as a reference."
+        >
+            <p>
+                The de novo assembly of transcriptomes from short shotgun
+                sequencesraises challenges due to random and non-random
+                sequencing biases andinherent transcript complexity. We sought
+                to define a pipeline for denovo transcriptome assembly to aid
+                researchers working withemerging model systems where well
+                annotated genome assemblies are notavailable as a reference. To
+                detail this experimental and computationalmethod, we used early
+                embryos of the sea anemone, Nematostellavectensis, an emerging
+                model system for studies of animal body planevolution. We
+                performed RNA-seq on embryos up to 24 h of developmentusing
+                Illumina HiSeq technology and evaluated independent de
+                novoassembly methods. The resulting reads were assembled using
+                either theTrinity assembler on all quality controlled reads or
+                both the Velvet andOases assemblers on reads passing a stringent
+                digital normalization filter.A control set of mRNA standards
+                from the National Institute of Standards andTechnology (NIST)
+                was included in our experimental pipeline to invest
+                ourtranscriptome with quantitative information on absolute
+                transcript levelsand to provide additional quality control.
+            </p>
+            <p>
+                We generated >200 million paired-end reads from directional cDNA
+                librariesrepresenting well over 20 Gb of sequence. The Trinity
+                assembler pipeline,including preliminary quality control steps,
+                resulted in more than 86% ofreads aligning with the reference
+                transcriptome thus generated.Nevertheless, digital normalization
+                combined with assembly by Velvet andOases required far less
+                computing power and decreased processing time whilestill mapping
+                82% of reads. We have made the raw sequencing reads andassembled
+                transcriptome publically available.
+            </p>
+            <p>
+                Nematostella vectensis was chosen for its strategic position in
+                thetree of life for studies into the origins of the animal body
+                plan, however, the challenge of reference-free transcriptome
+                assembly is relevant to allsystems for which well annotated gene
+                models and independently verifiedgenome assembly may not be
+                available. To navigate this new territory, wehave constructed a
+                pipeline for library preparation and computationalanalysis for
+                de novo transcriptome assembly. The gene modelsdefined by this
+                reference transcriptome define the set of genes transcribedin
+                early Nematostella development and will provide a valuable
+                dataset for further gene regulatory network investigations.
+            </p>
+        </Abstract>
+        <Abstract
+            client:load
+            title="Haplotype assembly in polyploid genomes and identical by descent shared tracts"
+            blurb="The de novo assembly of transcriptomes from short shotgun sequencesraises challenges due to random and non-random sequencing biases andinherent transcript complexity. We sought to define a pipeline for denovo transcriptome assembly to aid researchers working withemerging model systems where well annotated genome assemblies are notavailable as a reference."
+        >
+            <p>
+                Genome-wide haplotype reconstruction from sequence data, or
+                haplotype assembly, is at the center of major challenges in
+                molecular biology and life sciences. For complex eukaryotic
+                organisms like humans, the genome is vast and the population
+                samples are growing so rapidly that algorithms processing
+                high-throughput sequencing data must scale favorably in terms of
+                both accuracy and computational efficiency. Furthermore, current
+                models and methodologies for haplotype assembly (i) do not
+                consider individuals sharing haplotypes jointly, which reduces
+                the size and accuracy of assembled haplotypes, and (ii) are
+                unable to model genomes having more than two sets of homologous
+                chromosomes (polyploidy). Polyploid organisms are increasingly
+                becoming the target of many research groups interested in the
+                genomics of disease, phylogenetics, botany and evolution but
+                there is an absence of theory and methods for polyploid
+                haplotype reconstruction.
+            </p>
+            <p>
+                In this work, we present a number of results, extensions and
+                generalizations of compass graphs and our HapCompass framework.
+                We prove the theoretical complexity of two haplotype assembly
+                optimizations, thereby motivating the use of heuristics.
+                Furthermore, we present graph theory–based algorithms for the
+                problem of haplotype assembly using our previously developed
+                HapCompass framework for (i) novel implementations of haplotype
+                assembly optimizations (minimum error correction), (ii) assembly
+                of a pair of individuals sharing a haplotype tract identical by
+                descent and (iii) assembly of polyploid genomes. We evaluate our
+                methods on 1000 Genomes Project, Pacific Biosciences and
+                simulated sequence data.
+            </p>
+        </Abstract>
     </div>
 
     <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">
