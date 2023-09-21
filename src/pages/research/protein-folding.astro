@@ -4,6 +4,15 @@ import ResearchLayout from "@/layouts/ResearchLayout.astro";
 import BlockQuote from "@/components/BlockQuote";
 import { publications } from "@/components/publicationList/publications";
 import Abstract from "@/components/Abstract";
+import Carousel from "@/components/Carousel";
+
+import p1 from "@/assets/protein-folding/1.png";
+import p2 from "@/assets/protein-folding/2.png";
+import p3 from "@/assets/protein-folding/3.png";
+import p4 from "@/assets/protein-folding/4.png";
+import p5 from "@/assets/protein-folding/5.png";
+import p6 from "@/assets/protein-folding/6.png";
+import p7 from "@/assets/protein-folding/7.png";
 
 const relevantPapers = publications.filter((paper) =>
     paper.tags.includes("protein-folding")
@@ -157,6 +166,7 @@ const relevantPapers = publications.filter((paper) =>
             would be expected if residue hydrophobicities were independent of
             those of nearby residues in the sequence.
         </Abstract>
+        <Carousel client:load images={[p1, p2, p3, p4, p5, p6, p7]} />
     </div>
 
     <div slot="quote" class="grid gap-2">
