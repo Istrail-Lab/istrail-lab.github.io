@@ -159,13 +159,258 @@ const relevantPapers = publications.filter((paper) =>
         </Abstract>
     </div>
 
-    <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">
-        <p>
-            How famous physicists and mathematicians commented in the 1950-1960s
-            on an NP-complete problem before the concept of NP-completeness was
-            discovered in 1971 by Stephen Cook and Leonid Levin.
-        </p>
-    </BlockQuote> -->
+    <div slot="quote" class="grid gap-2">
+        <BlockQuote
+            author="Ken Dill"
+            journal="Folding proteins fast (Science 1995)"
+        >
+            <p>...a very nice step forward in the computerology of proteins.</p>
+        </BlockQuote>
+        <BlockQuote
+            author="Freeman Dyson"
+            journal="Birds and frogs (Notics of the American Mathematical Society 2009)"
+        >
+            <p>
+                The subject of chaos is characterized by an abundance of
+                quantitative data, an unending supply of beautiful pictures, and
+                a shortage of rigorous theorems. Rigorous theorems are the best
+                way to give a subject intellectual depth and precision. Until
+                you can prove rigorous theorems, you do not fully understand the
+                meaning of your concepts.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="John von Neumann"
+            journal="The mathematician (The Works of the Mind 1947)"
+        >
+            <p>
+                The most vitally characteristic fact about mathematics is, in my
+                opinion, its quite peculiar relationship to the natural sciences
+                ... In modern empirical sciences it has become more and more a
+                major criterion of success whether they have become accessible
+                to the mathematical method or to the near-mathematical methods
+                of physics. Indeed, throughout the natural sciences an unbroken
+                chain of successive pseudomorphoses, all of them pressing toward
+                mathematics, and almost identified with the idea of scientific
+                progress, has become more and more evident. Biology becomes
+                increasingly pervaded by chemistry and physics, chemistry by
+                experimental and theoretical physics, and physics by very
+                mathematical forms of theoretical physics.
+                <br />
+                There is a quite peculiar duplicity in the nature of mathematics.
+                One has to realize this duplicity, to accept it, and to assimilate
+                it into one's thinking on the subject. This double face is the face
+                of mathematics, and I do not believe that any simplified, unitarian
+                view of the thing is possible without sacrificing the essence.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="E. Shakhnovich"
+            journal="Modeling protein folding: the beauty and power of simplicity (Folding and Design 1996)"
+        >
+            <p>
+                Protein folding is a fascinating cross-disciplinary field that
+                attracts scientists with different backgrounds and scientific
+                cultures. They bring to the protein folding field the models and
+                the way of thinking that are accepted of their respective
+                background fields. Such diversity of scientific cultures is a
+                great virtue of the protein folding field, in which physics,
+                chemistry, biology, and mathematics meet. It is important for
+                our cross-disciplinary field to discuss with balance both strong
+                points and limitations of different approaches.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Eugene Shakhnovich"
+            journal="Modeling protein folding: the beauty and power of simplicity (Folding and Design 1996)"
+        >
+            <p>
+                Protein folding is a fascinating cross-disciplinary field that
+                attracts scientists with different backgrounds and scientific
+                cultures. They bring to the protein folding field the models and
+                the way of thinking that are accepted of their respective
+                background fields. Such diversity of scientific cultures is a
+                great virtue of the protein folding field, in which physics,
+                chemistry, biology, and mathematics meet. It is important for
+                our cross-disciplinary field to discuss with balance both strong
+                points and limitations of different approaches.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Ken Dill"
+            journal="The protein folding problem: when will it be solved?(Current Opinion in Structural Biology 2007)"
+        >
+            <p>
+                The protein folding problem is three different problems: the
+                folding code – the thermodynamic question of how a native
+                structure results from the interatomic forces acting on an amino
+                acid sequence; protein structure prediction – the computational
+                problem of how to predict the native structure of a protein from
+                its amino acid sequence; and the folding speed (Levinthal’s
+                paradox) – the kinetic question of how a protein can fold so
+                fast... Current knowledge of the folding codes is sufficient to
+                guide the successful design of new proteins and new materials.
+                Current computer algorithms are now predicting the native
+                structures of small simple proteins remarkably accurately,
+                contributing to drug discovery and proteomics. Even once
+                intractable Levinthal puzzle now seems to have a very simple
+                answer...
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Jonathan King"
+            journal="Protein folding and misfolding (American Scientist 2002)"
+        >
+            <p>
+                The failure of protein-folding processes, both within cells (in
+                vivo) and within test tubes or industrial vats (in vitro),
+                causes serious difficulties both for biomedical research and for
+                the biotechnology industry. Protein chains that fail to fold
+                properly aggregate into an insoluble and inactive state... There
+                is increased recognition that some human diseases are associated
+                with aberrations or defects in protein chain folding. These
+                include Alzheimer’s and Huntington’s and cystic fibrosis.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Peter Kollman"
+            journal="Protein folding: from lattice to all-atom (IBM Systems Journal 2001)"
+        >
+            <p>
+                Understanding the mechanism of protein folding is often called
+                the “second half” of genetics. Computational approaches have
+                been instrumental in the efforts. Simplified models have been
+                applied to understand the physical principles governing the
+                folding processes and will continue to play important roles in
+                the endeavor.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="John von Neumann"
+            journal="Method in physical sciences (The Unity of Knowledge 1995)"
+        >
+            <p>
+                We must emphasize a statement which I am sure you have heard
+                before, but which must be repeated again and again. It is that
+                the sciences do not try to explain, they hardly even try to
+                interpret, they mainly make models. By a model, I mean a
+                mathematical construct which, with the addition of certain
+                verbal interpretations, describes the observed phenomena.
+                Furthermore, it must satisfy certain aesthetic criteria, that
+                is, in relation to how much it describes, it must be rather
+                simple. Since one cannot tell exactly how 'simple' simple is...
+                Simplicity is largely a matter of historical background, of
+                previous conditioning, of antecedents, of customary procedures,
+                and it is very much a function of what is explained by it.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Michael Levitt and Arieh Warshel"
+            journal="Computer simulation of protein folding (Nature 1975)"
+        >
+            <p>
+                It seems remarkable that so simple a model based on
+                time-averaged forces can account for the stability and folding
+                of a molecule as complicated as a protein. Looking at known
+                protein conformations closely, one is struck by the precise
+                geometry of the interatomic contacts that stabilize the
+                molecule: all possible interior hydrogen bonds are well formed,
+                and many of the nonpolar side chains interlock to form a
+                close-packed interior. ... [T]he forces responsible for this
+                precise geometry... cause the chain to fold into the approximate
+                shape rapidly and without having to pass through many local
+                minima... Although calculating the energy of the all-atom
+                molecule would be time-consuming, one would have the great
+                advantage of starting close to the right conformation... The
+                general concept of using a simple model... when the detailed
+                forces are too complicated has many potential applications...
+                Such a hierarchical approach might eventually lead to an
+                understanding and simulation of very complicated biological
+                assembly processes.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Eugene Shakhnovich"
+            journal="Modeling pretin folding: the beauty and power of simplicity (Folding and Design 1996)"
+        >
+            <p>
+                Folding is an intrinsically statistical phenomenon and no
+                conclusion can be derived from a single folding or unfolding
+                trajectory. ... Lattice and other simplified analytical models
+                are the statistical mechanician’s contribution to the protein
+                folding... their intimate connection with statistical
+                mechanics... is very important as it often allows us to compare
+                simulation with statistical-mechanical analytical theories.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Martin Karplus"
+            journal="Computational complexity, protein structure prediction, and the Levinthal paradox (The Protein Folding Problem and Tertiary Structure Prediction 1994)"
+        >
+            <p>
+                The central question addressed in this review is this: Is there
+                some clever algorithm, yet to be invented, that can find the
+                global minimum of a protein’s potential-energy function reliably
+                and reasonably quickly? Or is there something intrinsic to the
+                problem that prevents such a solution from existing?... Is there
+                an approximation algorithm for global potential-energy
+                minimization?... To our knowledge, the possible existence of an
+                approximation algorithm for protein structure prediction has not
+                been addressed... Such an approximation algorithm might be of
+                significant practical use in protein structure prediction,
+                because exactness is not a central issue.
+            </p>
+        </BlockQuote>
+        <BlockQuote author="Aristotle" journal="Nichomachean ethics (319 BC)">
+            <p>
+                It is the mark of an instructed mind to rest satisfied with the
+                degree of precision which the nature of the subjects permits and
+                not seek an exactness where only an approximation of the truth
+                is possible.
+            </p>
+        </BlockQuote>
+        <BlockQuote author="Mark Kac and Stan Ulam" journal="(1968)">
+            <p>
+                The exactness of mathematics is well illustrated by proofs of
+                impossibility. When asserting that doubling the cube... is
+                impossible, the statement does not merely refer to a temporary
+                limitation of human ability to perform this feat. It goes far
+                beyond this, for it proclaims that never, no matter what, will
+                anybody ever be able to [double the cube]. No other science, or
+                for that matter no other discipline of human endeavor, can even
+                contemplate anything of such finality.
+            </p>
+        </BlockQuote>
+        <BlockQuote author="Christos Papadimitriou" journal="(1995)">
+            <p>
+                For a quarter of a century now, NP-completeness has been
+                computer science’s favorite paradigm, fad, punching bag,
+                buzzword, alibi, and intellectual export... pervasive and
+                contagious.
+            </p>
+        </BlockQuote>
+        <BlockQuote
+            author="Christian Anfinsen"
+            journal="Principles that govern the folding of protein chains (Science 1973)"
+        >
+            <p>
+                The true elegance of this consequence of natural selection was
+                dramatized by the ribonucleases work since the refolding of this
+                molecule after full denaturation by reductive cleavage of its
+                four disulfide bonds... required that only 1 of 10^5 possible
+                pairings of eight sulfhyryl groups to form four disulfide
+                linkages take place...to establish... the “thermodynamic
+                hypothesis.” This hypothesis states that the three-dimensional
+                structure of a native protein in its normal physiological milieu
+                (solvent, pH, ionic strength, presence of other components such
+                as metal ions or prosthetic groups, temperature, and other) is
+                the one in which the Gibbs free energy of the whole system is
+                lowest; that is, that the native conformation is determined by
+                its totality of interatomic interactions and hence by the amino
+                acid sequence, in a given environment.
+            </p>
+        </BlockQuote>
+    </div>
 
     <ul slot="relevant-papers" class="grid gap-4">
         {
