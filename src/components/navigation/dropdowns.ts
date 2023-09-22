@@ -65,9 +65,9 @@ export const dropdowns: Dropdown[] = [
         },
     },
     {
-        dropdownName: "Memoriam",
+        dropdownName: "In Memoriam",
         dropdownItems: {
-            "Paul Erdos": "",
+            "Paul Erdos": "/in-memoriam/paul-erdos",
             "Edger Dijkstra": "",
             "Alan Cobham": "",
             "John Conway": "",
