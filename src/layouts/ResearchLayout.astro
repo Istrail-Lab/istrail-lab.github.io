@@ -6,7 +6,6 @@ export interface Props {
 const { title } = Astro.props;
 
 import Navbar from "../components/navigation/Navbar.astro";
-import Sidebar from "../components/navigation/Sidebar.astro";
 import Footer from "../components/navigation/Footer.astro";
 import "../styles/globals.css";
 ---
@@ -21,30 +20,20 @@ import "../styles/globals.css";
         <meta name="generator" content={Astro.generator} />
         <title>Istrail Lab | {title}</title>
     </head>
-    <body class="drawer drawer-end h-full">
-        <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content flex flex-col">
-            <Navbar />
-            <div class="flex-1">
-                <main
-                    style="max-width: min(100ch, 100% - 4rem)"
-                    class="mx-auto"
-                >
-                    <h2 class="text-3xl font-bold pt-4">{title}</h2>
-                    <h3 class="text-2xl font-bold py-8">Research Summary</h3>
-                    <slot name="abstract" />
+    <body class="h-full">
+        <Navbar />
+        <div class="flex-1">
+            <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
+                <h2 class="text-3xl font-bold pt-4">{title}</h2>
+                <h3 class="text-2xl font-bold py-8">Research Summary</h3>
+                <slot name="abstract" />
 
-                    <slot name="quote" />
+                <slot name="quote" />
 
-                    <h3 class="text-2xl font-bold py-8">Relevant Papers</h3>
-                    <slot name="relevant-papers" />
-                </main>
-            </div>
+                <h3 class="text-2xl font-bold py-8">Relevant Papers</h3>
+                <slot name="relevant-papers" />
+            </main>
         </div>
         <Footer />
     </body>
-    <div class="drawer-side">
-        <label for="nav-drawer" class="drawer-overlay"></label>
-        <Sidebar />
-    </div>
 </html>

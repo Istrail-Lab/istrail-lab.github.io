@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { CSSProperties, PropsWithChildren, useState } from "react";
 
 const Abstract = ({
@@ -16,14 +17,14 @@ const Abstract = ({
                 {title}
             </h3>
             {showAbstract ? children : blurb}
-            <button
-                className="btn"
+            <Button
+                variant="outlined"
                 onClick={() => {
                     setShowAbstract(!showAbstract);
                 }}
             >
                 {showAbstract ? "Hide" : "See more"}
-            </button>
+            </Button>
         </div>
     );
 };

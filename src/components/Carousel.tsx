@@ -1,19 +1,15 @@
-import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
-import "@coreui/coreui/dist/css/coreui.min.css";
+import MUICarousel from "react-material-ui-carousel";
+import { Paper } from "@mui/material";
 
 const Carousel = ({ images }: { images: string[] }) => {
     return (
-        <CCarousel controls dark>
+        <MUICarousel>
             {images.map((image, index) => (
-                <CCarouselItem key={index}>
-                    <CImage
-                        className="mx-auto"
-                        src={image}
-                        alt={`slide ${index}`}
-                    />
-                </CCarouselItem>
+                <Paper key={index}>
+                    <img src={image} className="mx-auto h-80" />
+                </Paper>
             ))}
-        </CCarousel>
+        </MUICarousel>
     );
 };
 

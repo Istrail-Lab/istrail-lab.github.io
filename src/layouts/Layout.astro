@@ -6,7 +6,6 @@ export interface Props {
 const { title } = Astro.props;
 
 import Navbar from "../components/navigation/Navbar.astro";
-import Sidebar from "../components/navigation/Sidebar.astro";
 import Footer from "../components/navigation/Footer.astro";
 import "../styles/globals.css";
 import { Worker } from "@react-pdf-viewer/core";
@@ -22,23 +21,13 @@ import { Worker } from "@react-pdf-viewer/core";
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="drawer drawer-end h-full">
-        <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content flex flex-col">
-            <Navbar />
-            <div class="flex-1">
-                <main
-                    style="max-width: min(100ch, 100% - 4rem)"
-                    class="mx-auto"
-                >
-                    <slot />
-                </main>
-            </div>
+    <body class="h-full">
+        <Navbar />
+        <div class="flex-1">
+            <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
+                <slot />
+            </main>
         </div>
         <Footer />
     </body>
-    <div class="drawer-side">
-        <label for="nav-drawer" class="drawer-overlay"></label>
-        <Sidebar />
-    </div>
 </html>
