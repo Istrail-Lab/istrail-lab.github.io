@@ -166,7 +166,7 @@ const relevantPapers = publications.filter((paper) =>
             would be expected if residue hydrophobicities were independent of
             those of nearby residues in the sequence.
         </Abstract>
-        <Carousel client:load images={[p1, p2, p3, p4, p5, p6, p7]} />
+        <Carousel client:only="react" images={[p1, p2, p3, p4, p5, p6, p7]} />
     </div>
 
     <div slot="quote" class="grid gap-2">

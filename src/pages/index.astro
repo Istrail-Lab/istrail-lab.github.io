@@ -32,7 +32,7 @@ import Carousel from "@/components/Carousel";
         Science at Brown University.
     </p>
 
-    <Carousel client:load images={[p1, p2, p3, p4, p5, p6]} />
+    <Carousel client:only="react" images={[p1, p2, p3, p4, p5, p6]} />
 
     <div class="grid grid-cols-2 gap-4 md:grid-cols-5 py-8">
         <JournalCard img={humanGenome} title="The Human Genome" />
@@ -44,5 +44,5 @@ import Carousel from "@/components/Carousel";
         <JournalCard img={cisReg} title="cis-Regulatory Code" />
     </div>
 
-    <ResearchAccordion client:load />
+    <ResearchAccordion client:only="react" />
 </Layout>
