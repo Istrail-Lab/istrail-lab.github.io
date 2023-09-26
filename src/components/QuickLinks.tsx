@@ -1,28 +1,22 @@
+import type { HTMLProps } from "react";
+
+const Link = (props: HTMLProps<HTMLAnchorElement>) => {
+    return (
+        <a className="underline hover:text-blue-400" {...props}>
+            {props.children}
+        </a>
+    );
+};
+
 const QuickLinks = () => {
     return (
         <aside className="xl:flex flex-col gap-4 py-20 fixed hidden left-[5%] w-48">
             <h3 className="text-lg font-bold">Quick Links</h3>
-            <a className="underline hover:text-blue-400" href="/publications">
-                Publications
-            </a>
-            <a
-                className="underline hover:text-blue-400"
-                href="/sorin-istrail/grants"
-            >
-                Grants
-            </a>
-            <a className="underline hover:text-blue-400" href="/essays">
-                Essays
-            </a>
-            <a className="underline hover:text-blue-400" href="/media-coverage">
-                Media Coverage
-            </a>
-            <a
-                className="underline hover:text-blue-400"
-                href="/sorin-istrail/geneaology"
-            >
-                Advisor Geneaology
-            </a>
+            <Link href="/sorin-istrail">Sorin Istrail</Link>
+            <Link href="/sorin-istrail/teaching">Teaching</Link>
+            <Link href="/sorin-istrail/honors">Honors & Awards</Link>
+            <Link href="/sorin-istrail/grants">Grants</Link>
+            <Link href="/sorin-istrail/geneaology">Advisor Geneaology</Link>
         </aside>
     );
 };
