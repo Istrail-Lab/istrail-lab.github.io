@@ -23,7 +23,7 @@ const essays: Publication[] = [
         authors: ["Leon N. Cooper", "Sorin Istrail"],
         title: "Mental Experience and the Turing Test: This Double Face is the Face of Mathematics",
         year: 2012,
-        journal: "In Proceedings of the Turing Centenary Conference",
+        journal: "Proceedings of the Turing Centenary Conference",
         pdf: "/papers/Mental Experience and the Turing Test.pdf",
         tags: [],
     },
@@ -43,15 +43,7 @@ const essays: Publication[] = [
         pdf: "/papers/MarcusAxioms.pdf",
         tags: [],
     },
-    {
-        authors: ["Sorin Istrail"],
-        title: "Storytelling about Lighthouses: When Professor Dijkstra Slapped Me in the Quest for Beautiful Code",
-        journal: "Conduit",
-        volume: "19.1",
-        year: 2010,
-        pdf: "/papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
-        tags: [],
-    },
+
     {
         authors: [
             "Sorin Istrail",
@@ -64,24 +56,6 @@ const essays: Publication[] = [
         publisher: "International Press",
         year: 2009,
         pdf: "/papers/TributeBirthdayWaterman67.pdf",
-        tags: [],
-    },
-    {
-        authors: ["Sorin Istrail"],
-        title: "Storytelling about Lighthouses: Criticizing Professor Dijkstra Considered Harmless",
-        journal: "Conduit",
-        volume: "17.2",
-        year: 2008,
-        pdf: "/papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
-        tags: [],
-    },
-    {
-        authors: ["Sorin Istrail", "Tracie Sweeney"],
-        title: "Randomness is Beautiful: in Search of von Neumann",
-        journal: "Conduit",
-        volume: "9",
-        year: 2006,
-        pdf: "/papers/Randomness is Beautiful: in Search of von Neumann.pdf",
         tags: [],
     },
     {
@@ -126,8 +100,97 @@ const essays: Publication[] = [
 ---
 
 <Layout title="Istrail Lab | Essays">
-    <h2 class="flex-1 text-3xl font-bold pt-8">Essays</h2>
-    <div class="grid gap-4 py-4">
-        {essays.map((essay) => <EssayCard publication={essay} />)}
+    <h2 class="flex-1 text-3xl font-bold pt-8">Axioms</h2>
+    <div class="grid gap-6 py-4">
+        <div>
+            <h3 class="flex-1 text-2xl font-bold">John von Neumann</h3>
+            <div class="py-4">
+                <EssayCard
+                    publication={{
+                        authors: ["Sorin Istrail", "Tracie Sweeney"],
+                        title: "Randomness is Beautiful: in Search of von Neumann",
+                        journal: "Conduit",
+                        volume: "9",
+                        year: 2006,
+                        pdf: "/papers/Randomness is Beautiful: in Search of von Neumann.pdf",
+                        tags: [],
+                    }}
+                />
+            </div>
+        </div>
+
+        <div>
+            <h3 class="flex-1 text-2xl font-bold">Eric Davidson</h3>
+            <div class="py-4">
+                <EssayCard
+                    publication={{
+                        authors: ["Sorin Istrail"],
+                        title: "Eric Davidson - Master of the Universe",
+                        journal: "Developmental Biology",
+                        volume: "412",
+                        year: 2016,
+                        pdf: "/papers/EricDavidson-MasterOfTheUniverse-DevBiol2016 2.pdf",
+                        tags: [],
+                    }}
+                />
+            </div>
+        </div>
+
+        <div>
+            <h3 class="flex-1 text-2xl font-bold">Michael Waterman</h3>
+            <div class="py-4">
+                <EssayCard
+                    publication={{
+                        authors: ["Sorin Istrail"],
+                        title: "Mike Waterman in a National Treasure",
+                        journal:
+                            '"Michael Waterman\'s Contributions to Computational Biology and Bioinformatics" Journal of Computational Biology',
+                        volume: "29",
+                        number: "7",
+                        year: 2022,
+                        pdf: "/papers/EricDavidson-MasterOfTheUniverse-DevBiol2016 2.pdf",
+                        tags: [],
+                    }}
+                />
+            </div>
+        </div>
+
+        <div>
+            <h3 class="flex-1 text-2xl font-bold">Edsger W. Dijkstra</h3>
+            <div class="grid gap-4 py-4">
+                <EssayCard
+                    publication={{
+                        authors: ["Sorin Istrail"],
+                        title: "Storytelling about Lighthouses: Criticizing Professor Dijkstra Considered Harmless",
+                        journal: "Conduit",
+                        volume: "17.2",
+                        year: 2008,
+                        pdf: "/papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
+                        tags: [],
+                    }}
+                />
+                <EssayCard
+                    publication={{
+                        authors: ["Sorin Istrail"],
+                        title: "Storytelling about Lighthouses: When Professor Dijkstra Slapped Me in the Quest for Beautiful Code",
+                        journal: "Conduit",
+                        volume: "19.1",
+                        year: 2010,
+                        pdf: "/papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
+                        tags: [],
+                    }}
+                />
+            </div>
+        </div>
+
+        <div>
+            <h3 class="flex-1 text-2xl font-bold">Solomon Marcus</h3>
+            <div class="py-4"></div>
+        </div>
+
+        <h2 class="flex-1 text-3xl font-bold pt-8">Essays</h2>
+        <div class="grid gap-4 py-4">
+            {essays.map((essay) => <EssayCard publication={essay} />)}
+        </div>
     </div>
 </Layout>
