@@ -6,7 +6,7 @@ const HonorRollCard = ({ student }: { student: HonorRollStudent }) => {
             <h3 className="font-bold text-xl p-2">{student.name}</h3>
             <ul>
                 {student.achievements.map((achievement) => (
-                    <li>{achievement}</li>
+                    <li key={achievement}>{achievement}</li>
                 ))}
             </ul>
             <p className="italic p-2">{student.currentLocation}</p>
