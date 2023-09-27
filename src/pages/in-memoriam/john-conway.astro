@@ -1,0 +1,13 @@
+---
+import Carousel from "@/components/Carousel";
+import Layout from "@/layouts/Layout.astro";
+
+const images = (await Astro.glob("../../assets/john_conway/*.jpg")).map(
+    (image) => image.default as string
+);
+---
+
+<Layout title="Istrail Lab | John Conway">
+    <h2 class="text-2xl font-bold py-4">John Conway</h2>
+    <Carousel images={images} client:only="react" />
+</Layout>
