@@ -17,8 +17,8 @@ const HonorRollCard = ({ student }: { student: HonorRollStudent }) => {
 const HonorRollList = ({ students }: { students: HonorRollStudent[] }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {students.map((student) => (
-                <HonorRollCard key={student.name} student={student} />
+            {students.map((student, idx) => (
+                <HonorRollCard key={student.name + idx} student={student} />
             ))}
         </div>
     );
