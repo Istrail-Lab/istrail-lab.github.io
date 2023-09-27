@@ -163,7 +163,7 @@ const essays = [
 
     <div class="flex items-baseline">
         <h2 class="flex-1 text-2xl font-bold pt-8">Featured Essays</h2>
-        <a href="/essays">Read more</a>
+        <a class="underline hover:text-blue-400" href="/essays">Read more</a>
     </div>
     <div class="grid gap-4 py-4">
         {essays.map((essay) => <EssayCard publication={essay} />)}
