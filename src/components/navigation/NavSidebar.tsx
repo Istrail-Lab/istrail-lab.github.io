@@ -107,13 +107,18 @@ const NavSidebar = () => {
                         dropdownHeading="In Memoriam"
                         dropdownLinks={{
                             "Paul Erdos": "/in-memoriam/paul-erdos",
-                            "Edger Dijkstra": "",
-                            "Alan Cobham": "",
-                            "John Conway": "",
-                            "Eric Davidson": "",
-                            "Julie Nguyen Brown": "",
-                            "Freeman Dyson": "",
-                            "Ken Arrow": "",
+                            // "Edger Dijkstra": "",
+                            // "Alan Cobham": "",
+                            "John Conway": "/in-memoriam/john-conway",
+                            "Eric Davidson": "/in-memoriam/eric-davidson",
+                            // "Julie Nguyen Brown": "",
+                            // "Freeman Dyson": "",
+                            "Ken Arrow": "/in-memoriam/ken-arrow",
+                            "Solomon Marcus": "/in-memoriam/solomon-marcus",
+                            "Sergiu Rudeanu": "/in-memoriam/sergiu-rudeanu",
+                            "Dragos Vaida": "/in-memoriam/dragos-vaida",
+                            "Alberto Apostolico":
+                                "/in-memoriam/alberto-apostolico",
                         }}
                     />
                     <ListItemButton href="/essays">Essays</ListItemButton>
