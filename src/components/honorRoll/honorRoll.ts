@@ -38,7 +38,7 @@ export const students: HonorRollStudent[] = [
     {
         name: "Derek Aguiar",
         achievements: ["Second PhD student at Brown, graduated May 2014"],
-        currentLocation: "Postdoctoral Fellow at Princeton University",
+        currentLocation: "Assistant Professor at UConn",
     },
     {
         name: "Ryan Tarpine",
@@ -51,7 +51,7 @@ export const students: HonorRollStudent[] = [
             "Postdoctoral Fellow",
             "co-advised with Professor Rami Kantor MD, Brown Medical School and Professor Joe Hogan, School of Public Health, 2014",
         ],
-        currentLocation: "Senior Scientist at Pfizer Research",
+        currentLocation: "Google DeepMind",
     },
     {
         name: "Alper Uzun",
