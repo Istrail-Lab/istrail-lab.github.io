@@ -3,9 +3,16 @@ interface PositionCardProps {
     position: string;
     location: string;
     time: string;
+    href?: string;
 }
 
-const PositionCard = ({ img, position, location, time }: PositionCardProps) => {
+const PositionCard = ({
+    img,
+    position,
+    location,
+    time,
+    href,
+}: PositionCardProps) => {
     return (
         <div className="grid gap-2 text-center place-items-center">
             <h3
@@ -14,7 +21,9 @@ const PositionCard = ({ img, position, location, time }: PositionCardProps) => {
             >
                 {position}
             </h3>
-            <img className="h-44" src={img} />
+            <a className={href ? "hover:ring-4" : ""} href={href}>
+                <img className="h-44" src={img} />
+            </a>
             <div>
                 <p>{location}</p>
                 <p className="italic">{time}</p>

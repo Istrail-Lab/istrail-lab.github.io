@@ -35,13 +35,33 @@ import Carousel from "@/components/Carousel";
     <Carousel client:only="react" images={[p1, p2, p3, p4, p5, p6]} />
 
     <div class="grid grid-cols-2 gap-4 md:grid-cols-5 py-8">
-        <JournalCard img={humanGenome} title="The Human Genome" />
-        <JournalCard img={genomeAssemblies} title="Genome Assemblies" />
+        <JournalCard
+            img={humanGenome}
+            title="The Human Genome"
+            href="https://www.science.org/doi/10.1126/science.1058040"
+        />
+        <JournalCard
+            img={genomeAssemblies}
+            title="Genome Assemblies"
+            href="https://doi.org/10.1073/pnas.0307971100"
+        />
         <div class="hidden md:block">
-            <JournalCard img={immunePeptidomics} title="Immune Peptidomics" />
+            <JournalCard
+                img={immunePeptidomics}
+                title="Immune Peptidomics"
+                href="https://doi.org/10.1073/pnas.0404740101"
+            />
         </div>
-        <JournalCard img={seaUrchinGenome} title="The Sea Urchin Genome" />
-        <JournalCard img={cisReg} title="cis-Regulatory Code" />
+        <JournalCard
+            img={seaUrchinGenome}
+            title="The Sea Urchin Genome"
+            href="https://doi.org/10.1126/science.1133609"
+        />
+        <JournalCard
+            img={cisReg}
+            title="cis-Regulatory Code"
+            href="https://doi.org/10.1073/pnas.0409624102"
+        />
     </div>
 
     <ResearchAccordion client:only="react" />

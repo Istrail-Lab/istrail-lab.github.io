@@ -97,15 +97,19 @@ const essays = [
     <p class="p-2">
         Before joining Brown, he was the Senior Director and Head of Informatics
         Research at Celera Genomics, where his group played a central role in
-        the construction of the sequence of the human genome; they co-authorsed[
-        the 2001 Scienc]e paper "The Sequence of the Human Genome", which, with
-        over 12,000 citations to date, is one of the most cited scientific
-        paper. His group at Celera Genomics also built a powerful suite of
-        genome-wide algorithms that was used for the comparison of all human
-        genome assemblies to date. In 2002, his Celera group in collaboration
-        with the company ClearForrest won the ACM KDD Cup - the top
-        international data mining/machine learning competition. The challenge
-        then was the automatic annotation of a section of the Drosophila genome.
+        the construction of the sequence of the human genome; they co-authored
+        the 2001 Science article <a
+            class="underline hover:text-blue-400"
+            href="https://www.science.org/doi/10.1126/science.1058040"
+            >"The Sequence of the Human Genome"</a
+        >, which, with over 12,000 citations to date, is one of the most cited
+        scientific paper. His group at Celera Genomics also built a powerful
+        suite of genome-wide algorithms that was used for the comparison of all
+        human genome assemblies to date. In 2002, his Celera group in
+        collaboration with the company ClearForrest won the ACM KDD Cup - the
+        top international data mining/machine learning competition. The
+        challenge then was the automatic annotation of a section of the
+        Drosophila genome.
     </p>
     <p class="p-2">
         In 2003, he joined the ranks of Applied Biosystems Science Fellows, one
@@ -130,23 +134,22 @@ const essays = [
         co-editor of the MIT Press Computational Molecular Biology series, and
         co-editor of the Springer-Verlag Lecture Notes in Bioinformatics series.
     </p>
-    <p class="p-2">
+    <a
+        class="p-2 underline hover:text-blue-400"
+        href="/sorin-istrail/geneology.html"
+    >
         He has Erdos number 2 and postcard-Erdos number 1. He has 9 links to
         Euler and 11 links to Leibniz.
-    </p>
+    </a>
 
     <div class="p-8 flex flex-wrap gap-4 md:flex-nowrap justify-around">
-        <a
-            class="hover:ring-2"
+        <PositionCard
+            img={ccmb}
+            position="Director, Center of Computational Biology"
+            location="Brown University"
+            time="2006 — 2011"
             href="https://www.brown.edu/Research/Istrail_Lab/CCMB/index.htm"
-        >
-            <PositionCard
-                img={ccmb}
-                position="Director, Center of Computational Biology"
-                location="Brown University"
-                time="2006 — 2011"
-            />
-        </a>
+        />
         <PositionCard
             img={celera}
             position="Senior Director and Head of Informatics"
