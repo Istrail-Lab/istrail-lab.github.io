@@ -1,6 +1,5 @@
 ---
 import Abstract from "@/components/Abstract";
-import BlockQuote from "@/components/BlockQuote";
 import EssayCard from "@/components/EssayCard";
 import { publications } from "@/components/publicationList/publications";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
@@ -167,13 +166,39 @@ export const relevantPapers = publications.filter((paper) =>
         </Abstract>
     </div>
 
-    <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">
-        <p>
-            How famous physicists and mathematicians commented in the 1950-1960s
-            on an NP-complete problem before the concept of NP-completeness was
-            discovered in 1971 by Stephen Cook and Leonid Levin.
+    <div>
+        <h3 class="text-2xl font-bold py-4">ESA 2021 Test-of-Time Award</h3>
+        <p class="pb-8">
+            The 30th Annual European Symposium on Algorithms awarded its 2021
+            Test-of-Time Award to Sorin Istrail, professor of computational and
+            mathematical sciences and professor of computer science, and his
+            collaborators for their paper “SNPs Problems, Complexity and
+            Algorithms.” The award recognizes “excellent papers in algorithms
+            research” published 19 to 21 years ago that are “still influential
+            and stimulating for the field today,” according to ESA's website.
+            <br />
+            <a
+                class="hover:text-blue-400 underline"
+                href="https://cs.brown.edu/news/2022/11/16/sorin-istrail-wins-2021-esa-test-time-award/"
+                >Read more</a
+            >
         </p>
-    </BlockQuote> -->
+        <EssayCard
+            publication={{
+                title: "SNPs Problems, Complexity and Algorithms",
+                authors: [
+                    "Giuseppe Lancia",
+                    "Vineet Bafna",
+                    "Sorin Istrail",
+                    "Ross Lippert",
+                    "Russell Schwartz",
+                ],
+                journal: "European Symposium on Algorithms",
+                year: 2001,
+                tags: [],
+            }}
+        />
+    </div>
 
     <ul slot="relevant-papers" class="grid gap-4">
         {
