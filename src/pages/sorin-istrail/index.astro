@@ -7,12 +7,14 @@ import HonorRollList from "@/components/honorRoll/HonorRollList";
 import QuickLinks from "@/components/QuickLinks";
 
 import { students } from "@/components/honorRoll/honorRoll";
-import { type Award, AwardCard } from "@/components/AwardCard";
 
 import istrail from "@/assets/istrail.jpg";
 import ccmb from "@/assets/positions/ccmb_web_small.png";
 import celera from "@/assets/positions/science_291_5507.gif";
 import sandia from "@/assets/positions/proFoldingProtein.gif";
+import recomb from "@/assets/positions/recomb.jpg";
+import jcb from "@/assets/positions/jcb.jpg";
+import neumann from "@/assets/positions/vonneumann.gif";
 
 const essays = [
     {
@@ -142,7 +144,7 @@ const essays = [
         Euler and 11 links to Leibniz.
     </a>
 
-    <div class="p-8 flex flex-wrap gap-4 md:flex-nowrap justify-around">
+    <div class="p-8 gap-4 grid grid-cols-3">
         <PositionCard
             img={ccmb}
             position="Director, Center of Computational Biology"
@@ -161,6 +163,24 @@ const essays = [
             position="Principal Member of Technical Staff and Project Leader"
             location="Sandia National Laboratories"
             time="1992 — 2000"
+        />
+        <PositionCard
+            img={recomb}
+            position="Co-Founder and Steering Committee Member"
+            location="International Conference on Research in Computational Biology"
+            time="1997 — ???"
+        />
+        <PositionCard
+            img={jcb}
+            position="Co-Editor-In-Chief"
+            location="Journal of Computational Biology"
+            time="1994 — ???"
+        />
+        <PositionCard
+            img={neumann}
+            position="John von Neumann Lecture Series"
+            location="Brown University"
+            time="2010 & 2015"
         />
     </div>
 
