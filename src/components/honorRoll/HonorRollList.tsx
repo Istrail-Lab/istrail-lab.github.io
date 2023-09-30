@@ -3,13 +3,15 @@ import type { HonorRollStudent } from "./honorRoll";
 const HonorRollCard = ({ student }: { student: HonorRollStudent }) => {
     return (
         <div className="border-2 shadow-lg p-4 flex flex-col justify-center text-center">
-            <h3 className="font-bold text-xl p-2">{student.name}</h3>
+            <h3 className="font-bold text-xl p-2 flex-1">{student.name}</h3>
             <ul>
                 {student.achievements.map((achievement) => (
-                    <li key={achievement}>{achievement}</li>
+                    <li className="py-1" key={achievement}>
+                        {achievement}
+                    </li>
                 ))}
             </ul>
-            <p className="italic p-2">{student.currentLocation}</p>
+            <p className="italic p-2 flex-1">{student.currentLocation}</p>
         </div>
     );
 };

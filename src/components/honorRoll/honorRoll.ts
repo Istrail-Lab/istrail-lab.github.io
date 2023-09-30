@@ -1,5 +1,3 @@
-import { SecurityUpdateWarning } from "@mui/icons-material";
-
 export interface HonorRollStudent {
     name: string;
     achievements: string[];
@@ -15,14 +13,13 @@ export const students: HonorRollStudent[] = [
     {
         name: "Derek Aguiar",
         achievements: [
-            '"The ARIADNE Browser for Genome-Wide Association Studies" Master\'s Thesis',
+            '"The ARIADNE Browser for Genome-Wide Association Studies"',
             '"Genome-wide Algorithms for Haplotype Assembly, Haplotype Phasing, and Identical-by-Descent Inference" PhD thesis defended in May 2014',
-            "Postdoctoral Student at Princeton University",
         ],
         currentLocation: "Assistant Professor at University of Connecticut",
     },
     {
-        name: "Ryam Tarpine",
+        name: "Ryan Tarpine",
         achievements: [
             '"The CYRENE cisGRN Browser for the Regulatory Genome" Master\'s Thesis',
             '"A Database of Causality-Inferred Structure-Function Information for Genomic cis-Regulatory Architecture," PhD thesis defended in May 2012',
