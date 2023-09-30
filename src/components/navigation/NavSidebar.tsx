@@ -101,6 +101,9 @@ const NavSidebar = () => {
                             "Solomon Marcus Lectures": {
                                 "Lectures 1 - 8": "/lectures/solomon-marcus",
                             },
+                            Youtube: {
+                                "Istrail Laboratory": "/lectures/youtube",
+                            },
                         }}
                     />
                     <Dropdown
