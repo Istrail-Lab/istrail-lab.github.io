@@ -94,7 +94,8 @@ const NavSidebar = () => {
                             "John von Neumann Lectures": {
                                 "Brown University Symposium 2015":
                                     "/lectures/von-neumann-2015",
-                                "Brown University Symposium 2010": "",
+                                "Brown University Symposium 2010":
+                                    "/lectures/von-neumann-2010",
                                 // "Donald Knuth at Brown": "",
                             },
                             "Solomon Marcus Lectures": {
