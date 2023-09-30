@@ -8,14 +8,14 @@ import cisReg from "../assets/journals/pnas_102_14.gif";
 import immunePeptidomics from "../assets/journals/pnas_101_36.gif";
 import humanGenome from "../assets/journals/science_291_5507.gif";
 import seaUrchinGenome from "../assets/journals/science_314_5801.gif";
-
-import p1 from "@/assets/home/haplotype.png";
-import p2 from "@/assets/home/gene_regulatory.png";
-import p3 from "@/assets/home/AutismDeletionMap.png";
-import p4 from "@/assets/home/immuno.png";
-import p5 from "@/assets/home/next-gen-seq.jpg";
-import p6 from "@/assets/home/protein-folding.gif";
 import Carousel from "@/components/Carousel";
+
+const images = (await Astro.glob("../assets/home/*.jpg")).map(
+    (img) => img.default
+);
+images.sort();
+images.reverse();
+console.log(images);
 ---
 
 <Layout title="Istrail Lab">
@@ -32,7 +32,7 @@ import Carousel from "@/components/Carousel";
         Science at Brown University.
     </p>
 
-    <Carousel client:only="react" images={[p1, p2, p3, p4, p5, p6]} />
+    <Carousel client:only="react" images={images} />
 
     <div class="grid grid-cols-2 gap-4 md:grid-cols-5 py-8">
         <JournalCard
