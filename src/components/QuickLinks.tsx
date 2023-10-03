@@ -17,6 +17,7 @@ const QuickLinks = () => {
             <Link href="/sorin-istrail/honors">Honors & Awards</Link>
             <Link href="/sorin-istrail/grants">Grants</Link>
             <Link href="/sorin-istrail/genealogy.html">Advisor Genealogy</Link>
+            <Link href="/sorin-istrail/music">Music</Link>
         </aside>
     );
 };
