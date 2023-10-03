@@ -33,32 +33,35 @@ images.reverse();
 
     <Carousel client:only="react" images={images} />
 
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-5 py-8">
+    <div class="grid grid-cols-3 gap-4 py-8">
         <JournalCard
             img={humanGenome}
-            title="The Human Genome"
+            title="The Sequence of the Human Genome"
             href="https://www.science.org/doi/10.1126/science.1058040"
         />
         <JournalCard
             img={genomeAssemblies}
-            title="Genome Assemblies"
+            title="Whole Genome Shotgun Assembly and Comparison of Human Genome Assemblies"
             href="https://doi.org/10.1073/pnas.0307971100"
         />
-        <div class="hidden md:block">
-            <JournalCard
-                img={immunePeptidomics}
-                title="Immune Peptidomics"
-                href="https://doi.org/10.1073/pnas.0404740101"
-            />
-        </div>
+        <JournalCard
+            img={immunePeptidomics}
+            title="Immune Peptidomics of Humans and their Pathogens"
+            href="https://doi.org/10.1073/pnas.0404740101"
+        />
         <JournalCard
             img={seaUrchinGenome}
             title="The Sea Urchin Genome"
             href="https://doi.org/10.1126/science.1133609"
         />
         <JournalCard
+            img={seaUrchinGenome}
+            title="The Transcriptome of the Sea Urchin Embryo"
+            href="https://doi.org/10.1126/science.1131898"
+        />
+        <JournalCard
             img={cisReg}
-            title="cis-Regulatory Code"
+            title="Logic Functions of the Genomic cis-Regulatory Code"
             href="https://doi.org/10.1073/pnas.0409624102"
         />
     </div>
