@@ -4,14 +4,14 @@ const HonorRollCard = ({ student }: { student: HonorRollStudent }) => {
     return (
         <div className="border-2 shadow-lg p-4 flex flex-col justify-center text-center">
             <h3 className="font-bold text-xl p-2 flex-1">{student.name}</h3>
-            <ul>
+            <ul className="flex-1">
                 {student.achievements.map((achievement) => (
                     <li className="py-1" key={achievement}>
                         {achievement}
                     </li>
                 ))}
             </ul>
-            <p className="italic p-2 flex-1">{student.currentLocation}</p>
+            <p className="italic p-2">{student.currentLocation}</p>
         </div>
     );
 };
