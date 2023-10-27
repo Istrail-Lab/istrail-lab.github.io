@@ -48,6 +48,11 @@ export const students: HonorRollStudent[] = [
         currentLocation: "Google DeepMind",
     },
     {
+        name: "Alper Uzun",
+        achievements: [],
+        currentLocation: "Associate Professor, Department of Pediatrics, Brown Medical School"
+    }
+    {
         name: "Ning Hou",
         achievements: [
             '"Two Problems Related to cis-Regulatory Architecture of Transcription Factor Encoding Genes Homologous Translation and Evolutionary Conservation-Based cis-Module Inference" Master\'s Thesis (2014)',
