@@ -50,8 +50,9 @@ export const students: HonorRollStudent[] = [
     {
         name: "Alper Uzun",
         achievements: [],
-        currentLocation: "Associate Professor, Department of Pediatrics, Brown Medical School"
-    }
+        currentLocation:
+            "Associate Professor, Department of Pediatrics, Brown Medical School",
+    },
     {
         name: "Ning Hou",
         achievements: [
