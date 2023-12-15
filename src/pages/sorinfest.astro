@@ -1,0 +1,74 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import sorinFest from "@/assets/sorinfest/sorinfest.png";
+import Carousel from "@/components/Carousel";
+
+const dinner1 = (await Astro.glob("../assets/sorinfest/dinner1/*")).map(
+    (img) => img.default
+);
+const dinner2 = (await Astro.glob("../assets/sorinfest/dinner2/*")).map(
+    (img) => img.default
+);
+const day1 = [
+    "https://www.youtube.com/embed/4HUYZb5ldbo",
+    "https://www.youtube.com/embed/_i1_tlIfIUE",
+    "https://www.youtube.com/embed/oo9xu2NeWbo",
+    "https://www.youtube.com/embed/xro5jFtgxZo",
+    "https://www.youtube.com/embed/Bi8SFwvMUgk",
+    "https://www.youtube.com/embed/zELuLxCLuFo",
+    "https://www.youtube.com/embed/C3JMKhVgNW4",
+    "https://www.youtube.com/embed/FtueH0HzZAM",
+    "https://www.youtube.com/embed/GWAlGIJmGLI",
+    "https://www.youtube.com/embed/equyDtelPak",
+    "https://www.youtube.com/embed/bbNoW8HExJo",
+    "https://www.youtube.com/embed/H1O1PmgDaJs",
+];
+
+const day2 = [
+    "https://www.youtube.com/embed/36v8uPjgcok",
+    "https://www.youtube.com/embed/ZcKaImj_tFU",
+    "https://www.youtube.com/embed/FbogWhm5VXY",
+    "https://www.youtube.com/embed/K-RT6Q9ircU", // problem
+    "https://www.youtube.com/embed/i-dYnj4J1pA",
+    "https://www.youtube.com/embed/6jwOoIywnZE",
+    "https://www.youtube.com/embed/Ey0YSIBG-YU",
+    "https://www.youtube.com/embed/ZqrYunUjoOY",
+    "https://www.youtube.com/embed/aUmAVHosIos",
+    "https://www.youtube.com/embed/YsCAAbT00DQ",
+    "https://www.youtube.com/embed/hqoJlzFtjg4",
+    "https://www.youtube.com/embed/p8uMvgOTGAo",
+    "https://www.youtube.com/embed/Abaw6V8ed5I",
+    "https://www.youtube.com/embed/FocPcxmWt4Q",
+    "https://www.youtube.com/embed/ZE60C3nPtNc",
+];
+---
+
+<Layout title="Istrail Lab | SorinFest">
+    <h1 class="font-bold text-3xl pt-4">SorinFest</h1>
+    <h2 class="font-bold text-2xl py-2">
+        Phase Transitions in Computer Science and Computational Biology
+    </h2>
+    <div class="p-4 grid gap-10">
+        <img class="mx-auto" src={sorinFest} />
+
+        <div>
+            <h3 class="text-left font-bold text-xl py-1">Day 1 Talks</h3>
+            <Carousel client:only="react" images={day1} youtubeEmbed />
+        </div>
+
+        <div>
+            <h3 class="font-bold text-xl py-1">Day 2 Talks</h3>
+            <Carousel client:only="react" images={day2} youtubeEmbed />
+        </div>
+
+        <div>
+            <h3 class="font-bold text-xl py-1">Dinner Pictures</h3>
+            <Carousel client:only="react" images={dinner1} indicators />
+        </div>
+
+        <div>
+            <h3 class="font-bold text-xl py-1">SorinFest Dinner Pictures</h3>
+            <Carousel client:only="react" images={dinner2} indicators />
+        </div>
+    </div>
+</Layout>

@@ -124,6 +124,7 @@ const NavSidebar = () => {
                                 "/in-memoriam/alberto-apostolico",
                         }}
                     />
+                    <ListItemButton href="/sorinfest">SorinFest</ListItemButton>
                     <ListItemButton href="/essays">Essays</ListItemButton>
                     <ListItemButton href="/publications">
                         Publications
