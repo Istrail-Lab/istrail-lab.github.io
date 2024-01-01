@@ -1,6 +1,6 @@
 import type { HTMLProps } from "react";
 
-const Link = (props: HTMLProps<HTMLAnchorElement>) => {
+export const Link = (props: HTMLProps<HTMLAnchorElement>) => {
     return (
         <a className="underline hover:text-blue-400" {...props}>
             {props.children}

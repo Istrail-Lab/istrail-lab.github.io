@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import sorinFest from "@/assets/sorinfest/sorinfest.png";
 import Carousel from "@/components/Carousel";
+import { Link } from "@/components/QuickLinks";
 
 const dinner0 = (await Astro.glob("../assets/sorinfest/dinner0/*")).map(
     (img) => img.default
@@ -22,62 +23,75 @@ const day1 = [
         title: "Craig Venter: Past, Present, and Future of Genomics",
         url: "https://www.youtube.com/embed/4HUYZb5ldbo",
         distinguished_neumann: true,
+        speaker: "Craig Venter",
     },
     {
         title: "Bonnie Berger: 21st Century Genomics Minimizer Space Computation",
         url: "https://www.youtube.com/embed/_i1_tlIfIUE",
         distinguished_neumann: true,
+        speaker: "Bonnie Berger",
     },
     {
         title: "Michael Kosterlitz: Topological Defects and Phase Transitions",
         url: "https://www.youtube.com/embed/oo9xu2NeWbo",
         distinguished_neumann: false,
         distinguished_ising: true,
+        speaker: "Michael Kosterlitz",
     },
     {
         title: "Bill Camp: Never Make a Calculation Unless You Know the Answer",
         url: "https://www.youtube.com/embed/xro5jFtgxZo",
         distinguished_neumann: false,
+        distinguished_ising: false,
+        speaker: "Bill Camp",
     },
     {
         title: "Henri Lucian: Sorin's Twenties' Jubilee",
         url: "https://www.youtube.com/embed/Bi8SFwvMUgk",
         distinguished_neumann: false,
+        speaker: "Henri Lucian",
     },
     {
         title: "Andrea Califino: Defeating Cancer One Cell at a Time",
         url: "https://www.youtube.com/embed/zELuLxCLuFo",
         distinguished_neumann: false,
+        speaker: "Andrea Califino",
     },
     {
         title: "Caleb Finch: Socio-economic Gradients of Development in Pathways of Aging",
         url: "https://www.youtube.com/embed/C3JMKhVgNW4",
         distinguished_neumann: false,
+        speaker: "Caleb Finch",
     },
     {
         title: "Andy Clark: Allele-Specific Expression as a Pairwise Contest",
         url: "https://www.youtube.com/embed/FtueH0HzZAM",
         distinguished_neumann: true,
+        speaker: "Andy Clark",
     },
     {
         title: "Laxmi Parida: How, if not AI?",
         url: "https://www.youtube.com/embed/GWAlGIJmGLI",
         distinguished_neumann: false,
+        speaker: "Laxmi Parida",
     },
     {
         title: "Ernie Brickell: The Origin of Sorin's Computational Biology Research",
         url: "https://www.youtube.com/embed/equyDtelPak",
         distinguished_neumann: false,
+        speaker: "Ernie Brickell",
     },
     {
         title: "Bill Hart: Computational Protein Folding with Sorin",
         url: "https://www.youtube.com/embed/bbNoW8HExJo",
         distinguished_neumann: false,
+        speaker: "Bill Hart",
     },
     {
         title: "Franco Preparata: How it Began at Brown",
         url: "https://www.youtube.com/embed/H1O1PmgDaJs",
         distinguished_neumann: false,
+        speaker: "Franco Preparata",
     },
 ];
 
@@ -87,86 +101,115 @@ const day2 = [
         url: "https://www.youtube.com/embed/36v8uPjgcok",
         distinguished_neumann: true,
         distinguished_ising: false,
+        speaker: "Misha Gromov",
     },
     {
         title: "Jon Kleinberg: Transition, Mutation, and Fitness",
         url: "https://www.youtube.com/embed/ZcKaImj_tFU",
         distinguished_neumann: false,
+        speaker: "Jon Kleinberg",
     },
     {
         title: "Ron Shamir: Algorithms for Multinomic Disease Data",
         url: "https://www.youtube.com/embed/FbogWhm5VXY",
         distinguished_neumann: false,
+        speaker: "Ron Shamir",
     },
     {
         title: "Moshe Vardi: How to be an Ethical Computer Scientist",
         url: "https://www.youtube.com/embed/K-RT6Q9ircU",
         distinguished_neumann: false,
+        speaker: "Moshe Vardi",
     },
     {
         title: "Peter Shor: The Motzkin and Fredkin Quantum Spin Chains",
         url: "https://www.youtube.com/embed/i-dYnj4J1pA",
         distinguished_neumann: false,
+        speaker: "Peter Shor",
     },
     {
         title: "Bjarne Stroustrup: C++ Evolving a Useful Language",
         url: "https://www.youtube.com/embed/6jwOoIywnZE",
         distinguished_neumann: false,
+        speaker: "Bjarne Stroustrup",
     },
     {
         title: "Ken Dill: The Molecular Origins of Life - The Protein Folding Problem all Over Again?",
         url: "https://www.youtube.com/embed/Ey0YSIBG-YU",
         distinguished_neumann: true,
+        speaker: "Ken Dill",
     },
     {
         title: "Gene Meyers: Sorting for Speed",
         url: "https://www.youtube.com/embed/ZqrYunUjoOY",
         distinguished_neumann: true,
+        speaker: "Gene Meyers",
     },
     {
         title: "Pavel Pevzner: From Ulam's Problem to Sequence Alignment",
         url: "https://www.youtube.com/embed/aUmAVHosIos",
         distinguished_neumann: false,
+        speaker: "Pavel Pevzner",
     },
     {
         title: "Liliana Florea: Unraveling the Combinatorial Design of Genes",
         url: "https://www.youtube.com/embed/YsCAAbT00DQ",
         distinguished_neumann: false,
+        speaker: "Liliana Florea",
     },
     {
         title: "Giuseppe Lancia: Beating the Quadratic Algorithm",
         url: "https://www.youtube.com/embed/hqoJlzFtjg4",
         distinguished_neumann: false,
+        speaker: "Giuseppe Lancia",
     },
     {
         title: "Sridhar Hannenhalli - Prioritizing Non-Coding Mutations in Evolution and in Cancer",
         url: "https://www.youtube.com/embed/Qwi2_FU7D4k",
         distinguished_neumann: false,
+        speaker: "Sridhar Hannenhalli",
     },
     {
         title: "Jonathan Yewdell: Whither the MHC | Immunopeptidome?",
         url: "https://www.youtube.com/embed/p8uMvgOTGAo",
         distinguished_neumann: false,
+        speaker: "Jonathan Yewdell",
     },
     {
         title: "Jason Miller: Machine Learning and RNA-seq Alignment",
         url: "https://www.youtube.com/embed/Abaw6V8ed5I",
         distinguished_neumann: false,
+        speaker: "Jason Miller",
     },
     {
         title: "Daniel Fasulo: Type 2 Diabetes and the Gut Microbiome",
         url: "https://www.youtube.com/embed/FocPcxmWt4Q",
         distinguished_neumann: false,
+        speaker: "Daniel Fasulo",
     },
     {
         title: "Sorin Istrail: My Family",
         url: "https://www.youtube.com/embed/ZE60C3nPtNc",
         distinguished_neumann: false,
+        speaker: "Sorin Istrail",
     },
 ];
 ---
 
 <Layout title="Istrail Lab | SorinFest">
+    <aside
+        class="xl:flex flex-col gap-4 fixed hidden left-[5%] w-48 overflow-y-scroll top-[10%] bottom-[10%]"
+    >
+        <h3 class="text-lg font-bold">Day 1 Talks</h3>
+        {day1.map(({ speaker }) => <Link href={`#${speaker}`}>{speaker}</Link>)}
+        <h3 class="text-lg font-bold">Day 2 Talks</h3>
+        {day2.map(({ speaker }) => <Link href={`#${speaker}`}>{speaker}</Link>)}
+        <h3 class="text-lg font-bold">Dinners</h3>
+        <Link href="#dinner0">Dinner 0</Link>
+        <Link href="#dinner1">Dinner 1</Link>
+        <Link href="#dinner2">Dinner 2</Link>
+    </aside>
+
     <h1 class="font-bold text-3xl pt-4">SorinFest</h1>
     <h2 class="font-bold text-2xl py-2">
         Phase Transitions in Computer Science and Computational Biology
@@ -186,10 +229,13 @@ const day2 = [
                             url,
                             distinguished_neumann,
                             distinguished_ising,
+                            speaker,
                         }) => (
                             <div class="py-2">
                                 <div class="py-1">
-                                    <h4 class="font-bold text-lg">{title}</h4>
+                                    <h4 id={speaker} class="font-bold text-lg">
+                                        {title}
+                                    </h4>
                                     {distinguished_neumann && (
                                         <h4 class="font-bold text-lg">
                                             John von Neumann Distinguished
@@ -229,10 +275,13 @@ const day2 = [
                             url,
                             distinguished_neumann,
                             distinguished_ising,
+                            speaker,
                         }) => (
                             <div class="py-2">
                                 <div class="py-1">
-                                    <h4 class="font-bold text-lg">{title}</h4>
+                                    <h4 id={speaker} class="font-bold text-lg">
+                                        {title}
+                                    </h4>
                                     {distinguished_neumann && (
                                         <h4 class="font-bold text-lg">
                                             John von Neumann Distinguished
@@ -266,10 +315,10 @@ const day2 = [
             <h3 class="font-bold text-xl py-1">Dinner Pictures</h3>
 
             <div class="grid py-2">
-                <h4 class="font-bold text-lg py-1">Dinner 0</h4>
+                <h4 id="dinner0" class="font-bold text-lg py-1">Dinner 0</h4>
                 <Carousel client:only="react" images={dinner0} indicators />
 
-                <h4 class="font-bold text-lg py-1">Dinner 1</h4>
+                <h4 id="dinner1" class="font-bold text-lg py-1">Dinner 1</h4>
                 <iframe
                     class="mx-auto"
                     width="560"
@@ -282,7 +331,7 @@ const day2 = [
                     <Carousel client:only="react" images={dinner1} indicators />
                 </div>
 
-                <h4 class="font-bold text-lg py-1">Dinner 2</h4>
+                <h4 id="dinner2" class="font-bold text-lg py-1">Dinner 2</h4>
                 <div class="grid py-1">
                     <iframe
                         class="mx-auto"
