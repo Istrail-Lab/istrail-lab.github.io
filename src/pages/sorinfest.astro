@@ -206,8 +206,8 @@ const day2 = [
         {day2.map(({ speaker }) => <Link href={`#${speaker}`}>{speaker}</Link>)}
         <h3 class="text-lg font-bold">Dinners</h3>
         <Link href="#dinner0">Dinner 0</Link>
-        <Link href="#dinner1">Dinner 1</Link>
-        <Link href="#dinner2">Dinner 2</Link>
+        <Link href="#dinner1">Hope Club Dinner</Link>
+        <Link href="#dinner2">Brown Faculty Club Dinner</Link>
     </aside>
 
     <h1 class="font-bold text-3xl pt-4">SorinFest</h1>
@@ -318,21 +318,36 @@ const day2 = [
                 <h4 id="dinner0" class="font-bold text-lg py-1">Dinner 0</h4>
                 <Carousel client:only="react" images={dinner0} indicators />
 
-                <h4 id="dinner1" class="font-bold text-lg py-1">Dinner 1</h4>
-                <iframe
-                    class="mx-auto"
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/HlGf4USITL4"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="py-1">
-                    <Carousel client:only="react" images={dinner1} indicators />
+                <h4 id="dinner1" class="font-bold text-lg py-1">
+                    Hope Club Dinner
+                </h4>
+                <div class="grid gap-4 py-1">
+                    <iframe
+                        class="mx-auto"
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/HlGf4USITL4"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="text-md">
+                        <strong>Brief remarks:</strong> Sorin, Craig Venter, Bjarni
+                        Halldorsson, Serafim Batzoglou, Bonnie Berger, Derek Aguiar,
+                        Mike Waterman, Russell Schwartz, Sorin Dragici
+                    </p>
+                    <div class="py-1">
+                        <Carousel
+                            client:only="react"
+                            images={dinner1}
+                            indicators
+                        />
+                    </div>
                 </div>
 
-                <h4 id="dinner2" class="font-bold text-lg py-1">Dinner 2</h4>
-                <div class="grid py-1">
+                <h4 id="dinner2" class="font-bold text-lg py-1">
+                    Brown Faculty Club Dinner
+                </h4>
+                <div class="grid gap-4 py-1">
                     <iframe
                         class="mx-auto"
                         width="560"
@@ -341,6 +356,13 @@ const day2 = [
                         frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+                    <p class="text-md">
+                        <strong>Dinner speech</strong> by Brown University President
+                        Christina Paxson
+                        <br />
+                        <strong>Brief remarks:</strong> Bary Cipra, Sohini Ramachandran,
+                        Sorin
+                    </p>
                     <div class="py-1">
                         <Carousel
                             client:only="react"
