@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import sorinFest from "@/assets/sorinfest/sorinfest.png";
+import ccmb from "@/assets/sorinfest/ccmb.png";
 import Carousel from "@/components/Carousel";
 import { Link } from "@/components/QuickLinks";
 
@@ -30,6 +31,18 @@ const day1 = [
         url: "https://www.youtube.com/embed/_i1_tlIfIUE",
         distinguished_neumann: true,
         speaker: "Bonnie Berger",
+    },
+    {
+        title: "Thomas Ising: Introductory Remarks",
+        url: "https://www.youtube.com/embed/W2J-s0MQA7A",
+        distinguished_neumann: false,
+        speaker: "Thomas Ising",
+    },
+    {
+        title: "Richard Stratt: Why are There Different Phases of Matter?",
+        url: "https://www.youtube.com/embed/EH2r3vqRO9c",
+        distinguished_neumann: false,
+        speaker: "Richard Stratt",
     },
     {
         title: "Michael Kosterlitz: Topological Defects and Phase Transitions",
@@ -82,7 +95,7 @@ const day1 = [
         speaker: "Ernie Brickell",
     },
     {
-        title: "Bill Hart: Computational Protein Folding with Sorin",
+        title: "Bill Hart: Combinatorial Protein Folding with Sorin",
         url: "https://www.youtube.com/embed/bbNoW8HExJo",
         distinguished_neumann: false,
         speaker: "Bill Hart",
@@ -138,6 +151,12 @@ const day2 = [
         url: "https://www.youtube.com/embed/Ey0YSIBG-YU",
         distinguished_neumann: true,
         speaker: "Ken Dill",
+    },
+    {
+        title: "Vineet Bafna: Introductory Remarks",
+        url: "https://www.youtube.com/embed/pO2W1ZvHd-0",
+        distinguished_neumann: false,
+        speaker: "Vineet Bafna",
     },
     {
         title: "Gene Meyers: Sorting for Speed",
@@ -210,12 +229,24 @@ const day2 = [
         <Link href="#dinner2">Brown Faculty Club Dinner</Link>
     </aside>
 
-    <h1 class="font-bold text-3xl pt-4">SorinFest</h1>
-    <h2 class="font-bold text-2xl py-2">
-        Phase Transitions in Computer Science and Computational Biology
-    </h2>
     <div class="p-4 grid gap-10">
-        <img class="mx-auto" src={sorinFest} />
+        <div class="flex items-center justify-between">
+            <img src={sorinFest} />
+            <h2
+                class="font-bold text-3xl text-center"
+                style={{ textWrap: "balance" }}
+            >
+                SorinFest: Phase Transitions in Computer Science and
+                Computational Biology
+            </h2>
+            <img src={ccmb} />
+        </div>
+        <p class="text-center">
+            <i>
+                Click <Link href="/papers/sorin-bio-oct_4_v2.pdf">here</Link> for
+                a short biography of Sorin!
+            </i>
+        </p>
 
         <Carousel client:only="react" images={jessePhotos} indicators />
 
@@ -315,7 +346,9 @@ const day2 = [
             <h3 class="font-bold text-xl py-1">Dinner Pictures</h3>
 
             <div class="grid py-2">
-                <h4 id="dinner0" class="font-bold text-lg py-1">Welcoming Dinner at Bayberry Garden</h4>
+                <h4 id="dinner0" class="font-bold text-lg py-1">
+                    Welcoming Dinner at Bayberry Garden
+                </h4>
                 <Carousel client:only="react" images={dinner0} indicators />
 
                 <h4 id="dinner1" class="font-bold text-lg py-1">
@@ -331,9 +364,13 @@ const day2 = [
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     <p class="text-md">
-                        <strong>Brief remarks:</strong> Sorin, Craig Venter, Bjarni
-                        Halldorsson, Serafim Batzoglou, Bonnie Berger, Derek Aguiar,
-                        Mike Waterman, Russell Schwartz, Sorin Dragici
+                        <strong>Dinner Keynote</strong> by Brown University President
+                        Christina Paxson
+                        <br />
+                        <strong>Dinner Lecture</strong> by Barry Cipra: "Ising, Istrail,
+                        and I"
+                        <br />
+                        <strong>Brief remarks:</strong> Sohini Ramachandran, Sorin
                     </p>
                     <div class="py-1">
                         <Carousel
@@ -357,11 +394,9 @@ const day2 = [
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     <p class="text-md">
-                        <strong>Dinner speech</strong> by Brown University President
-                        Christina Paxson
-                        <br />
-                        <strong>Brief remarks:</strong> Bary Cipra, Sohini Ramachandran,
-                        Sorin
+                        <strong>Brief remarks:</strong> Sorin, Craig Venter, Bjarni
+                        Halldorsson, Serafim Batzoglou, Bonnie Berger, Derek Aguiar,
+                        Mike Waterman, Russell Schwartz, Sorin Dragici
                     </p>
                     <div class="py-1">
                         <Carousel
