@@ -1,6 +1,8 @@
 ---
 import Carousel from "@/components/Carousel";
 import Layout from "@/layouts/Layout.astro";
+import urchin from "@/assets/photos/urchin.webp";
+import mc from "@/assets/pdfs/mcerlean.pdf"
 
 const images = (await Astro.glob("../../assets/eric_davidson/*.jpg")).map(
     (image) => image.default as string
@@ -10,4 +12,11 @@ const images = (await Astro.glob("../../assets/eric_davidson/*.jpg")).map(
 <Layout title="Istrail Lab | Eric Davidson">
     <h2 class="text-2xl font-bold py-4">Eric Davidson</h2>
     <Carousel images={images} client:only="react" />
+    <h2 class="text-2xl font-bold py-4">Eric Davidson's favorite animal</h2>
+    <img src={urchin} alt="Urchin" />
+    <a
+        class="underline hover:text-blue-400"
+        href={mc}
+        >"mcerlean.pdf"
+    </a>
 </Layout>
