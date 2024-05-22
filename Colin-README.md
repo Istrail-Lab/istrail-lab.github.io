@@ -10,11 +10,11 @@ npm run dev
 
 And command-click the link that pops up in the terminal. This will take you to a hosted version of the website that makes live updates.
 
-Every time you want to "deploy" edits you've made to the actual website, click the three dots on the left side of your screen (the three dots that are connected by some wavy lines). Enter a message for what you've changed, then click commit, then click sync changes. Say yes to any prompt that pops up.
+Every time you want to "deploy" edits you've made to the actual website, click the three-network-nodes on the left side of your screen (the three dots that are connected by some wavy lines). Enter a message for what you've changed, then click commit, then click sync changes. Say yes to any prompt that pops up.
 
 ## Getting Started with VSCode
 
-When the `istrail-lab.github.io` folder is opened in VSCode you should have all the files/folders in the folder listed on the left hand side when the explorer (the icon just under the magnifying glass on the left) is expanded. All the markdown files you make should be placed in the `content/` folder, located in the root of `istrail-lab.github.io`.
+When the `istrail-lab.github.io` folder is opened in VSCode you should have all the files/folders in the folder listed on the left hand side when the explorer (the icon just under the magnifying glass on the left) is expanded.
 
 To make a new markdown file select the `content/` folder by pressing on it in the file explorer. Then click the button at the top of the explorer (page with a little plus icon) to make a new file. You'll be asked to enter a name for the file. To make sure its a markdown file be sure that this name ends in `.md`. To add a new folder is very similar, except you use the new folder button (folder icon with a plus icon).
 
