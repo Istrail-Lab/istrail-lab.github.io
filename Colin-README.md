@@ -28,37 +28,6 @@ If the Markdown Preview Pane is not open, you can open it once you have a Markdo
 
 To commit your changes use the three buttoned icon underneath the explorer on the left hand side. This will open Git source control. Add a message to your commit and then press `Commit`. Then press `Sync Changes`.
 
-## Markdown Guide
-
-The [Markdown Guide](https://www.markdownguide.org/basic-syntax/) Page has much more detailed information about this, however, here's a quick summary of some basic things you can do in markdown.
-
-Headings are done by placing hashtags (`#`) before the text you want to make into a heading. Note: there must be a space between the hashtag and the text for it to be properly rendered. Adding more hashtags will make the heading smaller.
-
-Links are done by using the syntax `[link text](link url)`. See the Markdown Guide link above for an example.
-
-Images and videos are handled very similarly. To embed an image use the syntax `[alt text](relative path to image)`. Similarly, for local videos use the syntax `[alt text](relative path to video)`. Unfortunately, you can't directly embed YouTube videos, but you can still link to them.
-
-To make text italic surround it with `_`, such as _example_. To make text bold surround it with two `*`, such as **example**. To make text both bold and italic surround it in both two `*` and one underscore `_`, such as **_example_**.
-
-You can make bullet points by using `-` such as:
-
--   bullet
--   bullet
-    -   nested
-        -   nested again
--   bullet
-
-You can make a number list by using the number followed by a dot such as:
-
-1. one
-2. two
-3. three
-
-To format equations using LaTeX you can surround them using `$`. In-line equations use a single `$` while equations on a seperate line use two `$`.
-
-For example: $e^{i\pi} = -1$ and
-$$ \int x^2 \ dx = \frac{1}{3}x^3 + C $$
-
 # Making Edits
 
 ## Adding to the Site (Simple)
