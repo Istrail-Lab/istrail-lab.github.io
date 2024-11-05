@@ -109,6 +109,7 @@ const NavSidebar = () => {
                     <Dropdown
                         dropdownHeading="In Memoriam"
                         dropdownLinks={{
+                            "Leon Cooper": "/in-memoriam/leon-cooper",
                             "Paul Erdos": "/in-memoriam/paul-erdos",
                             // "Edger Dijkstra": "",
                             // "Alan Cobham": "",

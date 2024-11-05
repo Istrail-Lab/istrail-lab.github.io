@@ -1,0 +1,26 @@
+---
+import Carousel from "@/components/Carousel";
+import Layout from "@/layouts/Layout.astro";
+import EssayCard from "@/components/EssayCard";
+
+const images = (await Astro.glob("../../assets/leon_cooper/*.jpg")).map(
+    (image) => image.default as string
+);
+
+const essay = {
+        authors: ["Leon N. Cooper", "Sorin Istrail"],
+        title: "Mental Experience and the Turing Test: This Double Face is the Face of Mathematics",
+        year: 2012,
+        journal: "Proceedings of the Turing Centenary Conference",
+        pdf: "/papers/Mental Experience and the Turing Test.pdf",
+        tags: [],
+    }
+---
+
+<Layout title="Istrail Lab | Alberto Apostolico">
+    <h2 class="text-2xl font-bold py-4">Leon Cooper</h2>
+    <Carousel images={images} client:only="react" />
+    <div class="grid gap-4 py-4 mt-8">
+        <EssayCard publication={essay}></EssayCard>
+    </div>
+</Layout>
