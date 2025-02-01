@@ -1,44 +1,29 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
+import YouTubeEmbed from "../../components/video/YouTubeEmbed.astro";
 ---
 
 <Layout title="Istrail Lab | Music">
-    <h2 class="font-bold text-3xl py-8">Music and Dance</h2>
+    <h1 class="font-bold text-3xl pt-4">Music</h1>
 
-    <h3 class="font-bold text-2xl">Commencement</h3>
-    <ul class="grid gap-4 py-4">
-        <li>
-            <h3 class="font-bold text-2xl">Class of 2020</h3>
-            <iframe
-                class="mx-auto"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/-H0xIT4GQFo?si=BW9dsWj6sIjjIp8P"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </li>
-
-        <li>
-            <h3 class="font-bold text-2xl">Class of 2021</h3>
-            <iframe
-                class="mx-auto"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/SnByjnzKUGw?si=dvnc-pzSxyZCtsO6"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </li>
-        <li>
-            <h3 class="font-bold text-2xl">Class of 2022</h3>
-            <a
-                class="underline text-blue-400"
-                href="https://blog.cs.brown.edu/2022/05/18/dear-class-2022/"
-                >Letter to the Class of 2022</a
-            >
-        </li>
-    </ul>
+    <div class="grid gap-4 max-w-3xl mx-auto">
+        <div>
+            <h3 class="font-semibold text-xl py-2">
+                Sorin Istrail - Piano Performance
+            </h3>
+            <YouTubeEmbed
+                videoId="-H0xIT4GQFo"
+                title="Sorin Istrail - Piano Performance"
+            />
+        </div>
+        <div>
+            <h3 class="font-semibold text-xl py-2">
+                Another Musical Performance
+            </h3>
+            <YouTubeEmbed
+                videoId="SnByjnzKUGw"
+                title="Another Musical Performance"
+            />
+        </div>
+    </div>
 </Layout>

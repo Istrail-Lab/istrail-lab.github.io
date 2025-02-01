@@ -4,6 +4,7 @@ import sorinFest from "@/assets/sorinfest/sorinfest.png";
 import ccmb from "@/assets/sorinfest/ccmb.png";
 import Carousel from "@/components/Carousel";
 import { Link } from "@/components/QuickLinks";
+import YouTubeEmbed from "@/components/video/YouTubeEmbed.astro";
 
 const dinner0 = (await Astro.glob("../assets/sorinfest/dinner0/*")).map(
     (img) => img.default
@@ -219,6 +220,17 @@ const day2 = [
         speaker: "Sorin Istrail",
     },
 ];
+
+const day1Videos = day1.map((talk) => ({
+    title: talk.title,
+    videoId: talk.url.split("embed/")[1],
+}));
+
+const day2Videos = day2.map((talk) => ({
+    title: talk.title,
+    videoId: talk.url.split("embed/")[1],
+}));
+
 ---
 
 <Layout title="Istrail Lab | SorinFest">
@@ -260,44 +272,19 @@ const day2 = [
             <h3 class="text-left font-bold text-xl py-1">Day 1 Talks</h3>
             <div class="grid gap-1">
                 {
-                    day1.map(
-                        ({
-                            title,
-                            url,
-                            distinguished_neumann,
-                            distinguished_ising,
-                            speaker,
-                        }) => (
-                            <div class="py-2">
-                                <div class="py-1">
-                                    <h4 id={speaker} class="font-bold text-lg">
-                                        {title}
-                                    </h4>
-                                    {distinguished_neumann && (
-                                        <h4 class="font-bold text-lg">
-                                            John von Neumann Distinguished
-                                            Lecture
-                                        </h4>
-                                    )}
-                                    {distinguished_ising && (
-                                        <h4 class="font-bold text-lg">
-                                            The Inaugural Ising-Onsager
-                                            Distinguished Lecture
-                                        </h4>
-                                    )}
-                                </div>
-                                <iframe
-                                    class="mx-auto"
-                                    width="560"
-                                    height="315"
-                                    src={url}
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                />
+                    day1Videos.map((video) => (
+                        <div class="py-2">
+                            <div class="py-1">
+                                <h4 id={video.title} class="font-bold text-lg">
+                                    {video.title}
+                                </h4>
                             </div>
-                        )
-                    )
+                            <YouTubeEmbed
+                                videoId={video.videoId}
+                                title={video.title}
+                            />
+                        </div>
+                    ))
                 }
             </div>
         </div>
@@ -306,44 +293,19 @@ const day2 = [
             <h3 class="text-left font-bold text-xl py-1">Day 2 Talks</h3>
             <div class="grid gap-1">
                 {
-                    day2.map(
-                        ({
-                            title,
-                            url,
-                            distinguished_neumann,
-                            distinguished_ising,
-                            speaker,
-                        }) => (
-                            <div class="py-2">
-                                <div class="py-1">
-                                    <h4 id={speaker} class="font-bold text-lg">
-                                        {title}
-                                    </h4>
-                                    {distinguished_neumann && (
-                                        <h4 class="font-bold text-lg">
-                                            John von Neumann Distinguished
-                                            Lecture
-                                        </h4>
-                                    )}
-                                    {distinguished_ising && (
-                                        <h4 class="font-bold text-lg">
-                                            The Inaugural Ising-Onsager
-                                            Distinguished Lecture
-                                        </h4>
-                                    )}
-                                </div>
-                                <iframe
-                                    class="mx-auto"
-                                    width="560"
-                                    height="315"
-                                    src={url}
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                />
+                    day2Videos.map((video) => (
+                        <div class="py-2">
+                            <div class="py-1">
+                                <h4 id={video.title} class="font-bold text-lg">
+                                    {video.title}
+                                </h4>
                             </div>
-                        )
-                    )
+                            <YouTubeEmbed
+                                videoId={video.videoId}
+                                title={video.title}
+                            />
+                        </div>
+                    ))
                 }
             </div>
         </div>

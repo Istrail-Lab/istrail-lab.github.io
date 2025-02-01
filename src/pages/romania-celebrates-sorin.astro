@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+import YouTubeEmbed from "../components/video/YouTubeEmbed.astro";
+import { Link } from "@/components/QuickLinks";
+
+const romaniaEvents = [
+    {
+        id: "honorary-citizen",
+        title: "Honorary Citizen of Târgu Neamț",
+        description: "In September 2024, Professor Sorin Istrail was awarded the honorary citizenship of Târgu Neamț, his hometown. This prestigious recognition celebrates his outstanding contributions to science and education.",
+        link: "https://ziarulatitudineadeneamt.ro/2024/09/04/prof-dr-sorin-istrail-cetatean-de-onoare-al-orasului-targu-neamt/",
+        linkText: "Read the full article (in Romanian)"
+    },
+    {
+        id: "csnm-event",
+        title: "Meeting with Excellence at CSNM",
+        description: "The 'Ștefan cel Mare' National College (CSNM) in Târgu Neamț hosted Professor Istrail as the key guest at their 'Meeting with a Distinguished Professor' event. This special occasion provided young students with the unique opportunity to learn from and be inspired by Professor Istrail's journey.",
+        link: "https://neamt24.ro/intalnire-cu-excelenta-o-conferinta-de-marca-cu-participarea-prof-dr-sorin-istrail/",
+        linkText: "Read about the event (in Romanian)",
+        videoId: "ek_CXZt77t8"
+    }
+];
+
+const interviews = [
+    {
+        id: "romani-universali-1",
+        title: "Romani Universali - Interview Part 1",
+        videoId: "Pyue9y4Dmow"
+    },
+    {
+        id: "romani-universali-2",
+        title: "Romani Universali - Interview Part 2",
+        videoId: "C2lHoqyf_O8"
+    }
+];
+---
+
+<Layout title="Istrail Lab | Romania Celebrates Sorin">
+    <aside
+        class="xl:flex flex-col gap-4 fixed hidden left-[5%] w-48 overflow-y-scroll top-[10%] bottom-[10%]"
+    >
+        <h3 class="text-lg font-bold">Events in Romania</h3>
+        <Link href="#honorary-citizen">Honorary Citizenship of Târgu Neamț</Link>
+        <Link href="#csnm-event">Meeting with Excellence at CSNM</Link>
+        <Link href="#romani-universali">Romani Universali Interviews</Link>
+        <Link href="#overview">Overview</Link>
+    </aside>
+
+    <div class="max-w-4xl mx-auto px-4">
+        <h1 class="font-bold text-3xl pt-8 pb-4">Romania Celebrates Sorin</h1>
+        
+        <p class="text-lg mb-8">
+            Professor Sorin Istrail's contributions to science and education have been celebrated across Romania. This page documents some of these special recognitions and events.
+        </p>
+
+        <div class="space-y-12">
+            {romaniaEvents.map((event) => (
+                <section id={event.id} class="border-b border-gray-200 pb-8">
+                    <h2 class="font-semibold text-2xl mb-4">{event.title}</h2>
+                    <p class="text-lg mb-4">{event.description}</p>
+                    <a href={event.link} target="_blank" rel="noopener noreferrer" 
+                       class="text-blue-600 hover:text-blue-800 underline mb-4 inline-block">
+                        {event.linkText}
+                    </a>
+                    {event.videoId && (
+                        <div class="mt-6">
+                            <YouTubeEmbed
+                                videoId={event.videoId}
+                                title={event.title}
+                            />
+                        </div>
+                    )}
+                </section>
+            ))}
+
+            <section id="romani-universali" class="pb-8">
+                <h2 class="font-semibold text-2xl mb-6">Romani Universali Interview Series</h2>
+                <p class="text-lg mb-6">
+                    In this comprehensive interview series, Professor Istrail shares insights about his journey, scientific work, and connection to Romania.
+                </p>
+                <div class="space-y-8">
+                    {interviews.map((interview) => (
+                        <div id={interview.id}>
+                            <h3 class="font-semibold text-xl mb-4">{interview.title}</h3>
+                            <YouTubeEmbed
+                                videoId={interview.videoId}
+                                title={interview.title}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section id="overview" class="pb-8">
+                <h2 class="font-semibold text-2xl mb-4">Complete Overview</h2>
+                <p class="text-lg mb-4">
+                    For a comprehensive overview of these events and celebrations, you can download the detailed report:
+                </p>
+                <a href="/assets/documents/conduit_2024.pdf" 
+                   class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                    Download Full Report (PDF)
+                </a>
+            </section>
+        </div>
+    </div>
+</Layout>
