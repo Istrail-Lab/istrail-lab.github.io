@@ -2,10 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import YouTubeEmbed from "../components/video/YouTubeEmbed.astro";
 import { Link } from "@/components/QuickLinks";
+import Carousel from "@/components/Carousel";
+
+// Import all images from the Iasi ceremony directory
+const iasiPhotos = (await Astro.glob("../assets/romania-celebrates/iasi/*")).map(
+    (img) => img.default
+);
 
 const romaniaEvents = [
     {
-        id: "honorary-citizen",
+        id: "honorary-citizen-iasi",
+        title: "Honorary Citizen of Iași",
+        description: "Professor Sorin Istrail was honored with the honorary citizenship of Iași, one of Romania's most important cultural and academic centers. This recognition celebrates his outstanding contributions to science and his role in promoting Romanian excellence globally.",
+        videoId: "hdDNVvHoU98",
+        hasPhotos: true
+    },
+    {
+        id: "honorary-citizen-targu",
         title: "Honorary Citizen of Târgu Neamț",
         description: "In September 2024, Professor Sorin Istrail was awarded the honorary citizenship of Târgu Neamț, his hometown. This prestigious recognition celebrates his outstanding contributions to science and education.",
         link: "https://ziarulatitudineadeneamt.ro/2024/09/04/prof-dr-sorin-istrail-cetatean-de-onoare-al-orasului-targu-neamt/",
@@ -23,8 +36,15 @@ const romaniaEvents = [
 
 const interviews = [
     {
+        id: "de-la-om-la-om",
+        title: "De la om la om - Interview with Prof. Dr. Emanuel Balan",
+        description: "On March 14, 2024, Professor Istrail was featured in an engaging episode of the podcast 'De la om la om,' hosted by Prof. Dr. Emanuel Balan.",
+        videoId: "4KNRjUY5JgM"
+    },
+    {
         id: "romani-universali-1",
         title: "Romani Universali - Interview Part 1",
+        description: "In this comprehensive interview series, Professor Istrail shares insights about his journey, scientific work, and connection to Romania.",
         videoId: "Pyue9y4Dmow"
     },
     {
@@ -40,9 +60,11 @@ const interviews = [
         class="xl:flex flex-col gap-4 fixed hidden left-[5%] w-48 overflow-y-scroll top-[10%] bottom-[10%]"
     >
         <h3 class="text-lg font-bold">Events in Romania</h3>
-        <Link href="#honorary-citizen">Honorary Citizenship of Târgu Neamț</Link>
+        <Link href="#honorary-citizen-iasi">Honorary Citizenship of Iași</Link>
+        <Link href="#honorary-citizen-targu">Honorary Citizenship of Târgu Neamț</Link>
         <Link href="#csnm-event">Meeting with Excellence at CSNM</Link>
-        <Link href="#romani-universali">Romani Universali Interviews</Link>
+        <Link href="#interviews">Interviews & Media</Link>
+        <Link href="#book-feature">Book Feature</Link>
         <Link href="#overview">Overview</Link>
     </aside>
 
@@ -58,10 +80,12 @@ const interviews = [
                 <section id={event.id} class="border-b border-gray-200 pb-8">
                     <h2 class="font-semibold text-2xl mb-4">{event.title}</h2>
                     <p class="text-lg mb-4">{event.description}</p>
-                    <a href={event.link} target="_blank" rel="noopener noreferrer" 
-                       class="text-blue-600 hover:text-blue-800 underline mb-4 inline-block">
-                        {event.linkText}
-                    </a>
+                    {event.link && (
+                        <a href={event.link} target="_blank" rel="noopener noreferrer" 
+                           class="text-blue-600 hover:text-blue-800 underline mb-4 inline-block">
+                            {event.linkText}
+                        </a>
+                    )}
                     {event.videoId && (
                         <div class="mt-6">
                             <YouTubeEmbed
@@ -70,18 +94,24 @@ const interviews = [
                             />
                         </div>
                     )}
+                    {event.hasPhotos && iasiPhotos.length > 0 && (
+                        <div class="mt-6">
+                            <h3 class="font-semibold text-xl mb-4">Photo Gallery</h3>
+                            <Carousel client:load images={iasiPhotos} />
+                        </div>
+                    )}
                 </section>
             ))}
 
-            <section id="romani-universali" class="pb-8">
-                <h2 class="font-semibold text-2xl mb-6">Romani Universali Interview Series</h2>
-                <p class="text-lg mb-6">
-                    In this comprehensive interview series, Professor Istrail shares insights about his journey, scientific work, and connection to Romania.
-                </p>
+            <section id="interviews" class="pb-8">
+                <h2 class="font-semibold text-2xl mb-6">Interviews & Media Coverage</h2>
                 <div class="space-y-8">
                     {interviews.map((interview) => (
                         <div id={interview.id}>
                             <h3 class="font-semibold text-xl mb-4">{interview.title}</h3>
+                            {interview.description && (
+                                <p class="text-lg mb-4">{interview.description}</p>
+                            )}
                             <YouTubeEmbed
                                 videoId={interview.videoId}
                                 title={interview.title}
@@ -89,6 +119,18 @@ const interviews = [
                         </div>
                     ))}
                 </div>
+            </section>
+
+            <section id="book-feature" class="pb-8">
+                <h2 class="font-semibold text-2xl mb-4">Featured in "Personalități de pe meridianul Ozana"</h2>
+                <p class="text-lg mb-4">
+                    Professor Istrail is featured on the cover of "Personalități de pe meridianul Ozana: Mic dicționar" (Personalities from the Ozana Meridian: A Small Dictionary), highlighting his significance among the notable personalities from the region.
+                </p>
+                <a href="https://www.academia.edu/107119936/Balan_Emanuel_Personalitati_de_pe_meridianul_Ozana_Mic_dictionar" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="text-blue-600 hover:text-blue-800 underline mb-4 inline-block">
+                    View the book on Academia.edu
+                </a>
             </section>
 
             <section id="overview" class="pb-8">
