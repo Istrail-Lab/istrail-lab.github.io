@@ -97,7 +97,7 @@ const interviews = [
                     {event.hasPhotos && iasiPhotos.length > 0 && (
                         <div class="mt-6">
                             <h3 class="font-semibold text-xl mb-4">Photo Gallery</h3>
-                            <Carousel client:load images={iasiPhotos} />
+                            <Carousel client:only="react" images={iasiPhotos} indicators />
                         </div>
                     )}
                 </section>
