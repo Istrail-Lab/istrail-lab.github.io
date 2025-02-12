@@ -247,7 +247,7 @@ const day2Videos = day2.map((talk) => ({
         <Link href="#dinner2">Brown Faculty Club Dinner</Link>
     </aside>
 
-    <div class="p-4 grid gap-10">
+    <div class="xl:ml-64 p-4 grid gap-10">
         <div class="flex items-center justify-between">
             <img src={sorinFest} />
             <h2
@@ -268,20 +268,170 @@ const day2Videos = day2.map((talk) => ({
 
         <Carousel client:only="react" images={jessePhotos} indicators />
 
+        <div class="space-y-6">
+            <h2 class="font-bold text-2xl">Distinguished Lectures</h2>
+            
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-bold text-xl">Introductory Remarks</h3>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><a href="#Sohini Ramachandran and Roberto Tamassia" class="text-blue-600 hover:underline">Roberto Tamassia</a> (James A. and Julie N. Brown Professor and Chair of Computer Science, Brown University)</li>
+                        <li><a href="#Sohini Ramachandran and Roberto Tamassia" class="text-blue-600 hover:underline">Sohini Ramachandran</a> (Hermon C. Bumpus Professor of Biology, Professor of Computer Science, Director of the Data Science Institute, Brown University)</li>
+                        <li>Daniel Weinreich (Royce Family Professor of Teaching Excellence in Biology, Professor of Ecology, Evolution, and Organismal Biology, Director of the Center for Computational Molecular Biology, Brown University)</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <p><strong>Opening Keynote:</strong> <a href="#Craig Venter" class="text-blue-600 hover:underline">Craig Venter</a> (CEO of Celera Genomics and the J. Craig Venter Institute, and winner of the US National Medal of Science), a John von Neumann Distinguished Lecture: "The past, the present and the future of genomics"</p>
+                        <p class="ml-4">Introduction by Michael Waterman (Quantitative & Computational Biology, Mathematics, Computer Science, University of Southern California, emeritus)</p>
+                    </div>
+
+                    <div>
+                        <p><a href="#Bonnie Berger" class="text-blue-600 hover:underline">Bonnie Berger</a> (Simons Professor of Mathematics, Massachusetts Institute of Technology), a John von Neumann Distinguished Lecture: "21st Century Genomics Minimizer Space Computation"</p>
+                        <p class="ml-4">Introduction by Ritambhara Singh (Computer Science and Center for Computational Molecular Biology, Brown University)</p>
+                    </div>
+
+                    <div>
+                        <p><a href="#Andy Clark" class="text-blue-600 hover:underline">Andy Clark</a> (Jacob Gould Schurman Professor of Population Genetics, Cornell University, and Brown University alumnus): "Allele-Specific Expression as a Pairwise Contest"</p>
+                        <p class="ml-4">Introduction by Sohini Ramachandran (Hermon C. Bumpus Professor of Biology, Professor of Computer Science, Director of the Data Science Institute, Brown University)</p>
+                    </div>
+
+                    <div>
+                        <p>Ken Dill (Laufer Family Endowed Chair in Physical Biology and SUNY Distinguished Professor of Chemistry & Physics, Director of the Louis and Beatrice Laufer Center for Physical and Quantitative Biology, Stony Brook University), a John von Neumann Distinguished Lecture: "The Molecular Origins of Life - The Protein Folding Problem all Over Again?"</p>
+                        <p class="ml-4">Introduction by Brenda Rubenstein (Chemistry, Brown University)</p>
+                    </div>
+
+                    <div>
+                        <p><a href="#Misha Gromov" class="text-blue-600 hover:underline">Misha Gromov</a> (Institut des Hautes Études Scientifiques and New York University, winner of the Abel Prize), a John von Neumann Distinguished Lecture: "Invisible Mathematics of Learning and Understanding" (on Zoom)</p>
+                        <p class="ml-4">Introduction by Stuart Geman (James Manning Professor of Applied Mathematics, Brown University)</p>
+                    </div>
+
+                    <div>
+                        <p>Gene Myers (Director of Max Planck Institute of Molecular Cell Biology and Genetics, emeritus, former VP of Informatics Research, Celera Genomics), a John von Neumann Distinguished Lecture: "Sorting for Speed"</p>
+                        <p class="ml-4">Introduction by Bjarni Halldorsson (deCODE Genetics, and Biomedical Engineering, Reykjavík University)</p>
+                    </div>
+
+                    <div>
+                        <p><a href="#Michael Kosterlitz" class="text-blue-600 hover:underline">J. Michael Kosterlitz</a> (Harrison E. Farnsworth Professor of Physics, Brown University, and winner of the Nobel Prize in Physics), an Ising-Onsager Distinguished Lecture: "Topological Defects and Phase Transitions"</p>
+                        <div class="ml-4 space-y-1">
+                            <p>Introduction by Provost Francis Doyle</p>
+                            <p>Introduction by Lai-Sheng Wang (Chair, Chemistry Department)</p>
+                            <p>Introduction by <a href="#Bill Camp" class="text-blue-600 hover:underline">Bill Camp</a> (Sandia Labs and Intel, emeritus)</p>
+                            <p>Introduction by <a href="#Thomas Ising" class="text-blue-600 hover:underline">Thomas Ising</a>, Ernst Ising's son</p>
+                            <p>Introduction by <a href="#Richard Stratt" class="text-blue-600 hover:underline">Richard Stratt</a> (Chemistry Department)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-sm space-y-4">
+                    <p>Professor Kosterlitz's lecture will also serve as the inaugural lecture in Brown University's new Ising-Onsager Distinguished Lecture Series. His research areas include condensed matter, phase transitions, and Ising spin glasses. The initial proposal for this lecture series ("Proposal for the Ernst Ising Distinguished Lecture Series") was made to Brown University's Dean of the Faculty on May 20, 2011 by Sorin and colleagues from the Departments of Chemistry and Physics. The Ising-Onsager Distinguished Lecture Series builds on and revises that proposal.</p>
+
+                    <p>This series honors the memory of Lars Onsager, Brown University Professor of Chemistry from 1928-1933 and winner of the Nobel Prize for Chemistry in 1968. In 1944, Onsager obtained the phase transition and exact solution for the 2D planar Ising Model (Ising ferromagnetic 2D plane grid). His seminal exact mathematical proof of the 2D planar Ising model partition function formula is considered one of the most extraordinary mathematical tour de force proofs in statistical physics. Answering the call to "make [the proof] human", a dream team of mathematicians and physicists, including Kac, Ward, Feynman, Hurst, Kasteleyn, and Temperley attempted until 1975 to generalize Onsager's proof to three dimensions, but without success. Kac and Ward, with contributions from Feynman, obtained a combinatorial proof of the Onsager theorem. In 2000, Sorin published the paper "Statistical Mechanics, Three-Dimensionality and NP-completeness. I. Universality of Intractability for the Partition Function of the Ising Model Across Non-Planar Lattices" at the Symposium on the Theory of Computing (STOC). His paper showed, for several Ising spin glass models, that for every non-planar (and therefore every 3D) model, computing the partition function is NP-complete. The proofs were axiomatic: Non-planarity plus Translational Invariance implies NP-completeness.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <h2 class="font-bold text-2xl">Speakers and Attendees</h2>
+            
+            <div class="space-y-4">
+                <p class="italic">Following the Distinguished Lectures, some of our attendees will present short talks and remembrances:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">Speakers</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Derek Aguiar (Assistant Professor of Computer Science and Engineering, University of Connecticut)</li>
+                            <li><a href="#Vineet Bafna" class="text-blue-600 hover:underline">Vineet Bafna</a> (Professor of Computer Science and Engineering, University of California San Diego)</li>
+                            <li>Serafim Batzoglou (Chief Data Officer, Seer, and Professor of Computer Science, Stanford University)</li>
+                            <li><a href="#Bonnie Berger" class="text-blue-600 hover:underline">Bonnie Berger</a> (Simons Professor of Mathematics, Massachusetts Institute of Technology)</li>
+                            <li><a href="#Ernie Brickell" class="text-blue-600 hover:underline">Ernie Brickell</a> (Chief Security Architect Emeritus, Intel, and Distinguished Member of the Technical Staff, Emeritus, Sandia National Laboratories, Fellow of the International Association for Cryptologic Research)</li>
+                            <li><a href="#Andrea Califano" class="text-blue-600 hover:underline">Andrea Califano</a> (Clyde and Helen Wu Professor of Chemical and Systems Biology, Columbia University) (on Zoom)</li>
+                            <li><a href="#Bill Camp" class="text-blue-600 hover:underline">Bill Camp</a> (Director of Supercomputing, Emeritus, Sandia National Laboratories; Director of the Department of Energy and National Nuclear Security Administration's Accelerated Strategic Computing Initiative; Head of Development for the world's first teraflop computer; Chief Supercomputing Architect, Emeritus, for Intel; and winner of the IEEE Seymour Cray Supercomputing Award) (tentative)</li>
+                            <li>Ugur Cetintemel (Khosrowshahi University Professor of Computer Science, Brown University)</li>
+                            <li>Bary Cipra (Freelance science writer for Science, SIAM, awarded the 1991 Merten M. Hasse Prize from the Mathematical Association of America for his work on the Ising model)</li>
+                            <li><a href="#Andy Clark" class="text-blue-600 hover:underline">Andy Clark</a> (Jacob Gould Schurman Professor of Population Genetics, Cornell University)</li>
+                            <li>Sorin Draghici (Program Director, Division of Information and Intelligent Systems of the Directorate for Computer and Information Science and Engineering at the National Science Foundation)</li>
+                            <li><a href="#Daniel Fasulo" class="text-blue-600 hover:underline">Daniel Fasulo</a> (Founder and President, Pattern Genomics)</li>
+                            <li><a href="#Caleb Finch" class="text-blue-600 hover:underline">Caleb "Tuck" Finch</a> (University Professor and ARCO/William F. Kieschnick Chair in the Neurobiology of Aging, University of Southern California)</li>
+                            <li><a href="#Liliana Florea" class="text-blue-600 hover:underline">Liliana Florea</a> (Associate Professor of Genetic Medicine, Johns Hopkins University) (on Zoom)</li>
+                            <li>Stuart Geman (James Manning Professor of Applied Mathematics, Brown University)</li>
+                            <li>Concettina Guerra (Professor of Computer Science, Georgia Institute of Technology, emeritus)</li>
+                            <li>Bjarni V. Halldórsson (Head of Sequence Analysis, deCODE genetics, and Associate Professor of Computer Science, Reykjavík University), Chair of the Fest Organizing Committee</li>
+                            <li><a href="#Sridhar Hannenhalli" class="text-blue-600 hover:underline">Sridhar Hannenhalli</a> (Head, Cancer Gene Regulation Section, National Cancer Institute)</li>
+                            <li><a href="#Bill Hart" class="text-blue-600 hover:underline">Bill Hart</a> (Sandia Labs, Distinguished Member of the Technical Staff)</li>
+                            <li>Merissa Henry (Johnson) (Executive Assistant to the Vice President and Chief Scientific Officer at Howard Hughes Medical Institute, former Senior Administrative Assistant of Sorin's Informatics Research group at Celera Genomics)</li>
+                            <li><a href="#Sorin Istrail" class="text-blue-600 hover:underline">Sorin Istrail</a> (James A. and Julie N. Brown Professor of Computational and Mathematical Sciences, Brown University, Second Director of CCMB)</li>
+                            <li>Jonathan King (Professor Emeritus of Biology, Massachusetts Institute of Technology)</li>
+                            <li><a href="#Jon Kleinberg" class="text-blue-600 hover:underline">Jon Kleinberg</a> (Tisch University Professor of Computer Science and Information Science, Cornell University, and winner of the Nevanlinna Prize and a MacArthur Fellowship) (on Zoom)</li>
+                            <li><a href="#Giuseppe Lancia" class="text-blue-600 hover:underline">Giuseppe Lancia</a> (Full Professor of Operations Research, University of Udine)</li>
+                            <li>Charles "Chip" Lawrence (Professor of Applied Mathematics and First Director of the Center for Computational and Molecular Biology (CCMB), Brown University)</li>
+                            <li><a href="#Henri Lucian" class="text-blue-600 hover:underline">Henri Luchian</a> (Vice-Rector for International Relations and Professor of Computer Science, the Alexandru Ioan Cuza University) (on Zoom)</li>
+                            <li><a href="#Jason Miller" class="text-blue-600 hover:underline">Jason Miller</a> (Associate Professor, Computer Science, Shepherd University)</li>
+                            <li><a href="#Gene Meyers" class="text-blue-600 hover:underline">Gene Myers</a> (Director of Max Planck Institute of Molecular Cell Biology and Genetics, former VP of Informatics Research, Celera Genomics)</li>
+                            <li><a href="#Laxmi Parida" class="text-blue-600 hover:underline">Laxmi Parida</a> (IBM Fellow and Group Leader in Computational Genomics at the Thomas J. Watson Research Center and Courant Institute of Mathematical Sciences)</li>
+                            <li><a href="#Pavel Pevzner" class="text-blue-600 hover:underline">Pavel Pevzner</a> (Ronald R. Taylor Chair and Distinguished Professor of Computer Science and Engineering, University of California San Diego) (on Zoom)</li>
+                            <li><a href="#Franco Preparata" class="text-blue-600 hover:underline">Franco Preparata</a> (An Wang Professor Emeritus of Computer Science, Brown University, Visionary Founder of CCMB) (on Zoom)</li>
+                            <li><a href="#Sohini Ramachandran and Roberto Tamassia" class="text-blue-600 hover:underline">Sohini Ramachandran</a> (Hermon C. Bumpus Professor of Biology, Professor of Computer Science, Director of the Data Science Institute, Brown University)</li>
+                            <li>R. Ravi (Andris A. Zoltners Professor of Business, Professor of Operations Research and Computer Science, Carnegie Mellon University) (on Zoom)</li>
+                            <li>Russell Schwartz (Professor and Head, Computational Biology Department, Carnegie Mellon University)</li>
+                            <li><a href="#Ron Shamir" class="text-blue-600 hover:underline">Ron Shamir</a> (Sackler Professor of Bioinformatics, Tel Aviv University) (on Zoom)</li>
+                            <li><a href="#Peter Shor" class="text-blue-600 hover:underline">Peter Shor</a> (Morss Professor of Applied Mathematics, Massachusetts Institute of Technology, and winner of the Gödel Prize and a MacArthur Fellowship)</li>
+                            <li><a href="#Bjarne Stroustrup" class="text-blue-600 hover:underline">Bjarne Stroustrup</a> (Professor of Computer Science, Columbia University, inventor of the C++ programming language, and winner of the Faraday Medal)</li>
+                            <li><a href="#Sohini Ramachandran and Roberto Tamassia" class="text-blue-600 hover:underline">Roberto Tamassia</a> (James A. and Julie N. Brown Professor and Chair of Computer Science, Brown University)</li>
+                            <li>Eli Upfal (Rush C. Hawkins Professor of Computer Science, Brown University)</li>
+                            <li><a href="#Moshe Vardi" class="text-blue-600 hover:underline">Moshe Vardi</a> (University Professor, Karen Ostrum George Distinguished Service Professor in Computational Engineering, Rice University) (on Zoom)</li>
+                            <li>Michael Waterman (Endowed Associates Chair in Biological Sciences, Mathematics and Computer Science, University of Southern California)</li>
+                            <li>Daniel Weinreich (Royce Family Professor of Teaching Excellence in Biology, Professor of Ecology, Evolution, and Organismal Biology, Director of the Center for Computational Molecular Biology, Brown University)</li>
+                            <li><a href="#Jonathan Yewdell" class="text-blue-600 hover:underline">Jonathan Yewdell</a> (Chief, Cellular Biology Section, Laboratory of Viral Diseases, National Institute of Allergy and Infectious Diseases, National Institutes of Health)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">In Memoriam</h3>
+                        <p class="mb-4">A talk by Sorin will close the event. His remarks will include an In Memoriam section with remembrances of beloved mentors, friends and heroes:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Paul Erdos (at Sandia Labs)</li>
+                            <li>Edsger Dijkstra (in Rhode Island)</li>
+                            <li>John Conway (at Sandia Labs, Brown, Romania)</li>
+                            <li>Alberto Apostolico (at Brown, Venice, Lipari, and Ischia)</li>
+                            <li>Eric Davidson (at Caltech, Brown)</li>
+                            <li>Solomon Marcus (at Brown, Cambridge, UK, Romania)</li>
+                            <li>Ken Arrow (at Brown, Romania)</li>
+                            <li>Julie Nguyen Brown</li>
+                            <li>Robert Zimmer (at Brown)</li>
+                            <li>Ernst Ising, Lars Onsager, and John von Neumann</li>
+                        </ul>
+
+                        <h3 class="font-bold text-xl mt-8 mb-2">Organizing Committee</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Chair:</strong> Bjarni V. Halldórsson (Head of Sequence Analysis, deCODE Genetics, and Associate Professor of Biomedical Engineering, Reykjavík University)</li>
+                            <li>Derek Aguiar (Assistant Professor of Computer Science and Engineering, University of Connecticut)</li>
+                            <li>Suzanne Alden (Grants and Financial Manager, Department of Computer Science, Brown University)</li>
+                            <li>Vineet Bafna (Professor of Computer Science and Engineering, University of California San Diego)</li>
+                            <li>Meg Lopes (Events and Outreach Coordinator, Center for Computational Molecular Biology, Brown University)</li>
+                            <li>Russell Schwartz (Professor and Head, Computational Biology Department, Carnegie Mellon University)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div>
             <h3 class="text-left font-bold text-xl py-1">Day 1 Talks</h3>
             <div class="grid gap-1">
                 {
-                    day1Videos.map((video) => (
+                    day1.map((talk) => (
                         <div class="py-2">
                             <div class="py-1">
-                                <h4 id={video.title} class="font-bold text-lg">
-                                    {video.title}
+                                <h4 id={talk.speaker} class="font-bold text-lg">
+                                    {talk.title}
                                 </h4>
                             </div>
                             <YouTubeEmbed
-                                videoId={video.videoId}
-                                title={video.title}
+                                videoId={talk.url.split("embed/")[1]}
+                                title={talk.title}
                             />
                         </div>
                     ))
@@ -293,16 +443,16 @@ const day2Videos = day2.map((talk) => ({
             <h3 class="text-left font-bold text-xl py-1">Day 2 Talks</h3>
             <div class="grid gap-1">
                 {
-                    day2Videos.map((video) => (
+                    day2.map((talk) => (
                         <div class="py-2">
                             <div class="py-1">
-                                <h4 id={video.title} class="font-bold text-lg">
-                                    {video.title}
+                                <h4 id={talk.speaker} class="font-bold text-lg">
+                                    {talk.title}
                                 </h4>
                             </div>
                             <YouTubeEmbed
-                                videoId={video.videoId}
-                                title={video.title}
+                                videoId={talk.url.split("embed/")[1]}
+                                title={talk.title}
                             />
                         </div>
                     ))
