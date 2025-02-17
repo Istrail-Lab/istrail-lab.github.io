@@ -1,77 +1,71 @@
-name: Deploy to GitHub Pages and Remote Server
+name: Deploy to GitHub Pages & Remote Server
 
 on:
-  push:
-    branches: ["main", "master"]
-  workflow_dispatch:
+    push:
+        branches: [main]
+    workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    group: "pages"
+    cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-      - name: Setup Ruby and Bundler
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: false
+            - name: Install, build, and upload Astro site
+              uses: withastro/action@v2
 
-      - name: Install dependencies
-        run: bundle install --verbose
+            - name: Upload site artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: site-build
+                path: dist  # Astro outputs the built site to "dist"
 
-      - name: Build Jekyll site
-        run: |
-          bundle exec jekyll build --source . --destination ./_site --baseurl "/courses/csci2840/spring-2025"
+    deploy-github-pages:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - name: Download site build
+              uses: actions/download-artifact@v4
+              with:
+                name: site-build
+                path: dist
 
-      # Upload the built site for later jobs
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-build
-          path: ./_site
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: dist
 
-  deploy-github-pages:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download site build
-        uses: actions/download-artifact@v4
-        with:
-          name: site-build
-          path: _site
+    deploy-remote:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download site build
+              uses: actions/download-artifact@v4
+              with:
+                name: site-build
+                path: dist
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site  # Make sure this matches the built Jekyll output
-
-  deploy-remote:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download site build
-        uses: actions/download-artifact@v4
-        with:
-          name: site-build
-          path: _site
-
-      - name: rsync files to remote server
-        uses: burnett01/rsync-deployments@6.0.0
-        with:
-          switches: -avzr --delete --omit-dir-times
-          path: _site/
-          remote_path: ${{ vars.REMOTE_PATH }}
-          remote_host: ${{ vars.REMOTE_HOST }}
-          remote_user: ${{ vars.REMOTE_USER }}
-          remote_key: ${{ secrets.DEPT_KEY }}
+            - name: Deploy to Remote Server via rsync
+              uses: burnett01/rsync-deployments@7.0.2
+              with:
+                switches: -avzr --delete --omit-dir-times
+                path: dist/
+                remote_path: ${{ vars.REMOTE_PATH }}
+                remote_host: ${{ vars.REMOTE_HOST }}
+                remote_user: ${{ vars.REMOTE_USER }}
+                remote_key: ${{ secrets.DEPT_KEY }}
