@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Astro description">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <meta name="generator" content="Astro v2.6.6">
+        <title>Istrail Lab | Protein Folding Algorithms</title>
+    <link rel="stylesheet" href="/_astro/essays.5ec62e0b.css" /></head>
+    <body class="h-full">
+        <div class="w-full flex items-center bg-base-300 px-2 py-3">
+    <div class="flex-1 px-2 mx-2">
+        <a class="no-underline text-black font-bold text-xl px-2 py-2 rounded-lg hover:bg-[#1F293733]" href="/">Istrail Lab</a>
+    </div>
+    <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var c;{let d={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,r)=>{if(t===""||!Array.isArray(r))return r;let[e,n]=r;return e in d?d[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(c=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{var l;if(!this.hydrator||!this.isConnected||(l=this.parentElement)!=null&&l.closest("astro-island[ssr]"))return;let r=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(let s of n){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML)}let a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let r=this.getAttribute("before-hydration-url");r&&await import(r),this.start()}start(){let r=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{let n=this.getAttribute("renderer-url"),[a,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),s=this.getAttribute("component-export")||"default";if(!s.includes("."))this.Component=a[s];else{this.Component=a;for(let i of s.split("."))this.Component=this.Component[i]}return this.hydrator=l,this.hydrate},r,this)}attributeChangedCallback(){this.hydrate()}},c.observedAttributes=["props"],c))}})();</script><astro-island uid="aIFOr" component-url="/_astro/NavSidebar.63e48d0f.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;NavSidebar&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>
+</div>
+        <div class="flex-1">
+            <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
+                <h2 class="text-3xl font-bold pt-4">Protein Folding Algorithms</h2>
+                <h3 class="text-2xl font-bold py-8">Research Summary</h3>
+                <div class="grid gap-4">
+        <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><astro-island uid="TmzzY" prefix="r17" component-url="/_astro/Abstract.2415f2d6.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{&quot;title&quot;:[0,&quot;1001 optimal PDB structure alignments: integer programming methods for finding the maximum contact map overlap&quot;],&quot;blurb&quot;:[0,&quot;Protein structure comparison is a fundamental problem for structural genomics, with applications to drug design, fold prediction, protein clustering, and evolutionary studies. Despite its importance, there are very few rigorous methods and widely accepted similarity measures known for this problem. In this paper we describe the last few years of developments on the study of an emerging measure, the contact map overlap (CMO), for protein structure comparison. A contact map is a list of pairs of residues which lie in three-dimensional proximity in the protein&#39;s native fold.&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Abstract&quot;,&quot;value&quot;:true}" await-children=""><div class="grid gap-2"><h3 class="text-lg font-bold" style="text-wrap:balance">1001 optimal PDB structure alignments: integer programming methods for finding the maximum contact map overlap</h3>Protein structure comparison is a fundamental problem for structural genomics, with applications to drug design, fold prediction, protein clustering, and evolutionary studies. Despite its importance, there are very few rigorous methods and widely accepted similarity measures known for this problem. In this paper we describe the last few years of developments on the study of an emerging measure, the contact map overlap (CMO), for protein structure comparison. A contact map is a list of pairs of residues which lie in three-dimensional proximity in the protein&#x27;s native fold.<button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-79xub" tabindex="0" type="button">See more</button></div><template data-astro-template>
+            Protein structure comparison is a fundamental problem for structural
+            genomics, with applications to drug design, fold prediction, protein
+            clustering, and evolutionary studies. Despite its importance, there
+            are very few rigorous methods and widely accepted similarity
+            measures known for this problem. In this paper we describe the last
+            few years of developments on the study of an emerging measure, the
+            contact map overlap (CMO), for protein structure comparison. A
+            contact map is a list of pairs of residues which lie in
+            three-dimensional proximity in the protein's native fold. Although
+            this measure is in principle computationally hard to optimize, we
+            show how it can in fact be computed with great accuracy for related
+            proteins by integer linear programming techniques. These methods
+            have the advantage of providing certificates of near-optimality by
+            means of upper bounds to the optimal alignment value. We also
+            illustrate effective heuristics, such as local search and genetic
+            algorithms. We were able to obtain for the first time optimal
+            alignments for large similar proteins (about 1,000 residues and
+            2,000 contacts) and used the CMO measure to cluster proteins in
+            families. The clusters obtained were compared to SCOP classification
+            in order to validate the measure. Extensive computational
+            experiments showed that alignments which are off by at most 10% from
+            the optimal value can be computed in a short time. Further
+            experiments showed how this measure reacts to the choice of the
+            threshold defining a contact and how to choose this threshold in a
+            sensible way.
+        </template></astro-island>
+        <astro-island uid="Z1tuYvS" prefix="r18" component-url="/_astro/Abstract.2415f2d6.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{&quot;title&quot;:[0,&quot;The Sequence of the Human Genome&quot;],&quot;blurb&quot;:[0,&quot;A 2.91-billion base pair (bp) consensus sequence of the euchromatic portion of the human genome was generated by the whole-genome shotgun sequencing method. The 14.8-billion bp DNA sequence was generated over 9 months from 27,271,853 high-quality sequence reads (5.11-fold coverage of the genome) from both ends of plasmid clones made from the DNA of five individuals. Two assembly strategies-a whole-genome assembly and a regional chromosome assembly-were used, each combining sequence data from Celera and the publicly funded genome effort.&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Abstract&quot;,&quot;value&quot;:true}" await-children=""><div class="grid gap-2"><h3 class="text-lg font-bold" style="text-wrap:balance">The Sequence of the Human Genome</h3>A 2.91-billion base pair (bp) consensus sequence of the euchromatic portion of the human genome was generated by the whole-genome shotgun sequencing method. The 14.8-billion bp DNA sequence was generated over 9 months from 27,271,853 high-quality sequence reads (5.11-fold coverage of the genome) from both ends of plasmid clones made from the DNA of five individuals. Two assembly strategies-a whole-genome assembly and a regional chromosome assembly-were used, each combining sequence data from Celera and the publicly funded genome effort.<button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-79xub" tabindex="0" type="button">See more</button></div><template data-astro-template>
+            A 2.91-billion base pair (bp) consensus sequence of the euchromatic
+            portion of the human genome was generated by the whole-genome
+            shotgun sequencing method. The 14.8-billion bp DNA sequence was
+            generated over 9 months from 27,271,853 high-quality sequence reads
+            (5.11-fold coverage of the genome) from both ends of plasmid clones
+            made from the DNA of five individuals. Two assembly strategies-a
+            whole-genome assembly and a regional chromosome assembly-were used,
+            each combining sequence data from Celera and the publicly funded
+            genome effort. The public data were shredded into 550-bp segments to
+            create a 2.9-fold coverage of those genome regions that had been
+            sequenced, without including biases inherent in the cloning and
+            assembly procedure used by the publicly funded group. This brought
+            the effective coverage in the assemblies to eightfold, reducing the
+            number and size of gaps in the final assembly over what would be
+            obtained with 5.11-fold coverage. The two assembly strategies
+            yielded very similar results that largely agree with independent
+            mapping data. The assemblies effectively cover the euchromatic
+            regions of the human chromosomes. More than 90% of the genome is in
+            scaffold assemblies of 100,000 bp or more, and 25% of the genome is
+            in scaffolds of 10 million bp or larger. Analysis of the genome
+            sequence revealed 26,588 protein-encoding transcripts for which
+            there was strong corroborating evidence and an additional
+            approximately 12,000 computationally derived genes with mouse
+            matches or other weak supporting evidence. Although gene-dense
+            clusters are obvious, almost half the genes are dispersed in low G+C
+            sequence separated by large tracts of apparently noncoding sequence.
+            Only 1.1% of the genome is spanned by exons, whereas 24% is in
+            introns, with 75% of the genome being intergenic DNA. Duplications
+            of segmental blocks, ranging in size up to chromosomal lengths, are
+            abundant throughout the genome and reveal a complex evolutionary
+            history. Comparative genomic analysis indicates vertebrate
+            expansions of genes associated with neuronal function, with
+            tissue-specific developmental regulation, and with the hemostasis
+            and immune systems. DNA sequence comparisons between the consensus
+            sequence and publicly funded genome data provided locations of 2.1
+            million single-nucleotide polymorphisms (SNPs). A random pair of
+            human haploid genomes differed at a rate of 1 bp per 1250 on
+            average, but there was marked heterogeneity in the level of
+            polymorphism across the genome. Less than 1% of all SNPs resulted in
+            variation in proteins, but the task of determining which SNPs have
+            functional consequences remains an open challenge.
+        </template></astro-island>
+        <astro-island uid="Z14gOeS" prefix="r19" component-url="/_astro/Abstract.2415f2d6.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{&quot;title&quot;:[0,&quot;Visualization Challenges for a New Cyberpharmaceutical Computing Paradigm&quot;],&quot;blurb&quot;:[0,&quot;In recent years, an explosion in data has been profoundly changing\n            the field of biology and creating the need for new areas of\n            expertise, particularly in the handling of data. One vital area that\n            has so far received insufficient attention is how to communicate the\n            large quantities of diverse and complex information that is being\n            generated.&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Abstract&quot;,&quot;value&quot;:true}" await-children=""><div class="grid gap-2"><h3 class="text-lg font-bold" style="text-wrap:balance">Visualization Challenges for a New Cyberpharmaceutical Computing Paradigm</h3>In recent years, an explosion in data has been profoundly changing
+            the field of biology and creating the need for new areas of
+            expertise, particularly in the handling of data. One vital area that
+            has so far received insufficient attention is how to communicate the
+            large quantities of diverse and complex information that is being
+            generated.<button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-79xub" tabindex="0" type="button">See more</button></div><template data-astro-template>
+            In recent years, an explosion in data has been profoundly changing
+            the field of biology and creating the need for new areas of
+            expertise, particularly in the handling of data. One vital area that
+            has so far received insufficient attention is how to communicate the
+            large quantities of diverse and complex information that is being
+            generated. Celera has encountered a number of visualization problems
+            in the course of developing tools for bioinformatics research,
+            applying them to our data generation efforts, and making that data
+            available to our customers. This paper presents several examples
+            from Celera’s experience. In the area of genomics, challenging
+            visualization problems have come up in assembling genomes, studying
+            variations between individuals, and comparing different genomes to
+            one another. The emerging area of proteomics has created new
+            visualization challenges in interpreting protein expression data,
+            studying protein regulatory networks, and examining protein
+            structure. These examples illustrate how the field of bioinformatics
+            is posing new challenges concerning the communication of data that
+            are often very different from those that have heretofore dominated
+            scientific computing. Addressing the level of detail, the degree of
+            complexity, and the interdisciplinary barriers that characterize
+            bioinformatic problems can be expected to be a sizable but rewarding
+            task for the field of scientific visualization.
+        </template></astro-island>
+        <astro-island uid="1XB4Uk" prefix="r20" component-url="/_astro/Abstract.2415f2d6.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{&quot;title&quot;:[0,&quot;Frequencies of amino acid strings in globular protein sequences indicate suppression of blocks of consecutive hydrophobic residues.&quot;],&quot;blurb&quot;:[0,&quot;Patterns of hydrophobic and hydrophilic residues play a major role\n            in protein folding and function. Long, predominantly hydrophobic\n            strings of 20–22 amino acids each are associated with transmembrane\n            helices and have been used to identify such sequences. Much less\n            attention has been paid to hydrophobic sequences within globular\n            proteins. In prior work on computer simulations of the competition\n            between on-pathway folding and off-pathway aggregate formation, we\n            found that long sequences of consecutive hydrophobic residues\n            promoted aggregation within the model, even controlling for overall\n            hydrophobic content.&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Abstract&quot;,&quot;value&quot;:true}" await-children=""><div class="grid gap-2"><h3 class="text-lg font-bold" style="text-wrap:balance">Frequencies of amino acid strings in globular protein sequences indicate suppression of blocks of consecutive hydrophobic residues.</h3>Patterns of hydrophobic and hydrophilic residues play a major role
+            in protein folding and function. Long, predominantly hydrophobic
+            strings of 20–22 amino acids each are associated with transmembrane
+            helices and have been used to identify such sequences. Much less
+            attention has been paid to hydrophobic sequences within globular
+            proteins. In prior work on computer simulations of the competition
+            between on-pathway folding and off-pathway aggregate formation, we
+            found that long sequences of consecutive hydrophobic residues
+            promoted aggregation within the model, even controlling for overall
+            hydrophobic content.<button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-79xub" tabindex="0" type="button">See more</button></div><template data-astro-template>
+            Patterns of hydrophobic and hydrophilic residues play a major role
+            in protein folding and function. Long, predominantly hydrophobic
+            strings of 20–22 amino acids each are associated with transmembrane
+            helices and have been used to identify such sequences. Much less
+            attention has been paid to hydrophobic sequences within globular
+            proteins. In prior work on computer simulations of the competition
+            between on-pathway folding and off-pathway aggregate formation, we
+            found that long sequences of consecutive hydrophobic residues
+            promoted aggregation within the model, even controlling for overall
+            hydrophobic content. We report here on an analysis of the
+            frequencies of different lengths of contiguous blocks of hydrophobic
+            residues in a database of amino acid sequences of proteins of known
+            structure. Sequences of three or more consecutive hydrophobic
+            residues are found to be significantly less common in actual
+            globular proteins than would be predicted if residues were selected
+            independently. The result may reflect selection against long blocks
+            of hydrophobic residues within globular proteins relative to what
+            would be expected if residue hydrophobicities were independent of
+            those of nearby residues in the sequence.
+        </template></astro-island>
+        <astro-island uid="1XOywL" component-url="/_astro/Carousel.fac3ba18.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{&quot;images&quot;:[1,&quot;[[0,\&quot;/_astro/1.cf7186e9.png\&quot;],[0,\&quot;/_astro/2.dfa30ce6.png\&quot;],[0,\&quot;/_astro/3.4ecfaec0.png\&quot;],[0,\&quot;/_astro/4.8d061674.png\&quot;],[0,\&quot;/_astro/5.7fe350d4.png\&quot;],[0,\&quot;/_astro/6.a4cf513a.png\&quot;],[0,\&quot;/_astro/7.cd310bfb.png\&quot;]]&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Carousel&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>
+    </div>
+                
+                <div class="grid gap-2">
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>...a very nice step forward in the computerology of proteins.</p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Ken Dill</p><p class="italic">Folding proteins fast (Science 1995)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The subject of chaos is characterized by an abundance of
+                quantitative data, an unending supply of beautiful pictures, and
+                a shortage of rigorous theorems. Rigorous theorems are the best
+                way to give a subject intellectual depth and precision. Until
+                you can prove rigorous theorems, you do not fully understand the
+                meaning of your concepts.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Freeman Dyson</p><p class="italic">Birds and frogs (Notics of the American Mathematical Society 2009)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The most vitally characteristic fact about mathematics is, in my
+                opinion, its quite peculiar relationship to the natural sciences
+                ... In modern empirical sciences it has become more and more a
+                major criterion of success whether they have become accessible
+                to the mathematical method or to the near-mathematical methods
+                of physics. Indeed, throughout the natural sciences an unbroken
+                chain of successive pseudomorphoses, all of them pressing toward
+                mathematics, and almost identified with the idea of scientific
+                progress, has become more and more evident. Biology becomes
+                increasingly pervaded by chemistry and physics, chemistry by
+                experimental and theoretical physics, and physics by very
+                mathematical forms of theoretical physics.
+                <br>
+                There is a quite peculiar duplicity in the nature of mathematics.
+                One has to realize this duplicity, to accept it, and to assimilate
+                it into one's thinking on the subject. This double face is the face
+                of mathematics, and I do not believe that any simplified, unitarian
+                view of the thing is possible without sacrificing the essence.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">John von Neumann</p><p class="italic">The mathematician (The Works of the Mind 1947)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                Protein folding is a fascinating cross-disciplinary field that
+                attracts scientists with different backgrounds and scientific
+                cultures. They bring to the protein folding field the models and
+                the way of thinking that are accepted of their respective
+                background fields. Such diversity of scientific cultures is a
+                great virtue of the protein folding field, in which physics,
+                chemistry, biology, and mathematics meet. It is important for
+                our cross-disciplinary field to discuss with balance both strong
+                points and limitations of different approaches.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">E. Shakhnovich</p><p class="italic">Modeling protein folding: the beauty and power of simplicity (Folding and Design 1996)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                Protein folding is a fascinating cross-disciplinary field that
+                attracts scientists with different backgrounds and scientific
+                cultures. They bring to the protein folding field the models and
+                the way of thinking that are accepted of their respective
+                background fields. Such diversity of scientific cultures is a
+                great virtue of the protein folding field, in which physics,
+                chemistry, biology, and mathematics meet. It is important for
+                our cross-disciplinary field to discuss with balance both strong
+                points and limitations of different approaches.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Eugene Shakhnovich</p><p class="italic">Modeling protein folding: the beauty and power of simplicity (Folding and Design 1996)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The protein folding problem is three different problems: the
+                folding code – the thermodynamic question of how a native
+                structure results from the interatomic forces acting on an amino
+                acid sequence; protein structure prediction – the computational
+                problem of how to predict the native structure of a protein from
+                its amino acid sequence; and the folding speed (Levinthal’s
+                paradox) – the kinetic question of how a protein can fold so
+                fast... Current knowledge of the folding codes is sufficient to
+                guide the successful design of new proteins and new materials.
+                Current computer algorithms are now predicting the native
+                structures of small simple proteins remarkably accurately,
+                contributing to drug discovery and proteomics. Even once
+                intractable Levinthal puzzle now seems to have a very simple
+                answer...
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Ken Dill</p><p class="italic">The protein folding problem: when will it be solved?(Current Opinion in Structural Biology 2007)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The failure of protein-folding processes, both within cells (in
+                vivo) and within test tubes or industrial vats (in vitro),
+                causes serious difficulties both for biomedical research and for
+                the biotechnology industry. Protein chains that fail to fold
+                properly aggregate into an insoluble and inactive state... There
+                is increased recognition that some human diseases are associated
+                with aberrations or defects in protein chain folding. These
+                include Alzheimer’s and Huntington’s and cystic fibrosis.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Jonathan King</p><p class="italic">Protein folding and misfolding (American Scientist 2002)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                Understanding the mechanism of protein folding is often called
+                the “second half” of genetics. Computational approaches have
+                been instrumental in the efforts. Simplified models have been
+                applied to understand the physical principles governing the
+                folding processes and will continue to play important roles in
+                the endeavor.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Peter Kollman</p><p class="italic">Protein folding: from lattice to all-atom (IBM Systems Journal 2001)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                We must emphasize a statement which I am sure you have heard
+                before, but which must be repeated again and again. It is that
+                the sciences do not try to explain, they hardly even try to
+                interpret, they mainly make models. By a model, I mean a
+                mathematical construct which, with the addition of certain
+                verbal interpretations, describes the observed phenomena.
+                Furthermore, it must satisfy certain aesthetic criteria, that
+                is, in relation to how much it describes, it must be rather
+                simple. Since one cannot tell exactly how 'simple' simple is...
+                Simplicity is largely a matter of historical background, of
+                previous conditioning, of antecedents, of customary procedures,
+                and it is very much a function of what is explained by it.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">John von Neumann</p><p class="italic">Method in physical sciences (The Unity of Knowledge 1995)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                It seems remarkable that so simple a model based on
+                time-averaged forces can account for the stability and folding
+                of a molecule as complicated as a protein. Looking at known
+                protein conformations closely, one is struck by the precise
+                geometry of the interatomic contacts that stabilize the
+                molecule: all possible interior hydrogen bonds are well formed,
+                and many of the nonpolar side chains interlock to form a
+                close-packed interior. ... [T]he forces responsible for this
+                precise geometry... cause the chain to fold into the approximate
+                shape rapidly and without having to pass through many local
+                minima... Although calculating the energy of the all-atom
+                molecule would be time-consuming, one would have the great
+                advantage of starting close to the right conformation... The
+                general concept of using a simple model... when the detailed
+                forces are too complicated has many potential applications...
+                Such a hierarchical approach might eventually lead to an
+                understanding and simulation of very complicated biological
+                assembly processes.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Michael Levitt and Arieh Warshel</p><p class="italic">Computer simulation of protein folding (Nature 1975)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                Folding is an intrinsically statistical phenomenon and no
+                conclusion can be derived from a single folding or unfolding
+                trajectory. ... Lattice and other simplified analytical models
+                are the statistical mechanician’s contribution to the protein
+                folding... their intimate connection with statistical
+                mechanics... is very important as it often allows us to compare
+                simulation with statistical-mechanical analytical theories.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Eugene Shakhnovich</p><p class="italic">Modeling pretin folding: the beauty and power of simplicity (Folding and Design 1996)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The central question addressed in this review is this: Is there
+                some clever algorithm, yet to be invented, that can find the
+                global minimum of a protein’s potential-energy function reliably
+                and reasonably quickly? Or is there something intrinsic to the
+                problem that prevents such a solution from existing?... Is there
+                an approximation algorithm for global potential-energy
+                minimization?... To our knowledge, the possible existence of an
+                approximation algorithm for protein structure prediction has not
+                been addressed... Such an approximation algorithm might be of
+                significant practical use in protein structure prediction,
+                because exactness is not a central issue.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Martin Karplus</p><p class="italic">Computational complexity, protein structure prediction, and the Levinthal paradox (The Protein Folding Problem and Tertiary Structure Prediction 1994)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                It is the mark of an instructed mind to rest satisfied with the
+                degree of precision which the nature of the subjects permits and
+                not seek an exactness where only an approximation of the truth
+                is possible.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Aristotle</p><p class="italic">Nichomachean ethics (319 BC)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The exactness of mathematics is well illustrated by proofs of
+                impossibility. When asserting that doubling the cube... is
+                impossible, the statement does not merely refer to a temporary
+                limitation of human ability to perform this feat. It goes far
+                beyond this, for it proclaims that never, no matter what, will
+                anybody ever be able to [double the cube]. No other science, or
+                for that matter no other discipline of human endeavor, can even
+                contemplate anything of such finality.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Mark Kac and Stan Ulam</p><p class="italic">(1968)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                For a quarter of a century now, NP-completeness has been
+                computer science’s favorite paradigm, fad, punching bag,
+                buzzword, alibi, and intellectual export... pervasive and
+                contagious.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Christos Papadimitriou</p><p class="italic">(1995)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <p>
+                The true elegance of this consequence of natural selection was
+                dramatized by the ribonucleases work since the refolding of this
+                molecule after full denaturation by reductive cleavage of its
+                four disulfide bonds... required that only 1 of 10^5 possible
+                pairings of eight sulfhyryl groups to form four disulfide
+                linkages take place...to establish... the “thermodynamic
+                hypothesis.” This hypothesis states that the three-dimensional
+                structure of a native protein in its normal physiological milieu
+                (solvent, pH, ionic strength, presence of other components such
+                as metal ions or prosthetic groups, temperature, and other) is
+                the one in which the Gibbs free energy of the whole system is
+                lowest; that is, that the native conformation is determined by
+                its totality of interatomic interactions and hence by the amino
+                acid sequence, in a given environment.
+            </p>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Christian Anfinsen</p><p class="italic">Principles that govern the folding of protein chains (Science 1973)</p></div></div></blockquote>
+    </div>
+
+                <h3 class="text-2xl font-bold py-8">Relevant Papers</h3>
+                <ul class="grid gap-4">
+        <li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">1001 optimal PDB structure alignments: integer programming methods for finding the maximum contact map overlap</h3><span class="text-md font-bold">2004</span></div><p class="py-2">Alberto Caprara, Robert Carr, Sorin Istrail, Giuseppe Lancia, Brian Walenz</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Journal of Computational Biology</i></span>, vol. 11, no. 1, pg. 27-52</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/1001-JCB.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">The Sequence of the Human Genome</h3><span class="text-md font-bold">2001</span></div><p class="py-2">J. Craig Venter, Mark D. Adams, Eugene W. Myers, Peter W. Li, Richard J. Mural, Granger G. Sutton, Hamilton O. Smith, Mark Yandell, Cheryl A. Evans, Robert A. Holt, Jeannine D. Gocayne, Peter Amanatides, Richard M. Ballew, Daniel H. Huson, Jennifer Russo Wortman, Qing Zhang, Chinnappa D. Kodira, Xiangqun H. Zheng, Lin Chen, Marian Skupski, Gangadharan Subramanian, Paul D. Thomas, Jinghui Zhang, George L. Gabor Miklos, Catherine Nelson, Samuel Broder, Andrew G. Clark, Joe Nadeau, Victor A. McKusick, Norton Zinder, Arnold J. Levine, Richard J. Roberts, Mel Simon, Carolyn Slayman, Michael Hunkapiller, Randall Bolanos, Arthur Delcher, Ian Dew, Daniel Fasulo, Michael Flanigan, Liliana Florea, Aaron Halpern, Sridhar Hannenhalli, Saul Kravitz, Samuel Levy, Clark Mobarry, Knut Reinert, Karin Remington, Jane Abu-Threideh, Ellen Beasley, Kendra Biddick, Vivien Bonazzi, Rhonda Brandon, Michele Cargill, Ishwar Chandramouliswaran, Rosane Charlab, Kabir Chaturvedi, Zuoming Deng, Valentina Di Francesco, Patrick Dunn, Karen Eilbeck, Carlos Evangelista, Andrei E. Gabrielian, Weiniu Gan, Wangmao Ge, Fangcheng Gong, Zhiping Gu, Ping Guan, Thomas J. Heiman, Maureen E. Higgins, Rui-Ru Ji, Zhaoxi Ke, Karen A. Ketchum, Zhongwu Lai, Yiding Lei, Zhenya Li, Jiayin Li, Yong Liang, Xiaoying Lin, Fu Lu, Gennady V. Merkulov, Natalia Milshina, Helen M. Moore, Ashwinikumar K Naik, Vaibhav A. Narayan, Beena Neelam, Deborah Nusskern, Douglas B. Rusch, Steven Salzberg, Wei Shao, Bixiong Shue, Jingtao Sun, Zhen Yuan Wang, Aihui Wang, Xin Wang, Jian Wang, Ming-Hui Wei, Ron Wides, Chunlin Xiao, Chunhua et al. Yan</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Science</i></span>, vol. 291, no. 5507, pg. 1304-1351</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/Science_2001_VenterThe_sequence_of_the_human.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Visualization challenges for a new cyberpharmaceutical computing paradigm</h3><span class="text-md font-bold">2001</span></div><p class="py-2">Russell J. Turner, Kabir Chaturvedi, Nathan J. Edwards, Daniel Fasulo, Aaron L. Halpern, Daniel H. Huson, Oliver Kohlbacher, Jason R. Miller, Knut Reinert, Karin A. Remington, Russell Schwartz, Brian Walenz, Shibu Yooseph, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>IEEE Press</p><p><span>In <i>IEEE 2001 symposium on parallel and large-data visualization and graphics</i></span>, pg. 7-18</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/p7-turner.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Frequencies of amino-acid strings in globular proteins sequences indicate suppression of blocks of consecutive hydrophobic residues</h3><span class="text-md font-bold">2001</span></div><p class="py-2">Russell Schwartz, Sorin Istrail, Jonathan King</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Protein Science</i></span>, vol. 10, pg. 1023-1031</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/101023_ftp.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">101 Optimal PDB Structure Alignments: A Branch-and-Cut Algorithm for the Maximum Contact Map Overlap Problem</h3><span class="text-md font-bold">2001</span></div><p class="py-2">Giuseppe Lancia, Robert Carr, Brian Walenz, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>ACM Press</p><p><span>In <i>RECOMB</i></span>, pg. 201-211</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/101%20optimal.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Prediction of Self-Assembly of Energetic Tiles and Dominos: Experiments, Mathematics and Software</h3><span class="text-md font-bold">2000</span></div><p class="py-2">Sorin Istrail, Alan Hurd, Ross A. Lippert, Brian Walenz, Serafim Batzoglou, John H. Conway, Fredrick W. Peyerl</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>Sandia Labs</p><p></p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/10.1.1.134.9581.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Insights Into the Association of Partially Folded Chains Derived From Lattice Simulation Models</h3><span class="text-md font-bold">1999</span></div><p class="py-2">Russell Schwartz, Sorin Istrail, Jonathan King</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>Sandia Labs</p><p></p></div><div class="flex gap-4 items-center"></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Prediction of Energetic Tiles Self-Assembly</h3><span class="text-md font-bold">1999</span></div><p class="py-2">Ross A. Lippert, Sorin Istrail, Alan Hurd</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>Sandia Labs</p><p></p></div><div class="flex gap-4 items-center"></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Lattice Simulations of Aggregation Funnels of Protein Folding</h3><span class="text-md font-bold">1999</span></div><p class="py-2">Sorin Istrail, Russell Schwartz, Jonathan King</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Journal of Computational Biology</i></span>, vol. 6, no. 2</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/latticesim.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Algorithmic Aspects of Protein Structure Similarity</h3><span class="text-md font-bold">1999</span></div><p class="py-2">Deborah Goldman, Sorin Istrail, Christos H. Papadimitriou</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>IEEE Computer Society Press</p><p><span>In <i>FOCS</i></span></p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/00814624.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Mathematics of Self-Assembly</h3><span class="text-md font-bold">1999</span></div><p class="py-2">John H. Conway, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>Sandia Labs</p><p></p></div><div class="flex gap-4 items-center"></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Branch-and-Bound LP-algorithms for Protein Structure Alignment Based on Contact Map Overlap</h3><span class="text-md font-bold">1999</span></div><p class="py-2">Robert Carr, Giuseppe Lancia, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>Sandia Labs</p><p></p></div><div class="flex gap-4 items-center"></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Robust Proofs of NP-Hardness for Protein Folding: General Lattices and Energy Potentials</h3><span class="text-md font-bold">1997</span></div><p class="py-2">William E. Hart, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Journal of Computational Biology</i></span>, vol. 4, no. 1, pg. 1-22</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/robustproofs.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Lattice and Off-Lattice Side Chain Models of Protein Folding: Linear Time Structure Prediction Better than 86% of Optimal</h3><span class="text-md font-bold">1997</span></div><p class="py-2">William E. Hart, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>ACM Press</p><p><span>In <i>In First International Conference on Computational Molecular Biology, (RECOMB97)</i></span>, pg. 137-146</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/1997/p137-hart.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Invariant Patterns in Crystal Lattices: Implications for Protein Folding Algorithms</h3><span class="text-md font-bold">1996</span></div><p class="py-2">William E. Hart, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>Springer</p><p><span>In <i>In 7th Conference on Combinatorial Pattern Matching (CPM96)</i></span>, pg. 288-303</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/fulltext.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Fast Protein Folding in the Hydrophobic-Hydrophilic Model Within Three-eighths of Optimal</h3><span class="text-md font-bold">1995</span></div><p class="py-2">William E. Hart, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>ACM Press</p><p><span>In <i>In 27th Annual ACM Symposium on Theory of Computation (STOC95)</i></span>, pg. 157-168</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="http://www.brown.edu/Research/Istrail_Lab/archive/papers/10.1.1.110.3139.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li><li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Crystallographical universal approximation: A complexity theory of protein folding algorithms for crystal lattices</h3><span class="text-md font-bold">1995</span></div><p class="py-2">William E. Hart, Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Sandia Labs</i></span></p></div><div class="flex gap-4 items-center"></div></div></div>
+                </li>
+    </ul>
+            </main>
+        </div>
+        <footer class="flex justify-center items-center p-4 bg-neutral text-neutral-content mt-20 text-sm">
+    <div class="items-center grid-flow-col">
+        <p>Copyright Istrail Lab © 2024 - All rights reserved</p>
+    </div>
+</footer>
+    </body></html>

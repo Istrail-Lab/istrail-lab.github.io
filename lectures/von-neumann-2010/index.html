@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Astro description">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <meta name="generator" content="Astro v2.6.6">
+        <title>Istrail Lab | John von Neumann Lectures</title>
+    <link rel="stylesheet" href="/_astro/essays.5ec62e0b.css" /></head>
+    <body class="flex flex-col h-full">
+        <div class="w-full flex items-center bg-base-300 px-2 py-3">
+    <div class="flex-1 px-2 mx-2">
+        <a class="no-underline text-black font-bold text-xl px-2 py-2 rounded-lg hover:bg-[#1F293733]" href="/">Istrail Lab</a>
+    </div>
+    <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var c;{let d={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,r)=>{if(t===""||!Array.isArray(r))return r;let[e,n]=r;return e in d?d[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(c=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{var l;if(!this.hydrator||!this.isConnected||(l=this.parentElement)!=null&&l.closest("astro-island[ssr]"))return;let r=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(let s of n){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML)}let a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let r=this.getAttribute("before-hydration-url");r&&await import(r),this.start()}start(){let r=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{let n=this.getAttribute("renderer-url"),[a,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),s=this.getAttribute("component-export")||"default";if(!s.includes("."))this.Component=a[s];else{this.Component=a;for(let i of s.split("."))this.Component=this.Component[i]}return this.hydrator=l,this.hydrate},r,this)}attributeChangedCallback(){this.hydrate()}},c.observedAttributes=["props"],c))}})();</script><astro-island uid="aIFOr" component-url="/_astro/NavSidebar.63e48d0f.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;NavSidebar&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>
+</div>
+        <div class="flex-1">
+            <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
+                
+  <h1 class="font-bold text-3xl pt-4">John von Neumann Lectures 2010</h1>
+
+  <div class="py-4">
+    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Randomness is Beautiful: In search of von Neumann</h3><span class="text-md font-bold">2006</span></div><p class="py-2">Sorin Istrail, Tracie Sweeney</p><div class="flex gap-6 justify-between"><div class="text-sm"><p><span>In <i>Conduit</i></span>, vol. 9</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="/papers/randomness_vonneumann.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+  </div>
+
+  <h3 class="font-semibold text-xl py-2">Format of the Sweatbox Q&A</h3>
+  <p>
+    Funded by the National Science Foundation as a workshop called "Q&A Boot
+    Camp at Brown University: Asking Tough Scientific Questions," the "Sweatbox"
+    session as a didactic concept was inspired by the famous 8-week "Summer
+    Course/Boot Camp on Embryology" at the Marine Biological Laboratory, Woods
+    Hall, MA and the director of the course for 15 years, Professor Eric
+    Davidson of the Division of Biology at California Institute of Technology.
+    The story goes that invited speakers at this course would talk in the
+    laboratory's Warm Room and would be subjected there to tough scientific
+    questions about their scientific findings and their claims. Professor
+    Davidson, professor-in-chief of developmental gene regulatory network
+    biology and a beacon of critical discourse, has mentored about 300 PhDs,
+    postdocs and faculty in his laboratory. Basing his work on causality-focused
+    and genomics-based systems, and with insights from experimental biology,
+    biochemistry, physics and engineering, he has been bringing together all us
+    biologists, physicists, biochemists, engineers, mathematicians,
+    statisticians and computer scientists in a renaissance research quest for
+    the functional meaning of DNA. The resulting symbiosis of insights is von
+    Neumannesque in spirit and fits well with von Neumann's unfinished research
+    towards a new logical and computational model for the biological cell by
+    unifying continuous and discrete mathematics via a concept of thermodynamic
+    error. Our “Sweatbox” is so named to honor Professor Davidson's academic
+    legacy.
+  </p>
+
+  <p class="py-4">
+    A Brown University account is required to access the lectures via Panopto.
+  </p>
+
+  <ul class="grid gap-4 py-4 list-disc list-inside">
+    <li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c9210732-475f-45ab-ba50-b07501516719">
+            Andrew G. Clark Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ac0438cd-5915-45fe-956e-b07501541a88">
+            David Shaw Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=156d72f2-f2d6-4645-963e-b07501541d3f">
+            David Shaw Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2a51deaa-0c3b-4817-965c-b075015423d9">
+            Ellen V. Rothenberg Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=61462215-b625-41d1-bfb0-b0750154269a">
+            Ellen V. Rothenberg Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=12f9a39f-e750-4c4c-8186-b0750155896b">
+            Eric H. Davidson Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aa34abf1-ee9b-4bc0-8624-b07501558b5f">
+            Eric H. Davidson Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cf2adafc-059c-48c3-8d57-b0750155be5c">
+            Freeman Dyson A Walk Through Johnny von Neumann&#39;s Garden Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d610287-789d-476c-ae04-b07501560c3b">
+            Freeman Dyson Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=00b1f89c-8ebc-4320-85cc-b06e0139586a">
+            George Dyson On the Physical Realization of an Electronic Computing Instrument
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b1ea2c5-af32-4078-8400-b0750155c51b">
+            John Conway Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=925a99a8-21cf-4b77-b076-b0750155c836">
+            John Conway Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ff85aaa-c269-4718-a858-b075015146f0">
+            Jonathan W. Yewdell - CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b923a94a-cb07-4378-9b14-b07501562018">
+            Kenneth Arrow Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=327a3e73-7a58-49db-b788-b075015659f2">
+            Kenneth Arrow Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=995833c9-8e28-4f62-ace3-b0750156d2ff">
+            Leon Cooper Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cb63ba08-49ba-487a-85f7-b07501571e28">
+            Leon Cooper Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1a57b92d-607a-4641-b181-b0750156ed7b">
+            Marina von Neumann Whitman, Ph.D. &quot;John von Neumann A Daughter&#39;s View&quot;
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=769c54c7-d951-44a9-8c65-b0750156b761">
+            Marina von Neumann Whitman, Ph.D. Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db133dc0-0eb0-4869-83a2-b0750159e9c5">
+            Martha Bulyk Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=16b4d2f8-ada9-4bfa-a0fc-b07501584576">
+            Martha Bulyk Brown University CCMB Symposium - May 6 2010
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd13c99d-551c-436b-bdcf-b07501558c82">
+            Martin Meier Brown University CCMB Symposium - May 6 2010
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0e00d50b-0f7e-4a95-9f60-b07501570953">
+            Martin Meier Schelleisheim Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f46d20c7-e692-418d-af40-b07501515ec7">
+            Panel Session - Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2dabe307-f693-44ef-b7e0-b0750155032a">
+            Richard Karp, Ph.D. &quot;Understanding Science Through the Lens of Computation&quot;
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6142fac9-cca6-4f24-8f16-b075015506d2">
+            Richard Karp, Ph.D. Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0cd78d79-4689-44a3-b2bc-b0750154e744">
+            Richard Lewontin Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1c320782-84f1-4d90-937d-b0750154f5a0">
+            Richard Lewontin CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=86b12bcd-8197-45c7-9e83-b0750154b6c1">
+            Sam Broder Brown University CCMB Symposium
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dd73c3ef-e86e-4b9c-b55c-b0750154a9a5">
+            Sam Broder Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=51ef89d7-72f4-4a80-b7c4-b07501547c4d">
+            Sean Eddy Brown University CCMB Symposium - Sweatbox Q&amp;A
+          </a>
+        </li><li>
+          <a class="underline hover:text-blue-400" href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e8a48898-c1b4-463e-b9c1-b075015477ce">
+            Sean Eddy Brown University CCMB Symposium - May 7 2010
+          </a>
+        </li>
+  </ul>
+
+            </main>
+        </div>
+        <footer class="flex justify-center items-center p-4 bg-neutral text-neutral-content mt-20 text-sm">
+    <div class="items-center grid-flow-col">
+        <p>Copyright Istrail Lab © 2024 - All rights reserved</p>
+    </div>
+</footer>
+    </body></html>

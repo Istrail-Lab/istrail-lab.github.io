@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Astro description">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <meta name="generator" content="Astro v2.6.6">
+        <title>Istrail Lab | 3D Ising Model</title>
+    <link rel="stylesheet" href="/_astro/essays.5ec62e0b.css" /></head>
+    <body class="h-full">
+        <div class="w-full flex items-center bg-base-300 px-2 py-3">
+    <div class="flex-1 px-2 mx-2">
+        <a class="no-underline text-black font-bold text-xl px-2 py-2 rounded-lg hover:bg-[#1F293733]" href="/">Istrail Lab</a>
+    </div>
+    <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var c;{let d={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,r)=>{if(t===""||!Array.isArray(r))return r;let[e,n]=r;return e in d?d[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(c=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{var l;if(!this.hydrator||!this.isConnected||(l=this.parentElement)!=null&&l.closest("astro-island[ssr]"))return;let r=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(let s of n){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML)}let a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let r=this.getAttribute("before-hydration-url");r&&await import(r),this.start()}start(){let r=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{let n=this.getAttribute("renderer-url"),[a,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),s=this.getAttribute("component-export")||"default";if(!s.includes("."))this.Component=a[s];else{this.Component=a;for(let i of s.split("."))this.Component=this.Component[i]}return this.hydrator=l,this.hydrate},r,this)}attributeChangedCallback(){this.hydrate()}},c.observedAttributes=["props"],c))}})();</script><astro-island uid="aIFOr" component-url="/_astro/NavSidebar.63e48d0f.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;NavSidebar&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>
+</div>
+        <div class="flex-1">
+            <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
+                <h2 class="text-3xl font-bold pt-4">3D Ising Model</h2>
+                <h3 class="text-2xl font-bold py-8">Research Summary</h3>
+                <div class="grid gap-4">
+        <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><astro-island uid="Z2wWgLi" prefix="r1" component-url="/_astro/Abstract.2415f2d6.js" component-export="default" renderer-url="/_astro/client.4db56182.js" props="{&quot;title&quot;:[0,&quot;Statistical Mechanics, Three-Dimensionality and NP-Completeness: I. Universality of Intractability of the Partition Functions of the Ising Model Across Non-Planar Lattices&quot;],&quot;blurb&quot;:[0,&quot;This work provides an exact characterization, across crystal\nlattices, of the computational tractability frontier for the\npartition functions of several Ising models. Our results show\nthat beyond planarity computing partition functions is\nNP-complete. We provide rigorous solutions to several working\nconjectures in the statistical mechanics literature, such as the\nCrossed-Bonds conjecture, and the impossibility to compute\neffectively the partition functions for any three-dimensional\nlattice Ising model; these conjectures apply to the Onsager\nalgebraic method, the Fermion operators method, and the\ncombinatorial method based on Pfaffians. The fundamental results\nof the area, including those of Onsager, Kac, Feynman, Fisher,\nKasteleyn, Temperley, Green, Hurst and more recently Barahona:&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Abstract&quot;,&quot;value&quot;:true}" await-children=""><div class="grid gap-2"><h3 class="text-lg font-bold" style="text-wrap:balance">Statistical Mechanics, Three-Dimensionality and NP-Completeness: I. Universality of Intractability of the Partition Functions of the Ising Model Across Non-Planar Lattices</h3>This work provides an exact characterization, across crystal
+lattices, of the computational tractability frontier for the
+partition functions of several Ising models. Our results show
+that beyond planarity computing partition functions is
+NP-complete. We provide rigorous solutions to several working
+conjectures in the statistical mechanics literature, such as the
+Crossed-Bonds conjecture, and the impossibility to compute
+effectively the partition functions for any three-dimensional
+lattice Ising model; these conjectures apply to the Onsager
+algebraic method, the Fermion operators method, and the
+combinatorial method based on Pfaffians. The fundamental results
+of the area, including those of Onsager, Kac, Feynman, Fisher,
+Kasteleyn, Temperley, Green, Hurst and more recently Barahona:<button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-79xub" tabindex="0" type="button">See more</button></div><template data-astro-template>
+            <p>
+                This work provides an exact characterization, across crystal
+                lattices, of the computational tractability frontier for the
+                partition functions of several Ising models. Our results show
+                that beyond planarity computing partition functions is
+                NP-complete. We provide rigorous solutions to several working
+                conjectures in the statistical mechanics literature, such as the
+                Crossed-Bonds conjecture, and the impossibility to compute
+                effectively the partition functions for any three-dimensional
+                lattice Ising model; these conjectures apply to the Onsager
+                algebraic method, the Fermion operators method, and the
+                combinatorial method based on Pfaffians. The fundamental results
+                of the area, including those of Onsager, Kac, Feynman, Fisher,
+                Kasteleyn, Temperley, Green, Hurst and more recently Barahona:
+            </p>
+            <ul class="list-inside list-disc grid gap-2 ml-5">
+                <li>
+                    for every Planar crystal lattice the partition functions for
+                    the finite sublattices can be computed in polynomial-time,
+                    paired with the results of this paper:
+                </li>
+                <li>
+                    for every Non-Planar crystal lattice computing the partition
+                    functions for the finite sublattices is NP-complete, provide
+                    an exact characterization for several of the most studied
+                    Ising models. Our results settle at once, for several
+                    models, (1) the 2D non-planar vs. 2D planar, (2) the
+                    next-nearest neighbour interactions vs. 2D, and (3) the
+                    general 3D Ising, intensively studied open problems of the
+                    area.
+                </li>
+            </ul>
+            <p>
+                Our results axe obtained by establishing a Kuratowski-like
+                characterization theorem for the class of (infinite) crystal
+                lattices called Bravais lattices, that can also be extended to
+                general crystal structures. The "forbidden subgraph," called
+                Kuratowskian, plays the central role, being contained in every
+                non-planar crystal lattice. This universality phenomenon
+                (existence independent of lattice structure), captured in the
+                "equation": Translational Invariance + NonPlanarity =
+                Universality of Subgraphs, provides a unified understanding of
+                non-planarity as a root of computational intractability. The
+                important structural property of the Kuratowskians is that they
+                are "embedding-universal" for 3- regular graphs, in the sense
+                that every such graph has a subdivision included in the
+                Kuratowskian. Several NP-hardness results are obtained in this
+                paper, by using different types of Kuratowskians, which in turn
+                witness NP-hardness of various counting coefficients of the
+                partition functions.
+            </p>
+            <p>
+                The exceedingly complex mathematical methods that solved the
+                planar cases of the Ising model, could be interpreted as an
+                explanation of why no 3D solvable cases have been found. Richard
+                Feynman in 1972 commented " The exact solution for three
+                dimensions has not yet been found". Our results, for the Ising
+                models that we consider in this paper, provide evidence of a
+                paradigm-shift: the "has not yet been found" needs now be
+                replaced with "it may be computationally intractable across
+                lattices."
+            </p>
+        </template></astro-island>
+    </div>
+                
+    
+
+    <div>
+        <h3 class="text-2xl font-bold py-4">SorinFest</h3>
+        <p class="pb-8">
+            Lars Onsager, Brown University Professor of Chemistry from 1928-1933
+            and winner of the Nobel Prize for Chemistry in 1968. In 1944,
+            Onsager obtained the phase transition and exact solution for the 2D
+            planar Ising Model (Ising ferromagnetic 2D plane grid). His seminal
+            exact mathematical proof of the 2D planar Ising model partition
+            function formula is considered one of the most extraordinary
+            mathematical tour de force proofs in statistical physics. Answering
+            the call to “make [the proof] human”, a dream team of mathematicians
+            and physicists, including Kac, Ward, Feynman, Hurst, Kasteleyn, and
+            Temperley attempted until 1975 to generalize Onsager’s proof to
+            three dimensions, but without success. Kac and Ward, with
+            contributions from Feynman, obtained a combinatorial proof of the
+            Onsager theorem. In 2000, Sorin published the paper "Statistical
+            Mechanics, Three-Dimensionality and NP-completeness. I. Universality
+            of Intractability for the Partition Function of the Ising Model
+            Across Non-Planar Lattices" at the Symposium on the Theory of
+            Computing (STOC). His paper showed, for several Ising spin glass
+            models, that for every non-planar (and therefore every 3D) model,
+            computing the partition function is NP-complete. The proofs were
+            axiomatic: Non-planarity plus Translational Invariance implies
+            NP-completeness.
+        </p>
+    </div>
+
+    
+    <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+        <div class="grid gap-2">
+            <p>
+                The dimer problem and the Ising problem were finally solved for
+                planar lattice graphs only. It was found that a generalization
+                to nonplanar lattice graphs, including all three-dimensional
+                lattice graphs, is impossible unless the number of Pfaans
+                involved is allowed to increase to intractably large numbers.
+            </p>
+        </div>
+    </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">P. W. Kasteleyn</p><p class="italic">The Statistics of Dimers on a Lattice. (Physica 1961)</p></div></div></blockquote>
+    <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+        <p>
+            How famous physicists and mathematicians commented in the 1950-1960s
+            on an NP-complete problem before the concept of NP-completeness was
+            discovered in 1971 by Stephen Cook and Leonid Levin.
+        </p>
+    </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Sorin Istrail</p><p class="italic"></p></div></div></blockquote>
+
+    
+
+                <div class="grid gap-2">
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <div class="grid gap-2">
+                <p>
+                    No physically interesting nonplanar lattice has been solved
+                    completely as yet. The simplest such lattice is the plane
+                    square lattice with interactions along the diagonals as well
+                    as the sides of the squares, sometimes called the union jack
+                    lattice. It is somewhat melancholy thought that nearly
+                    twenty-four years of work has added relatively little to our
+                    knowledge of analytical properties of the Onsager Ising
+                    model itself, though we now have a great deal more
+                    information deduced from series expansions.
+                </p>
+                <p>
+                    With monotonous regularity, each method has reproduced
+                    virtually the same results as those listed above and has
+                    added virtually no new ones on the analytical side. This
+                    information may be summarized as knowledge for planar
+                    lattices but not for any interesting nonplanar lattice of
+                    the partition function and correlations as a function of
+                    temperature in zero magnetic field, together with the
+                    spontaneous magnetization and various boundary and impurity
+                    effects. It relates either the trace of vacuum to vacuum
+                    expectation of a product of linear sums of operators known
+                    as Cliord or Fermi operators to what is known mathematically
+                    as a Pfaan.
+                </p>
+                <p>
+                    This experience is almost unique in mathematical physics.
+                    Nearly always a valid new treatment of a problem produces
+                    new results as well as reproducing old ones.
+                </p>
+            </div>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">H. N. V. Temperley</p><p class="italic">Two-dimensional Ising Models (Phase transitions and critical phenomena 1974)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <div class="grid gap-2">
+                <p>
+                    Conspicuously missing from the table of open problems are
+                    the calculation of the free energy of the two-dimensional
+                    Ising model when H is non-zero, and the calculation of the
+                    free energy of the three-dimensional Ising model. This
+                    omission is intentional. These two problems are both
+                    extremely difficult. Indeed, they have existed for a quarter
+                    of a century, and absolutely no progress has been made. By
+                    no progress, we mean no progress toward an explicit
+                    solution.
+                </p>
+            </div>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">B. M. McCoy and T. T. Wu</p><p class="italic">The Two-Dimensional Ising Model (Harvard University Press 1973)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <div class="grid gap-2">
+                <p>
+                    The three-dimensional case does exhibit a phase transition,
+                    but exact calculation of its properties has proved
+                    hopelessly difficult. The two-dimensional case for so-called
+                    nearest-neighbor interactions was solved by Lars Onsager. In
+                    Onsager's solution, a veritable tour de force of
+                    mathematical ingenuity and inventiveness, he uncovered a
+                    number of surprising features and started a series of
+                    investigations which continue to this day.
+                </p>
+                <p>
+                    The solution was difficult to understand, and George
+                    Uhlenbeck urged me to try to simplify it. <strong>"Make it human," was the way he put it</strong>. At the Institute for Advanced Studies at Princeton, I met
+                    John C. Ward, and we succeeded in rederiving Onsager's
+                    result. Our success was in large measure due to knowing the
+                    answer; we were, in fact, guided by this knowledge. But our
+                    solution turned out to be incomplete. It took several years
+                    and the effort of several people before the gap in the
+                    derivation was filled. Even Feynman got into the act. He
+                    attended two lectures I gave at CalTech and came up with the
+                    clearest and sharpest formulation of what was needed to fill
+                    the gap. <strong>The only time I have ever seen Feynman taking notes was
+                        during the two lectures. Usually, he is miles ahead of
+                        the speaker, but following combinatorial arguments is
+                        difficult for all mortals</strong>.
+                </p>
+            </div>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Mark Kac</p><p class="italic">Enigmas of Chance (Harper and Row 1985)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <div class="grid gap-2">
+                <p>
+                    The exact solution for three dimensions has not yet been
+                    found.
+                </p>
+            </div>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">Richard Feynman</p><p class="italic">Lectures on Statistical Mechanics (Addison-Wesley 1972)</p></div></div></blockquote>
+        <blockquote class="p-4 md:py-0 my-4 border-l-4 border-gray-300 bg-gray-50 flex items-baseline"><svg class="hidden md:block w-8 h-8 text-gray-400/50 rotate-180 m-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14"><path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"></path></svg><div class="px-2 flex-grow"><i>
+            <div class="grid gap-2">
+                <p>
+                    It has been rather puzzling that the two methods at present
+                    known for finding exact solutions for the Ising problem,
+                    namely the algebraic method of Onsager and the combinatorial
+                    method employing Pfaans, have exactly the same range of
+                    application, although they appear so different in approach.
+                    Problems which yield to one method yield to the other,
+                    whilst problems which are not tractable by one approach also
+                    fail to be exactly solved by the other, although the reasons
+                    for this failure appear to have completely different
+                    mathematical origins.
+                </p><p>
+                    On the one hand, Ising problems which cannot be solved by
+                    the Pfaan method are characterized by the appearance of
+                    crossed bonds, which produce unwanted negative signs in the
+                    combinatorial generating functions, and such crossed bonds
+                    are usually manifestations of the topological structure of
+                    the lattice being investigated, i.e., the three-dimensional
+                    cubic lattice.
+                </p>
+                <p>
+                    On the other hand, the Onsager approach breaks down because
+                    the Lie algebra encountered in the process of solution
+                    cannot be decomposed into sufficiently simple algebra. It is
+                    usually stated that such more complicated algebras occur
+                    only when the corresponding lattice has crossed bonds,
+                    although an explicit proof of this fact does not appear to
+                    be published. It is difficult to see why the two methods
+                    have exactly the same limitations.
+                </p>
+            </div>
+        </i><br/><br/><div class="flex flex-col items-end text-md"><p class="font-bold">C. A. Hurst</p><p class="italic">Relation between the Onsager and Pfaffian methods for Solving the Ising Problem (Journal of Mathematical Physics 1965)</p></div></div></blockquote>
+    </div>
+
+                <h3 class="text-2xl font-bold py-8">Relevant Papers</h3>
+                <ul class="grid gap-4">
+        <li>
+                    <div class="border-2 p-4 shadow-lg"><div class="flex gap-6 justify-between"><h3 class="text-xl" style="text-wrap:balance">Statistical Mechanics, Three-Dimensionality and NP-Completeness: I. Universality of Intractability of the Partition Functions of the Ising Model Across Non-Planar Lattices</h3><span class="text-md font-bold">2000</span></div><p class="py-2">Sorin Istrail</p><div class="flex gap-6 justify-between"><div class="text-sm"><p>ACM Press</p><p><span>In <i>STOC</i></span>, pg. 87-96</p></div><div class="flex gap-4 items-center"><a class="text-2xl hover:fill-red-500" href="/papers/Statistical Mechanics, Three-Dimensionality and NP-completeness.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg></a></div></div></div>
+                </li>
+    </ul>
+            </main>
+        </div>
+        <footer class="flex justify-center items-center p-4 bg-neutral text-neutral-content mt-20 text-sm">
+    <div class="items-center grid-flow-col">
+        <p>Copyright Istrail Lab © 2024 - All rights reserved</p>
+    </div>
+</footer>
+    </body></html>
