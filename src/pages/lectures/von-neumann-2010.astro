@@ -3,131 +3,129 @@ import Layout from "../../layouts/Layout.astro";
 import EssayCard from "@/components/EssayCard";
 
 const lectures = {
-    "Andrew G. Clark Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c9210732-475f-45ab-ba50-b07501516719",
-    "David Shaw Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ac0438cd-5915-45fe-956e-b07501541a88",
-    "David Shaw Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=156d72f2-f2d6-4645-963e-b07501541d3f",
-    "Ellen V. Rothenberg Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2a51deaa-0c3b-4817-965c-b075015423d9",
-    "Ellen V. Rothenberg Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=61462215-b625-41d1-bfb0-b0750154269a",
-    "Eric H. Davidson Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=12f9a39f-e750-4c4c-8186-b0750155896b",
-    "Eric H. Davidson Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aa34abf1-ee9b-4bc0-8624-b07501558b5f",
-    "Freeman Dyson A Walk Through Johnny von Neumann's Garden Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cf2adafc-059c-48c3-8d57-b0750155be5c",
-    "Freeman Dyson Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d610287-789d-476c-ae04-b07501560c3b",
-    "George Dyson On the Physical Realization of an Electronic Computing Instrument":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=00b1f89c-8ebc-4320-85cc-b06e0139586a",
-    "John Conway Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b1ea2c5-af32-4078-8400-b0750155c51b",
-    "John Conway Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=925a99a8-21cf-4b77-b076-b0750155c836",
-    "Jonathan W. Yewdell - CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ff85aaa-c269-4718-a858-b075015146f0",
-    "Kenneth Arrow Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b923a94a-cb07-4378-9b14-b07501562018",
-    "Kenneth Arrow Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=327a3e73-7a58-49db-b788-b075015659f2",
-    "Leon Cooper Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=995833c9-8e28-4f62-ace3-b0750156d2ff",
-    "Leon Cooper Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cb63ba08-49ba-487a-85f7-b07501571e28",
-    'Marina von Neumann Whitman, Ph.D. "John von Neumann A Daughter\'s View"':
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1a57b92d-607a-4641-b181-b0750156ed7b",
-    "Marina von Neumann Whitman, Ph.D. Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=769c54c7-d951-44a9-8c65-b0750156b761",
-    "Martha Bulyk Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db133dc0-0eb0-4869-83a2-b0750159e9c5",
-    "Martha Bulyk Brown University CCMB Symposium - May 6 2010":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=16b4d2f8-ada9-4bfa-a0fc-b07501584576",
-    "Martin Meier Brown University CCMB Symposium - May 6 2010":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd13c99d-551c-436b-bdcf-b07501558c82",
-    "Martin Meier Schelleisheim Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0e00d50b-0f7e-4a95-9f60-b07501570953",
-    "Panel Session - Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f46d20c7-e692-418d-af40-b07501515ec7",
-    'Richard Karp, Ph.D. "Understanding Science Through the Lens of Computation"':
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2dabe307-f693-44ef-b7e0-b0750155032a",
-    "Richard Karp, Ph.D. Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6142fac9-cca6-4f24-8f16-b075015506d2",
-    "Richard Lewontin Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0cd78d79-4689-44a3-b2bc-b0750154e744",
-    "Richard Lewontin CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1c320782-84f1-4d90-937d-b0750154f5a0",
-    "Sam Broder Brown University CCMB Symposium":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=86b12bcd-8197-45c7-9e83-b0750154b6c1",
-    "Sam Broder Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dd73c3ef-e86e-4b9c-b55c-b0750154a9a5",
-    "Sean Eddy Brown University CCMB Symposium - Sweatbox Q&A":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=51ef89d7-72f4-4a80-b7c4-b07501547c4d",
-    "Sean Eddy Brown University CCMB Symposium - May 7 2010":
-        "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e8a48898-c1b4-463e-b9c1-b075015477ce",
+  "Andrew G. Clark Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c9210732-475f-45ab-ba50-b07501516719",
+  "David Shaw Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ac0438cd-5915-45fe-956e-b07501541a88",
+  "David Shaw Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=156d72f2-f2d6-4645-963e-b07501541d3f",
+  "Ellen V. Rothenberg Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2a51deaa-0c3b-4817-965c-b075015423d9",
+  "Ellen V. Rothenberg Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=61462215-b625-41d1-bfb0-b0750154269a",
+  "Eric H. Davidson Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=12f9a39f-e750-4c4c-8186-b0750155896b",
+  "Eric H. Davidson Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aa34abf1-ee9b-4bc0-8624-b07501558b5f",
+  "Freeman Dyson A Walk Through Johnny von Neumann's Garden Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cf2adafc-059c-48c3-8d57-b0750155be5c",
+  "Freeman Dyson Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7d610287-789d-476c-ae04-b07501560c3b",
+  "George Dyson On the Physical Realization of an Electronic Computing Instrument":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=00b1f89c-8ebc-4320-85cc-b06e0139586a",
+  "John Conway Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b1ea2c5-af32-4078-8400-b0750155c51b",
+  "John Conway Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=925a99a8-21cf-4b77-b076-b0750155c836",
+  "Jonathan W. Yewdell - CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ff85aaa-c269-4718-a858-b075015146f0",
+  "Kenneth Arrow Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b923a94a-cb07-4378-9b14-b07501562018",
+  "Kenneth Arrow Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=327a3e73-7a58-49db-b788-b075015659f2",
+  "Leon Cooper Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=995833c9-8e28-4f62-ace3-b0750156d2ff",
+  "Leon Cooper Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cb63ba08-49ba-487a-85f7-b07501571e28",
+  'Marina von Neumann Whitman, Ph.D. "John von Neumann A Daughter\'s View"':
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1a57b92d-607a-4641-b181-b0750156ed7b",
+  "Marina von Neumann Whitman, Ph.D. Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=769c54c7-d951-44a9-8c65-b0750156b761",
+  "Martha Bulyk Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db133dc0-0eb0-4869-83a2-b0750159e9c5",
+  "Martha Bulyk Brown University CCMB Symposium - May 6 2010":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=16b4d2f8-ada9-4bfa-a0fc-b07501584576",
+  "Martin Meier Brown University CCMB Symposium - May 6 2010":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd13c99d-551c-436b-bdcf-b07501558c82",
+  "Martin Meier Schelleisheim Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0e00d50b-0f7e-4a95-9f60-b07501570953",
+  "Panel Session - Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f46d20c7-e692-418d-af40-b07501515ec7",
+  'Richard Karp, Ph.D. "Understanding Science Through the Lens of Computation"':
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2dabe307-f693-44ef-b7e0-b0750155032a",
+  "Richard Karp, Ph.D. Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6142fac9-cca6-4f24-8f16-b075015506d2",
+  "Richard Lewontin Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0cd78d79-4689-44a3-b2bc-b0750154e744",
+  "Richard Lewontin CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1c320782-84f1-4d90-937d-b0750154f5a0",
+  "Sam Broder Brown University CCMB Symposium":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=86b12bcd-8197-45c7-9e83-b0750154b6c1",
+  "Sam Broder Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dd73c3ef-e86e-4b9c-b55c-b0750154a9a5",
+  "Sean Eddy Brown University CCMB Symposium - Sweatbox Q&A":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=51ef89d7-72f4-4a80-b7c4-b07501547c4d",
+  "Sean Eddy Brown University CCMB Symposium - May 7 2010":
+    "https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e8a48898-c1b4-463e-b9c1-b075015477ce",
 };
 ---
 
 <Layout title="Istrail Lab | John von Neumann Lectures">
-    <h1 class="font-bold text-3xl pt-4">John von Neumann Lectures 2010</h1>
+  <h1 class="font-bold text-3xl pt-4">John von Neumann Lectures 2010</h1>
 
-    <div class="py-4">
-        <EssayCard
-            publication={{
-                authors: ["Sorin Istrail", "Tracie Sweeney"],
-                title: "Randomness is Beautiful: in Search of von Neumann",
-                journal: "Conduit",
-                volume: "9",
-                year: 2006,
-                pdf: "/papers/Randomness is Beautiful: in Search of von Neumann.pdf",
-                tags: [],
-            }}
-        />
-    </div>
+  <div class="py-4">
+    <EssayCard
+      publication={{
+        authors: ["Sorin Istrail", "Tracie Sweeney"],
+        title: "Randomness is Beautiful: In search of von Neumann",
+        journal: "Conduit",
+        volume: "9",
+        year: 2006,
+        pdf: "/papers/randomness_vonneumann.pdf",
+        tags: [],
+      }}
+    />
+  </div>
 
-    <h3 class="font-semibold text-xl py-2">Format of the Sweatbox Q&A</h3>
-    <p>
-        Funded by the National Science Foundation as a workshop called "Q&A Boot
-        Camp at Brown University: Asking Tough Scientific Questions," the
-        "Sweatbox" session as a didactic concept was inspired by the famous
-        8-week "Summer Course/Boot Camp on Embryology" at the Marine Biological
-        Laboratory, Woods Hall, MA and the director of the course for 15 years,
-        Professor Eric Davidson of the Division of Biology at California
-        Institute of Technology. The story goes that invited speakers at this
-        course would talk in the laboratory's Warm Room and would be subjected
-        there to tough scientific questions about their scientific findings and
-        their claims. Professor Davidson, professor-in-chief of developmental
-        gene regulatory network biology and a beacon of critical discourse, has
-        mentored about 300 PhDs, postdocs and faculty in his laboratory. Basing
-        his work on causality-focused and genomics-based systems, and with
-        insights from experimental biology, biochemistry, physics and
-        engineering, he has been bringing together all us biologists,
-        physicists, biochemists, engineers, mathematicians, statisticians and
-        computer scientists in a renaissance research quest for the functional
-        meaning of DNA. The resulting symbiosis of insights is von Neumannesque
-        in spirit and fits well with von Neumann's unfinished research towards a
-        new logical and computational model for the biological cell by unifying
-        continuous and discrete mathematics via a concept of thermodynamic
-        error. Our “Sweatbox” is so named to honor Professor Davidson's academic
-        legacy.
-    </p>
+  <h3 class="font-semibold text-xl py-2">Format of the Sweatbox Q&A</h3>
+  <p>
+    Funded by the National Science Foundation as a workshop called "Q&A Boot
+    Camp at Brown University: Asking Tough Scientific Questions," the "Sweatbox"
+    session as a didactic concept was inspired by the famous 8-week "Summer
+    Course/Boot Camp on Embryology" at the Marine Biological Laboratory, Woods
+    Hall, MA and the director of the course for 15 years, Professor Eric
+    Davidson of the Division of Biology at California Institute of Technology.
+    The story goes that invited speakers at this course would talk in the
+    laboratory's Warm Room and would be subjected there to tough scientific
+    questions about their scientific findings and their claims. Professor
+    Davidson, professor-in-chief of developmental gene regulatory network
+    biology and a beacon of critical discourse, has mentored about 300 PhDs,
+    postdocs and faculty in his laboratory. Basing his work on causality-focused
+    and genomics-based systems, and with insights from experimental biology,
+    biochemistry, physics and engineering, he has been bringing together all us
+    biologists, physicists, biochemists, engineers, mathematicians,
+    statisticians and computer scientists in a renaissance research quest for
+    the functional meaning of DNA. The resulting symbiosis of insights is von
+    Neumannesque in spirit and fits well with von Neumann's unfinished research
+    towards a new logical and computational model for the biological cell by
+    unifying continuous and discrete mathematics via a concept of thermodynamic
+    error. Our “Sweatbox” is so named to honor Professor Davidson's academic
+    legacy.
+  </p>
 
-    <p class="py-4">
-        A Brown University account is required to access the lectures via
-        Panopto.
-    </p>
+  <p class="py-4">
+    A Brown University account is required to access the lectures via Panopto.
+  </p>
 
-    <ul class="grid gap-4 py-4 list-disc list-inside">
-        {
-            Object.entries(lectures).map(([name, link]) => (
-                <li>
-                    <a class="underline hover:text-blue-400" href={link}>
-                        {name}
-                    </a>
-                </li>
-            ))
-        }
-    </ul>
+  <ul class="grid gap-4 py-4 list-disc list-inside">
+    {
+      Object.entries(lectures).map(([name, link]) => (
+        <li>
+          <a class="underline hover:text-blue-400" href={link}>
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

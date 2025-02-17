@@ -7,228 +7,173 @@ import YouTubeEmbed from "../../components/video/YouTubeEmbed.astro";
 ---
 
 <Layout title="Istrail Lab | John von Neumann Lectures">
-    <h1 class="font-bold text-3xl pt-4">John von Neumann Lectures 2015</h1>
-    <h2 class="font-bold text-2xl py-2">
-        250th Anniversary Symposium: The Next 250 Years
-    </h2>
+  <h1 class="font-bold text-3xl pt-4">John von Neumann Lectures 2015</h1>
+  <h2 class="font-bold text-2xl py-2">
+    250th Anniversary Symposium: The Next 250 Years
+  </h2>
 
-    <div class="py-4">
-        <EssayCard
-            publication={{
-                authors: ["Sorin Istrail", "Tracie Sweeney"],
-                title: "Randomness is Beautiful: in Search of von Neumann",
-                journal: "Conduit",
-                volume: "9",
-                year: 2006,
-                pdf: "/papers/Randomness is Beautiful: in Search of von Neumann.pdf",
-                tags: [],
-            }}
-        />
+  <div class="py-4">
+    <EssayCard
+      publication={{
+        authors: ["Sorin Istrail", "Tracie Sweeney"],
+        title: "Randomness is Beautiful: In search of von Neumann",
+        journal: "Conduit",
+        volume: "9",
+        year: 2006,
+        pdf: "/papers/randomness_vonneumann.pdf",
+        tags: [],
+      }}
+    />
+  </div>
+
+  <div class="flex gap-10">
+    <div class="basis-1/2 carousel rounded-box">
+      <div class="carousel-item w-full">
+        <img src={poster1} class="w-full" />
+      </div>
+      <div class="carousel-item w-full">
+        <img src={poster2} class="w-full" />
+      </div>
+    </div>
+    <div class="basis-1/2">
+      <h3 class="font-semibold text-xl py-2">Format of the Sweatbox Q&A</h3>
+      <p>
+        Funded by the National Science Foundation as a workshop called "Q&A Boot
+        Camp at Brown University: Asking Tough Scientific Questions," the
+        "Sweatbox" session as a didactic concept was inspired by the famous
+        8-week "Summer Course/Boot Camp on Embryology" at the Marine Biological
+        Laboratory, Woods Hall, MA and the director of the course for 15 years,
+        Professor Eric Davidson of the Division of Biology at California
+        Institute of Technology. The story goes that invited speakers at this
+        course would talk in the laboratory's Warm Room and would be subjected
+        there to tough scientific questions about their scientific findings and
+        their claims. Professor Davidson, professor-in-chief of developmental
+        gene regulatory network biology and a beacon of critical discourse, has
+        mentored about 300 PhDs, postdocs and faculty in his laboratory. Basing
+        his work on causality-focused and genomics-based systems, and with
+        insights from experimental biology, biochemistry, physics and
+        engineering, he has been bringing together all us biologists,
+        physicists, biochemists, engineers, mathematicians, statisticians and
+        computer scientists in a renaissance research quest for the functional
+        meaning of DNA. The resulting symbiosis of insights is von Neumannesque
+        in spirit and fits well with von Neumann's unfinished research towards a
+        new logical and computational model for the biological cell by unifying
+        continuous and discrete mathematics via a concept of thermodynamic
+        error. Our “Sweatbox” is so named to honor Professor Davidson's academic
+        legacy.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid gap-4 py-4">
+    <div>
+      <h3 class="font-semibold text-xl py-2">Opening Remarks</h3>
+      <YouTubeEmbed videoId="zhIFAntHx2w" title="Opening Remarks" />
     </div>
 
-    <div class="flex gap-10">
-        <div class="basis-1/2 carousel rounded-box">
-            <div class="carousel-item w-full">
-                <img src={poster1} class="w-full" />
-            </div>
-            <div class="carousel-item w-full">
-                <img src={poster2} class="w-full" />
-            </div>
-        </div>
-        <div class="basis-1/2">
-            <h3 class="font-semibold text-xl py-2">
-                Format of the Sweatbox Q&A
-            </h3>
-            <p>
-                Funded by the National Science Foundation as a workshop called
-                "Q&A Boot Camp at Brown University: Asking Tough Scientific
-                Questions," the "Sweatbox" session as a didactic concept was
-                inspired by the famous 8-week "Summer Course/Boot Camp on
-                Embryology" at the Marine Biological Laboratory, Woods Hall, MA
-                and the director of the course for 15 years, Professor Eric
-                Davidson of the Division of Biology at California Institute of
-                Technology. The story goes that invited speakers at this course
-                would talk in the laboratory's Warm Room and would be subjected
-                there to tough scientific questions about their scientific
-                findings and their claims. Professor Davidson,
-                professor-in-chief of developmental gene regulatory network
-                biology and a beacon of critical discourse, has mentored about
-                300 PhDs, postdocs and faculty in his laboratory. Basing his
-                work on causality-focused and genomics-based systems, and with
-                insights from experimental biology, biochemistry, physics and
-                engineering, he has been bringing together all us biologists,
-                physicists, biochemists, engineers, mathematicians,
-                statisticians and computer scientists in a renaissance research
-                quest for the functional meaning of DNA. The resulting symbiosis
-                of insights is von Neumannesque in spirit and fits well with von
-                Neumann's unfinished research towards a new logical and
-                computational model for the biological cell by unifying
-                continuous and discrete mathematics via a concept of
-                thermodynamic error. Our “Sweatbox” is so named to honor
-                Professor Davidson's academic legacy.
-            </p>
-        </div>
+    <div>
+      <h3 class="font-semibold text-xl py-2">Susanne Schennach</h3>
+      <YouTubeEmbed videoId="JNZhRZVqXRU" title="Susanne Schennach" />
     </div>
 
-    <div class="grid gap-4 py-4">
-        <div>
-            <h3 class="font-semibold text-xl py-2">Opening Remarks</h3>
-            <YouTubeEmbed
-                videoId="zhIFAntHx2w"
-                title="Opening Remarks"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Susanne Schennach</h3>
-            <YouTubeEmbed
-                videoId="JNZhRZVqXRU"
-                title="Susanne Schennach"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Mark Satterthwaite</h3>
-            <YouTubeEmbed
-                videoId="41jmlUYB3-o"
-                title="Mark Satterthwaite"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Vincent Crawford</h3>
-            <YouTubeEmbed
-                videoId="LBwe2mLMpBU"
-                title="Vincent Crawford"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">
-                Sweatbox Session: Satterthwaite, Crawford and Arrow
-            </h3>
-            <YouTubeEmbed
-                videoId="mQW8Z3Sf5so"
-                title="Sweatbox Session: Satterthwaite, Crawford and Arrow"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Freeman Dyson</h3>
-            <YouTubeEmbed
-                videoId="lWbKpkbT0QA"
-                title="Freeman Dyson"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Frank Wilczek</h3>
-            <YouTubeEmbed
-                videoId="7UyCR7rnqWg"
-                title="Frank Wilczek"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Leon Cooper</h3>
-            <YouTubeEmbed
-                videoId="k9GJ4Wx1Giw"
-                title="Leon Cooper"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Michael Jordan</h3>
-            <YouTubeEmbed
-                videoId="H5VFuKe8kc8"
-                title="Michael Jordan"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Nima Arkani-Hamid</h3>
-            <YouTubeEmbed
-                videoId="2eSkse9XdZ4"
-                title="Nima Arkani-Hamid"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">
-                Sweatbox Session: Dyson, Cooper, Arkani-Hamid, Wilczeck
-            </h3>
-            <YouTubeEmbed
-                videoId="-HI49HcjMFQ"
-                title="Sweatbox Session: Dyson, Cooper, Arkani-Hamid, Wilczeck"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Tom Leighton</h3>
-            <YouTubeEmbed
-                videoId="TW1bGZFI50s"
-                title="Tom Leighton"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Christos Papadimitriou</h3>
-            <YouTubeEmbed
-                videoId="D6zqYUuOmdQ"
-                title="Christos Papadimitriou"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Leslie Valiant</h3>
-            <YouTubeEmbed
-                videoId="mCBYiTFLgMg"
-                title="Leslie Valiant"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">
-                Sweatbox Session: Leighton
-            </h3>
-            <YouTubeEmbed
-                videoId="Nn7WWnO2Xd4"
-                title="Sweatbox Session: Leighton"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">
-                Sweatbox Session: Valiant and Papadimitriou
-            </h3>
-            <YouTubeEmbed
-                videoId="bgYV7BbcMLQ"
-                title="Sweatbox Session: Valiant and Papadimitriou"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">David Berson</h3>
-            <YouTubeEmbed
-                videoId="V6R5PK74DHE"
-                title="David Berson"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Kenneth Arrow</h3>
-            <YouTubeEmbed
-                videoId="egV0Ale7dp0"
-                title="Kenneth Arrow"
-            />
-        </div>
-
-        <div>
-            <h3 class="font-semibold text-xl py-2">Patricia Churchland</h3>
-            <YouTubeEmbed
-                videoId="cB3nsWfh7qk"
-                title="Patricia Churchland"
-            />
-        </div>
+    <div>
+      <h3 class="font-semibold text-xl py-2">Mark Satterthwaite</h3>
+      <YouTubeEmbed videoId="41jmlUYB3-o" title="Mark Satterthwaite" />
     </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Vincent Crawford</h3>
+      <YouTubeEmbed videoId="LBwe2mLMpBU" title="Vincent Crawford" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">
+        Sweatbox Session: Satterthwaite, Crawford and Arrow
+      </h3>
+      <YouTubeEmbed
+        videoId="mQW8Z3Sf5so"
+        title="Sweatbox Session: Satterthwaite, Crawford and Arrow"
+      />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Freeman Dyson</h3>
+      <YouTubeEmbed videoId="lWbKpkbT0QA" title="Freeman Dyson" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Frank Wilczek</h3>
+      <YouTubeEmbed videoId="7UyCR7rnqWg" title="Frank Wilczek" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Leon Cooper</h3>
+      <YouTubeEmbed videoId="k9GJ4Wx1Giw" title="Leon Cooper" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Michael Jordan</h3>
+      <YouTubeEmbed videoId="H5VFuKe8kc8" title="Michael Jordan" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Nima Arkani-Hamid</h3>
+      <YouTubeEmbed videoId="2eSkse9XdZ4" title="Nima Arkani-Hamid" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">
+        Sweatbox Session: Dyson, Cooper, Arkani-Hamid, Wilczeck
+      </h3>
+      <YouTubeEmbed
+        videoId="-HI49HcjMFQ"
+        title="Sweatbox Session: Dyson, Cooper, Arkani-Hamid, Wilczeck"
+      />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Tom Leighton</h3>
+      <YouTubeEmbed videoId="TW1bGZFI50s" title="Tom Leighton" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Christos Papadimitriou</h3>
+      <YouTubeEmbed videoId="D6zqYUuOmdQ" title="Christos Papadimitriou" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Leslie Valiant</h3>
+      <YouTubeEmbed videoId="mCBYiTFLgMg" title="Leslie Valiant" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Sweatbox Session: Leighton</h3>
+      <YouTubeEmbed videoId="Nn7WWnO2Xd4" title="Sweatbox Session: Leighton" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">
+        Sweatbox Session: Valiant and Papadimitriou
+      </h3>
+      <YouTubeEmbed
+        videoId="bgYV7BbcMLQ"
+        title="Sweatbox Session: Valiant and Papadimitriou"
+      />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">David Berson</h3>
+      <YouTubeEmbed videoId="V6R5PK74DHE" title="David Berson" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Kenneth Arrow</h3>
+      <YouTubeEmbed videoId="egV0Ale7dp0" title="Kenneth Arrow" />
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl py-2">Patricia Churchland</h3>
+      <YouTubeEmbed videoId="cB3nsWfh7qk" title="Patricia Churchland" />
+    </div>
+  </div>
 </Layout>
