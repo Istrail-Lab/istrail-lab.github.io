@@ -5,172 +5,163 @@ import { publications } from "@/components/publicationList/publications";
 import Abstract from "@/components/Abstract";
 
 const relevantPapers = publications.filter((paper) =>
-    paper.tags.includes("assemblies")
+  paper.tags.includes("assemblies")
 );
 ---
 
 <ResearchLayout
-    title="Genome Assembly and Comparisons, Haplotype Assembly, and Transcriptome Assembly"
+  title="Genome Assembly and Comparisons, Haplotype Assembly, and Transcriptome Assembly"
 >
-    <div slot="abstract" class="grid gap-4">
-        <Abstract
-            client:load
-            blurb={`The American oyster Crassostrea virginica, an ecologically and
+  <div slot="abstract" class="grid gap-4">
+    <Abstract
+      client:load
+      blurb={`The American oyster Crassostrea virginica, an ecologically and
                 economically important estuarine organism, can suffer high
                 mortalities in areas in the Northeast United States due to
                 Roseovarius Oyster Disease (ROD), caused by the gram-negative
                 bacterial pathogen Roseovarius crassostreae. The goals of this
                 research were to provide insights into:`}
-            title="Transcriptome of American Oysters, Crassostrea virginica, in Response to Bacterial Challenge: Insights into Potential Mechanisms of Disease Resistance"
-        >
-            The American oyster Crassostrea virginica, an ecologically and
-            economically important estuarine organism, can suffer high
-            mortalities in areas in the Northeast United States due to
-            Roseovarius Oyster Disease (ROD), caused by the gram-negative
-            bacterial pathogen Roseovarius crassostreae. The goals of this
-            research were to provide insights into: 1) the responses of American
-            oysters to R. crassostreae, and 2) potential mechanisms of
-            resistance or susceptibility to ROD. The responses of oysters to
-            bacterial challenge were characterized by exposing oysters from
-            ROD-resistant and susceptible families to R. crassostreae, followed
-            by high-throughput sequencing of cDNA samples from various
-            timepoints after disease challenge. Sequence data was assembled into
-            a reference transcriptome and analyzed through differential gene
-            expression and functional enrichment to uncover genes and processes
-            potentially involved in responses to ROD in the American oyster.
-            While susceptible oysters experienced constant levels of mortality
-            when challenged with R. crassostreae, resistant oysters showed
-            levels of mortality similar to non-challenged oysters. Oysters
-            exposed to R. crassostreae showed differential expression of
-            transcripts involved in immune recognition, signaling, protease
-            inhibition, detoxification, and apoptosis. Transcripts involved in
-            metabolism were enriched in susceptible oysters, suggesting that
-            bacterial infection places a large metabolic demand on these
-            oysters. Transcripts differentially expressed in resistant oysters
-            in response to infection included the immune modulators IL-17 and
-            arginase, as well as several genes involved in extracellular matrix
-            remodeling. The identification of potential genes and processes
-            responsible for defense against R. crassostreae in the American
-            oyster provides insights into potential mechanisms of disease
-            resistance.
-        </Abstract>
-        <Abstract
-            client:load
-            title="A quantitative reference transcriptome for Nematostella vectensis earlyembryonic development: a pipeline for de novo assembly in emergingmodel systems"
-            blurb="The de novo assembly of transcriptomes from short shotgun sequencesraises challenges due to random and non-random sequencing biases andinherent transcript complexity. We sought to define a pipeline for denovo transcriptome assembly to aid researchers working withemerging model systems where well annotated genome assemblies are notavailable as a reference."
-        >
-            <p>
-                The de novo assembly of transcriptomes from short shotgun
-                sequencesraises challenges due to random and non-random
-                sequencing biases andinherent transcript complexity. We sought
-                to define a pipeline for denovo transcriptome assembly to aid
-                researchers working withemerging model systems where well
-                annotated genome assemblies are notavailable as a reference. To
-                detail this experimental and computationalmethod, we used early
-                embryos of the sea anemone, Nematostellavectensis, an emerging
-                model system for studies of animal body planevolution. We
-                performed RNA-seq on embryos up to 24 h of developmentusing
-                Illumina HiSeq technology and evaluated independent de
-                novoassembly methods. The resulting reads were assembled using
-                either theTrinity assembler on all quality controlled reads or
-                both the Velvet andOases assemblers on reads passing a stringent
-                digital normalization filter.A control set of mRNA standards
-                from the National Institute of Standards andTechnology (NIST)
-                was included in our experimental pipeline to invest
-                ourtranscriptome with quantitative information on absolute
-                transcript levelsand to provide additional quality control.
-            </p>
-            <p>
-                We generated >200 million paired-end reads from directional cDNA
-                librariesrepresenting well over 20 Gb of sequence. The Trinity
-                assembler pipeline,including preliminary quality control steps,
-                resulted in more than 86% ofreads aligning with the reference
-                transcriptome thus generated.Nevertheless, digital normalization
-                combined with assembly by Velvet andOases required far less
-                computing power and decreased processing time whilestill mapping
-                82% of reads. We have made the raw sequencing reads andassembled
-                transcriptome publically available.
-            </p>
-            <p>
-                Nematostella vectensis was chosen for its strategic position in
-                thetree of life for studies into the origins of the animal body
-                plan, however, the challenge of reference-free transcriptome
-                assembly is relevant to allsystems for which well annotated gene
-                models and independently verifiedgenome assembly may not be
-                available. To navigate this new territory, wehave constructed a
-                pipeline for library preparation and computationalanalysis for
-                de novo transcriptome assembly. The gene modelsdefined by this
-                reference transcriptome define the set of genes transcribedin
-                early Nematostella development and will provide a valuable
-                dataset for further gene regulatory network investigations.
-            </p>
-        </Abstract>
-        <Abstract
-            client:load
-            title="HapCompass: A Fast Cycle Basis Algorithm forAccurate Haplotype Assembly of Sequence Data"
-            blurb={`
+      title="Transcriptome of American Oysters, Crassostrea virginica, in Response to Bacterial Challenge: Insights into Potential Mechanisms of Disease Resistance"
+    >
+      The American oyster Crassostrea virginica, an ecologically and
+      economically important estuarine organism, can suffer high mortalities in
+      areas in the Northeast United States due to Roseovarius Oyster Disease
+      (ROD), caused by the gram-negative bacterial pathogen Roseovarius
+      crassostreae. The goals of this research were to provide insights into: 1)
+      the responses of American oysters to R. crassostreae, and 2) potential
+      mechanisms of resistance or susceptibility to ROD. The responses of
+      oysters to bacterial challenge were characterized by exposing oysters from
+      ROD-resistant and susceptible families to R. crassostreae, followed by
+      high-throughput sequencing of cDNA samples from various timepoints after
+      disease challenge. Sequence data was assembled into a reference
+      transcriptome and analyzed through differential gene expression and
+      functional enrichment to uncover genes and processes potentially involved
+      in responses to ROD in the American oyster. While susceptible oysters
+      experienced constant levels of mortality when challenged with R.
+      crassostreae, resistant oysters showed levels of mortality similar to
+      non-challenged oysters. Oysters exposed to R. crassostreae showed
+      differential expression of transcripts involved in immune recognition,
+      signaling, protease inhibition, detoxification, and apoptosis. Transcripts
+      involved in metabolism were enriched in susceptible oysters, suggesting
+      that bacterial infection places a large metabolic demand on these oysters.
+      Transcripts differentially expressed in resistant oysters in response to
+      infection included the immune modulators IL-17 and arginase, as well as
+      several genes involved in extracellular matrix remodeling. The
+      identification of potential genes and processes responsible for defense
+      against R. crassostreae in the American oyster provides insights into
+      potential mechanisms of disease resistance.
+    </Abstract>
+    <Abstract
+      client:load
+      title="A quantitative reference transcriptome for Nematostella vectensis earlyembryonic development: a pipeline for de novo assembly in emergingmodel systems"
+      blurb="The de novo assembly of transcriptomes from short shotgun sequencesraises challenges due to random and non-random sequencing biases andinherent transcript complexity. We sought to define a pipeline for denovo transcriptome assembly to aid researchers working withemerging model systems where well annotated genome assemblies are notavailable as a reference."
+    >
+      <p>
+        The de novo assembly of transcriptomes from short shotgun
+        sequencesraises challenges due to random and non-random sequencing
+        biases andinherent transcript complexity. We sought to define a pipeline
+        for denovo transcriptome assembly to aid researchers working
+        withemerging model systems where well annotated genome assemblies are
+        notavailable as a reference. To detail this experimental and
+        computationalmethod, we used early embryos of the sea anemone,
+        Nematostellavectensis, an emerging model system for studies of animal
+        body planevolution. We performed RNA-seq on embryos up to 24 h of
+        developmentusing Illumina HiSeq technology and evaluated independent de
+        novoassembly methods. The resulting reads were assembled using either
+        theTrinity assembler on all quality controlled reads or both the Velvet
+        andOases assemblers on reads passing a stringent digital normalization
+        filter.A control set of mRNA standards from the National Institute of
+        Standards andTechnology (NIST) was included in our experimental pipeline
+        to invest ourtranscriptome with quantitative information on absolute
+        transcript levelsand to provide additional quality control.
+      </p>
+      <p>
+        We generated >200 million paired-end reads from directional cDNA
+        librariesrepresenting well over 20 Gb of sequence. The Trinity assembler
+        pipeline,including preliminary quality control steps, resulted in more
+        than 86% ofreads aligning with the reference transcriptome thus
+        generated.Nevertheless, digital normalization combined with assembly by
+        Velvet andOases required far less computing power and decreased
+        processing time whilestill mapping 82% of reads. We have made the raw
+        sequencing reads andassembled transcriptome publically available.
+      </p>
+      <p>
+        Nematostella vectensis was chosen for its strategic position in thetree
+        of life for studies into the origins of the animal body plan, however,
+        the challenge of reference-free transcriptome assembly is relevant to
+        allsystems for which well annotated gene models and independently
+        verifiedgenome assembly may not be available. To navigate this new
+        territory, wehave constructed a pipeline for library preparation and
+        computationalanalysis for de novo transcriptome assembly. The gene
+        modelsdefined by this reference transcriptome define the set of genes
+        transcribedin early Nematostella development and will provide a valuable
+        dataset for further gene regulatory network investigations.
+      </p>
+    </Abstract>
+    <Abstract
+      client:load
+      title="HapCompass: A Fast Cycle Basis Algorithm forAccurate Haplotype Assembly of Sequence Data"
+      blurb={`
          Genome assembly methods produce haplotype phase ambiguous assemblies
             due to limita-tions in current sequencing technologies. Determining
             the haplotype phase of an individualis computationally challenging
             and experimentally expensive. However, haplotype phaseinformation is
             crucial in many bioinformatics workflows such as genetic association
             studiesand genomic imputation.`}
-        >
-            Genome assembly methods produce haplotype phase ambiguous assemblies
-            due to limita-tions in current sequencing technologies. Determining
-            the haplotype phase of an individualis computationally challenging
-            and experimentally expensive. However, haplotype phaseinformation is
-            crucial in many bioinformatics workflows such as genetic association
-            studiesand genomic imputation. Current computational methods of
-            determining haplotype phasefrom sequence data—known as haplotype
-            assembly—have difficulties producing accurateresults for large (1000
-            Genomes-type) data or operate on restricted optimizations that
-            areunrealistic considering modern high-throughput sequencing
-            technologies. We present anovel algorithm, HapCompass, for haplotype
-            assembly of densely sequenced human genomedata. The HapCompass
-            algorithm operates on a graph where single nucleotide polymor-phisms
-            (SNPs) are nodes and edges are defined by sequence reads and viewed
-            as supportingevidence of co-occurring SNP alleles in a haplotype. In
-            our graph model, haplotype phasingscorrespond to spanning trees. We
-            define the minimum weighted edge removal optimizationon this graph
-            and develop an algorithm based on cycle basis local optimizations
-            for resolvingconflicting evidence. We then estimate the amount of
-            sequencing required to produce acomplete haplotype assembly of a
-            chromosome. Using these estimates together with metricsborrowed from
-            genome assembly and haplotype phasing, we compare the accuracy
-            ofHapCompass, the Genome Analysis ToolKit, and HapCut for 1000
-            Genomes Project andsimulated data. We show that HapCompass performs
-            significantly better for a variety ofdata and metrics. HapCompass is
-            freely available for download (www.brown.edu/Research/Istrail_Lab/).
-        </Abstract>
-        <Abstract
-            client:load
-            title="The Transcriptome of the Sea Urchin Embryo"
-            blurb={`
+    >
+      Genome assembly methods produce haplotype phase ambiguous assemblies due
+      to limita-tions in current sequencing technologies. Determining the
+      haplotype phase of an individualis computationally challenging and
+      experimentally expensive. However, haplotype phaseinformation is crucial
+      in many bioinformatics workflows such as genetic association studiesand
+      genomic imputation. Current computational methods of determining haplotype
+      phasefrom sequence data—known as haplotype assembly—have difficulties
+      producing accurateresults for large (1000 Genomes-type) data or operate on
+      restricted optimizations that areunrealistic considering modern
+      high-throughput sequencing technologies. We present anovel algorithm,
+      HapCompass, for haplotype assembly of densely sequenced human genomedata.
+      The HapCompass algorithm operates on a graph where single nucleotide
+      polymor-phisms (SNPs) are nodes and edges are defined by sequence reads
+      and viewed as supportingevidence of co-occurring SNP alleles in a
+      haplotype. In our graph model, haplotype phasingscorrespond to spanning
+      trees. We define the minimum weighted edge removal optimizationon this
+      graph and develop an algorithm based on cycle basis local optimizations
+      for resolvingconflicting evidence. We then estimate the amount of
+      sequencing required to produce acomplete haplotype assembly of a
+      chromosome. Using these estimates together with metricsborrowed from
+      genome assembly and haplotype phasing, we compare the accuracy
+      ofHapCompass, the Genome Analysis ToolKit, and HapCut for 1000 Genomes
+      Project andsimulated data. We show that HapCompass performs significantly
+      better for a variety ofdata and metrics. HapCompass is freely available
+      for download (www.brown.edu/Research/Istrail_Lab/archive/).
+    </Abstract>
+    <Abstract
+      client:load
+      title="The Transcriptome of the Sea Urchin Embryo"
+      blurb={`
          The sea urchin Strongylocentrotus purpuratus is a model organism for
             study of the genomic control circuitry underlying embryonic
             development. We examined the complete repertoire of genes expressed
             in the S. purpuratus embryo, up to late gastrula stage, by means of
             high-resolution custom tiling arrays covering the whole genome.`}
-        >
-            The sea urchin Strongylocentrotus purpuratus is a model organism for
-            study of the genomic control circuitry underlying embryonic
-            development. We examined the complete repertoire of genes expressed
-            in the S. purpuratus embryo, up to late gastrula stage, by means of
-            high-resolution custom tiling arrays covering the whole genome. We
-            detected complete spliced structures even for genes known to be
-            expressed at low levels in only a few cells. At least 11,000 to
-            12,000 genes are used in embryogenesis. These include most of the
-            genes encoding transcription factors and signaling proteins, as well
-            as some classes of general cytoskeletal and metabolic proteins, but
-            only a minor fraction of genes encoding immune functions and sensory
-            receptors. Thousands of small asymmetric transcripts of unknown
-            function were also detected in intergenic regions throughout the
-            genome. The tiling array data were used to correct and authenticate
-            several thousand gene models during the genome annotation process.
-        </Abstract>
-    </div>
-    <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">
+    >
+      The sea urchin Strongylocentrotus purpuratus is a model organism for study
+      of the genomic control circuitry underlying embryonic development. We
+      examined the complete repertoire of genes expressed in the S. purpuratus
+      embryo, up to late gastrula stage, by means of high-resolution custom
+      tiling arrays covering the whole genome. We detected complete spliced
+      structures even for genes known to be expressed at low levels in only a
+      few cells. At least 11,000 to 12,000 genes are used in embryogenesis.
+      These include most of the genes encoding transcription factors and
+      signaling proteins, as well as some classes of general cytoskeletal and
+      metabolic proteins, but only a minor fraction of genes encoding immune
+      functions and sensory receptors. Thousands of small asymmetric transcripts
+      of unknown function were also detected in intergenic regions throughout
+      the genome. The tiling array data were used to correct and authenticate
+      several thousand gene models during the genome annotation process.
+    </Abstract>
+  </div>
+  <!-- <BlockQuote slot="quote" author="Sorin Istrail" journal="">
         <p>
             How famous physicists and mathematicians commented in the 1950-1960s
             on an NP-complete problem before the concept of NP-completeness was
@@ -178,13 +169,13 @@ const relevantPapers = publications.filter((paper) =>
         </p>
     </BlockQuote> -->
 
-    <ul slot="relevant-papers" class="grid gap-4">
-        {
-            relevantPapers.map((paper) => (
-                <li>
-                    <EssayCard publication={paper} />
-                </li>
-            ))
-        }
-    </ul>
+  <ul slot="relevant-papers" class="grid gap-4">
+    {
+      relevantPapers.map((paper) => (
+        <li>
+          <EssayCard publication={paper} />
+        </li>
+      ))
+    }
+  </ul>
 </ResearchLayout>

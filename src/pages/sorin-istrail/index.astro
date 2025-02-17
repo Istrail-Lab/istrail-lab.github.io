@@ -17,190 +17,188 @@ import jcb from "@/assets/positions/jcb.jpg";
 import neumann from "@/assets/positions/vonneumann.gif";
 
 const essays = [
-    {
-        authors: ["Sorin Istrail"],
-        title: "Ode to Computational Biology: A letter in support of awarding the National Medal of Science to Professor Michael Waterman",
-        year: 2012,
-        pdf: "/papers/Ode to Computational Biology.pdf",
-        tags: [],
-    },
-    {
-        authors: ["Sorin Istrail"],
-        title: "Professor Solomon Marcus' Axioms",
-        year: 2011,
-        journal:
-            "Meetings with Marcus: 85th Birthday Celebration of Professor Solomon Marcus Editurea Academiei Romane",
-        pdf: "/papers/MarcusAxioms.pdf",
-        tags: [],
-    },
-    {
-        authors: ["Sorin Istrail"],
-        title: "Storytelling about Lighthouses: When Professor Dijkstra Slapped Me in the Quest for Beautiful Code",
-        journal: "Conduit",
-        volume: "19.1",
-        year: 2010,
-        pdf: "/papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
-        tags: [],
-    },
-    {
-        authors: ["Sorin Istrail"],
-        title: "Storytelling about Lighthouses: Criticizing Professor Dijkstra Considered Harmless",
-        journal: "Conduit",
-        volume: "17.2",
-        year: 2008,
-        pdf: "/papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
-        tags: [],
-    },
+  {
+    authors: ["Sorin Istrail"],
+    title:
+      "Ode to Computational Biology: A letter in support of awarding the National Medal of Science to Professor Michael Waterman",
+    year: 2012,
+    pdf: "/papers/Ode to Computational Biology.pdf",
+    tags: [],
+  },
+  {
+    authors: ["Sorin Istrail"],
+    title: "Professor Solomon Marcus' Axioms",
+    year: 2011,
+    journal:
+      "Meetings with Marcus: 85th Birthday Celebration of Professor Solomon Marcus Editurea Academiei Romane",
+    pdf: "/papers/MarcusAxioms.pdf",
+    tags: [],
+  },
+  {
+    authors: ["Sorin Istrail"],
+    title:
+      "Storytelling about Lighthouses: When Professor Dijkstra Slapped Me in the Quest for Beautiful Code",
+    journal: "Conduit",
+    volume: "19.1",
+    year: 2010,
+    pdf: "/papers/When Professor Dijkstra Slapped Me in the Quest for Beautiful Code.pdf",
+    tags: [],
+  },
+  {
+    authors: ["Sorin Istrail"],
+    title:
+      "Storytelling about Lighthouses: Criticizing Professor Dijkstra Considered Harmless",
+    journal: "Conduit",
+    volume: "17.2",
+    year: 2008,
+    pdf: "/papers/Criticizing Professor Dijkstra Considered Harmless.pdf",
+    tags: [],
+  },
 ];
 ---
 
 <Layout title="Istrail Lab | Sorin Istrail">
-    <QuickLinks />
-    <div class="grid md:grid-cols-2 p-4">
-        <div class="flex flex-col items-center">
-            <img src={istrail} alt="Sorin Istrail" />
-            <h2 class="font-bold p-4">Sorin Istrail</h2>
-        </div>
-        <div
-            class="flex flex-col items-center justify-center text-center gap-2"
-        >
-            <h2 class="font-bold" style="text-wrap: balance">
-                James A. and Julie N. Brown Professor of Computational and
-                Mathematical Sciences
-            </h2>
-            <h2 class="font-bold">Professor of Computer Science</h2>
-            <div class="text-xs">
-                <p>Department of Computer Science</p>
-                <p>Brown University</p>
-                <p>115 Waterman Street Box 1910</p>
-                <p>Providence, RI 02912</p>
-                <p>Phone: (401)-863-6196</p>
-                <p>
-                    <a href="mailto:sorin_istrail@brown.edu"
-                        >sorin_istrail@brown.edu</a
-                    >
-                </p>
-            </div>
-        </div>
+  <QuickLinks />
+  <div class="grid md:grid-cols-2 p-4">
+    <div class="flex flex-col items-center">
+      <img src={istrail} alt="Sorin Istrail" />
+      <h2 class="font-bold p-4">Sorin Istrail</h2>
     </div>
-
-    <BlockQuote author="Sorin Istrail" journal="Vision For Brown University">
-        Engaging the world, one inspiring course, one innovative student, one
-        influential research leader at a time.
-    </BlockQuote>
-
-    <p class="p-2">
-        Sorin Istrail is the James A. and Julie N. Brown Professor of
-        Computational and Mathematical Sciences and Professor of Computer
-        Science, and former Director of the Center for Computational Molecular
-        Biology at Brown University. He is Professor Honoris Causa of the
-        Alexandru Ioan Cuza University, Iasi, Romania.
-    </p>
-    <p class="p-2">
-        Before joining Brown, he was the Senior Director and Head of Informatics
-        Research at Celera Genomics, where his group played a central role in
-        the construction of the sequence of the human genome; they co-authored <a
-            class="underline hover:text-blue-400"
-            href="https://www.science.org/doi/10.1126/science.1058040"
-            >"The Sequence of the Human Genome"</a
-        > (Science, 2001) which, with over 20,000 citations to date, is one of the
-        most cited scientific paper. His group at Celera Genomics also built a powerful
-        suite of genome-assembly-to-genome-assembly alignment algorithms that was
-        used for the comparison of all human genome assemblies to date in the paper
-        <a
-            class="underline hover:text-blue-400"
-            href="https://doi.org/10.1073/pnas.0307971100"
-            >"Whole Genome Shotgun Assembly and Comparison of Human Genome
-            Assemblies"</a
-        > (PNAS 2004). In 2002, his Celera group in collaboration with the company
-        ClearForrest won the ACM KDD Cup - the top international data mining/machine
-        learning competition. The challenge then was the automatic annotation of
-        a section of the Drosophila genome.
-    </p>
-    <p class="p-2">
-        In 2003, he joined the ranks of Applied Biosystems Science Fellows, one
-        of just six science fellows in a company of 800 scientists. Before
-        Celera, Professor Istrail founded and led the Computational Biology
-        Project at Sandia National Laboratories (1992-2000). In 2000, he
-        obtained the negative solution (computational intractability) of a 50
-        years old unresolved problem in statistical mechanics, the
-        <a
-            class="underline hover:text-blue-400"
-            href="/papers/Statistical Mechanics, Three-Dimensionality and NP-completeness.pdf"
-            >Three-Dimensional Ising Model Problem</a
-        > (STOC 2000). This work was included in the Top 100 Most Important Discoveries
-        of the U.S. Department of Energy's first 25 years, and as the 7th top achievement
-        of DOE in Advanced Scientific Computing.
-    </p>
-    <p class="p-2">
-        Professor Istrail's current research focuses on SNPs and haplotypes and
-        genome-wide association studies (GWAS), the regulatory genome and gene
-        regulatory networks, and protein folding algorithms; algorithms and
-        computational complexity; and statistical physics.
-    </p>
-    <p class="p-2">
-        He is the former Co-Editor-In-Chief of the Journal of Computational
-        Biology (2000 - 2020) and together with Pavel Pevnzer and Mike Waterman,
-        he is the co-founded the RECOMB Conference Series (Annual International
-        Conference on Computational Molecular Biology) in 1997. He is the
-        co-editor of the MIT Press Computational Molecular Biology series, and
-        co-editor of the Springer-Verlag Lecture Notes in Bioinfromatics series.
-    </p>
-    <p class="p-2">
-        He has Erdos number 2 and postcard-Erdos number 1. In the <a
-            class="underline hover:text-blue-400"
-            href="/sorin-istrail/genealogy.html">PhD advisor genealogy</a
-        > he has 9 links to Euler and 11 links to Leibniz.
-    </p>
-
-    <div class="p-8 gap-4 grid grid-cols-3">
-        <PositionCard
-            img={ccmb}
-            position="Director, Center of Computational Biology"
-            location="Brown University"
-            time="2006 — 2011"
-            href="https://www.brown.edu/Research/Istrail_Lab/CCMB/index.htm"
-        />
-        <PositionCard
-            img={celera}
-            position="Senior Director and Head of Informatics"
-            location="Celera Genomics"
-            time="2000 — 2005"
-        />
-        <PositionCard
-            img={sandia}
-            position="Principal Member of Technical Staff and Project Leader"
-            location="Sandia National Laboratories"
-            time="1992 — 2000"
-        />
-        <PositionCard
-            img={recomb}
-            position="Co-Founder and Steering Committee Member"
-            location="International Conference on Research in Computational Biology"
-            time="1997 — Present"
-        />
-        <PositionCard
-            img={jcb}
-            position="Co-Editor-In-Chief"
-            location="Journal of Computational Biology"
-            time="2000 — 2020"
-        />
-        <PositionCard
-            img={neumann}
-            position="John von Neumann Lecture Series"
-            location="Brown University"
-            time="2010 & 2015"
-        />
+    <div class="flex flex-col items-center justify-center text-center gap-2">
+      <h2 class="font-bold" style="text-wrap: balance">
+        James A. and Julie N. Brown Professor of Computational and Mathematical
+        Sciences
+      </h2>
+      <h2 class="font-bold">Professor of Computer Science</h2>
+      <div class="text-xs">
+        <p>Department of Computer Science</p>
+        <p>Brown University</p>
+        <p>115 Waterman Street Box 1910</p>
+        <p>Providence, RI 02912</p>
+        <p>Phone: (401)-863-6196</p>
+        <p>
+          <a href="mailto:sorin_istrail@brown.edu">sorin_istrail@brown.edu</a>
+        </p>
+      </div>
     </div>
+  </div>
 
-    <div class="flex items-baseline">
-        <h2 class="flex-1 text-2xl font-bold pt-8">Featured Essays</h2>
-        <a class="underline hover:text-blue-400" href="/essays">Read more</a>
-    </div>
-    <div class="grid gap-4 py-4">
-        {essays.map((essay) => <EssayCard publication={essay} />)}
-    </div>
+  <BlockQuote author="Sorin Istrail" journal="Vision For Brown University">
+    Engaging the world, one inspiring course, one innovative student, one
+    influential research leader at a time.
+  </BlockQuote>
 
-    <h2 class="text-2xl font-bold pt-8 pb-4">Sorin's Honor Roll Students</h2>
-    <HonorRollList students={students} />
+  <p class="p-2">
+    Sorin Istrail is the James A. and Julie N. Brown Professor of Computational
+    and Mathematical Sciences and Professor of Computer Science, and former
+    Director of the Center for Computational Molecular Biology at Brown
+    University. He is Professor Honoris Causa of the Alexandru Ioan Cuza
+    University, Iasi, Romania.
+  </p>
+  <p class="p-2">
+    Before joining Brown, he was the Senior Director and Head of Informatics
+    Research at Celera Genomics, where his group played a central role in the
+    construction of the sequence of the human genome; they co-authored <a
+      class="underline hover:text-blue-400"
+      href="https://www.science.org/doi/10.1126/science.1058040"
+      >"The Sequence of the Human Genome"</a
+    > (Science, 2001) which, with over 20,000 citations to date, is one of the most
+    cited scientific paper. His group at Celera Genomics also built a powerful suite
+    of genome-assembly-to-genome-assembly alignment algorithms that was used for
+    the comparison of all human genome assemblies to date in the paper
+    <a
+      class="underline hover:text-blue-400"
+      href="https://doi.org/10.1073/pnas.0307971100"
+      >"Whole Genome Shotgun Assembly and Comparison of Human Genome Assemblies"</a
+    > (PNAS 2004). In 2002, his Celera group in collaboration with the company ClearForrest
+    won the ACM KDD Cup - the top international data mining/machine learning competition.
+    The challenge then was the automatic annotation of a section of the Drosophila
+    genome.
+  </p>
+  <p class="p-2">
+    In 2003, he joined the ranks of Applied Biosystems Science Fellows, one of
+    just six science fellows in a company of 800 scientists. Before Celera,
+    Professor Istrail founded and led the Computational Biology Project at
+    Sandia National Laboratories (1992-2000). In 2000, he obtained the negative
+    solution (computational intractability) of a 50 years old unresolved problem
+    in statistical mechanics, the
+    <a
+      class="underline hover:text-blue-400"
+      href="/papers/Statistical Mechanics, Three-Dimensionality and NP-completeness.pdf"
+      >Three-Dimensional Ising Model Problem</a
+    > (STOC 2000). This work was included in the Top 100 Most Important Discoveries
+    of the U.S. Department of Energy's first 25 years, and as the 7th top achievement
+    of DOE in Advanced Scientific Computing.
+  </p>
+  <p class="p-2">
+    Professor Istrail's current research focuses on SNPs and haplotypes and
+    genome-wide association studies (GWAS), the regulatory genome and gene
+    regulatory networks, and protein folding algorithms; algorithms and
+    computational complexity; and statistical physics.
+  </p>
+  <p class="p-2">
+    He is the former Co-Editor-In-Chief of the Journal of Computational Biology
+    (2000 - 2020) and together with Pavel Pevnzer and Mike Waterman, he is the
+    co-founded the RECOMB Conference Series (Annual International Conference on
+    Computational Molecular Biology) in 1997. He is the co-editor of the MIT
+    Press Computational Molecular Biology series, and co-editor of the
+    Springer-Verlag Lecture Notes in Bioinfromatics series.
+  </p>
+  <p class="p-2">
+    He has Erdos number 2 and postcard-Erdos number 1. In the <a
+      class="underline hover:text-blue-400"
+      href="/sorin-istrail/genealogy.html">PhD advisor genealogy</a
+    > he has 9 links to Euler and 11 links to Leibniz.
+  </p>
+
+  <div class="p-8 gap-4 grid grid-cols-3">
+    <PositionCard
+      img={ccmb}
+      position="Director, Center of Computational Biology"
+      location="Brown University"
+      time="2006 — 2011"
+      href="https://www.brown.edu/Research/Istrail_lab/archive/CCMB/index.htm"
+    />
+    <PositionCard
+      img={celera}
+      position="Senior Director and Head of Informatics"
+      location="Celera Genomics"
+      time="2000 — 2005"
+    />
+    <PositionCard
+      img={sandia}
+      position="Principal Member of Technical Staff and Project Leader"
+      location="Sandia National Laboratories"
+      time="1992 — 2000"
+    />
+    <PositionCard
+      img={recomb}
+      position="Co-Founder and Steering Committee Member"
+      location="International Conference on Research in Computational Biology"
+      time="1997 — Present"
+    />
+    <PositionCard
+      img={jcb}
+      position="Co-Editor-In-Chief"
+      location="Journal of Computational Biology"
+      time="2000 — 2020"
+    />
+    <PositionCard
+      img={neumann}
+      position="John von Neumann Lecture Series"
+      location="Brown University"
+      time="2010 & 2015"
+    />
+  </div>
+
+  <div class="flex items-baseline">
+    <h2 class="flex-1 text-2xl font-bold pt-8">Featured Essays</h2>
+    <a class="underline hover:text-blue-400" href="/essays">Read more</a>
+  </div>
+  <div class="grid gap-4 py-4">
+    {essays.map((essay) => <EssayCard publication={essay} />)}
+  </div>
+
+  <h2 class="text-2xl font-bold pt-8 pb-4">Sorin's Honor Roll Students</h2>
+  <HonorRollList students={students} />
 </Layout>
