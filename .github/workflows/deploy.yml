@@ -42,8 +42,8 @@ jobs:
       # Build for Remote Server
       - name: Clean and rebuild for Remote Server
         env:
-          ASTRO_SITE: "https://cs.brown.edu/people/sistrail"
-          ASTRO_BASE: "/"
+          ASTRO_SITE: "https://cs.brown.edu"
+          ASTRO_BASE: "/people/sistrail/"
         run: |
           rm -rf dist
           npm run build

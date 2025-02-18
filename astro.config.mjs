@@ -6,6 +6,12 @@ import react from "@astrojs/react";
 const site = process.env.ASTRO_SITE || "https://istrail-laboratory.github.io";
 const base = process.env.ASTRO_BASE || "/";
 
+// For Brown CS deployment, if the site includes cs.brown.edu, use the full path as base
+const isBrownCS = site.includes('cs.brown.edu');
+if (isBrownCS && !base.includes('/people/sistrail')) {
+  base = '/people/sistrail/';
+}
+
 export default defineConfig({
   site,
   base,
