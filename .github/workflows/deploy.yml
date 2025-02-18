@@ -15,37 +15,61 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  # Build for GitHub Pages deployment
+  build-github-pages:
     runs-on: ubuntu-latest
+    env:
+      ASTRO_SITE: "https://istrail-laboratory.github.io"
+      ASTRO_BASE: "/"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install, build, and upload Astro site
+      - name: Install, build, and upload Astro site for GitHub Pages
         uses: withastro/action@v2
-        # Optional configuration:
+        # Optional: add additional inputs if needed:
         # with:
-        #   path: .           # The root location of your Astro project (if not at repo root)
-        #   node-version: 16  # Specify Node version if needed
-        #   package-manager: yarn  # Automatically detected based on your lockfile
+        #   path: .
+        #   node-version: 16
+        #   package-manager: yarn
 
-      - name: Upload site artifact
+      - name: Upload primary site artifact
         uses: actions/upload-artifact@v4
         with:
-          name: site-build
+          name: primary-site-build
           path: dist  # Astro outputs the built site to "dist"
 
+  # Build for Remote deployment
+  build-remote:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_SITE: "https://cs.brown.edu/people/sistrail/"
+      ASTRO_BASE: "/"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install, build, and upload Astro site for Remote Server
+        uses: withastro/action@v2
+
+      - name: Upload remote site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: remote-site-build
+          path: dist
+
+  # Deploy to GitHub Pages using the primary build
   deploy-github-pages:
-    needs: build
+    needs: build-github-pages
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download site artifact
+      - name: Download primary site artifact
         uses: actions/download-artifact@v4
         with:
-          name: site-build
+          name: primary-site-build
           path: dist
 
       - name: Deploy to GitHub Pages
@@ -54,14 +78,15 @@ jobs:
         with:
           folder: dist  # Deploy the contents of the "dist" folder
 
+  # Deploy to your remote server via rsync using the remote build
   deploy-remote:
-    needs: build
+    needs: build-remote
     runs-on: ubuntu-latest
     steps:
-      - name: Download site artifact
+      - name: Download remote site artifact
         uses: actions/download-artifact@v4
         with:
-          name: site-build
+          name: remote-site-build
           path: dist
 
       - name: Deploy to Remote Server via rsync
