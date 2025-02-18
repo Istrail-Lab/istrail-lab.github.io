@@ -1,71 +1,75 @@
 name: Deploy to GitHub Pages & Remote Server
 
 on:
-    push:
-        branches: [main]
-    workflow_dispatch:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-    contents: read
-    pages: write
-    id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-    group: "pages"
-    cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Install, build, and upload Astro site
-              uses: withastro/action@v2
+      - name: Install, build, and upload Astro site
+        uses: withastro/action@v2
+        # Optional configuration:
+        # with:
+        #   path: .           # The root location of your Astro project (if not at repo root)
+        #   node-version: 16  # Specify Node version if needed
+        #   package-manager: yarn  # Automatically detected based on your lockfile
 
-            - name: Upload site artifact
-              uses: actions/upload-artifact@v4
-              with:
-                name: site-build
-                path: dist  # Astro outputs the built site to "dist"
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: dist  # Astro outputs the built site to "dist"
 
-    deploy-github-pages:
-        needs: build
-        runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        steps:
-            - name: Download site build
-              uses: actions/download-artifact@v4
-              with:
-                name: site-build
-                path: dist
+  deploy-github-pages:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: dist
 
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: peaceiris/actions-gh-pages@v4
-              with:
-                github_token: ${{ secrets.GH_PAT }}
-                publish_dir: dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          folder: dist  # Deploy the contents of the "dist" folder
 
-    deploy-remote:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
-            - name: Download site build
-              uses: actions/download-artifact@v4
-              with:
-                name: site-build
-                path: dist
+  deploy-remote:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: dist
 
-            - name: Deploy to Remote Server via rsync
-              uses: burnett01/rsync-deployments@7.0.2
-              with:
-                switches: -avzr --delete --omit-dir-times
-                path: dist/
-                remote_path: ${{ vars.REMOTE_PATH }}
-                remote_host: ${{ vars.REMOTE_HOST }}
-                remote_user: ${{ vars.REMOTE_USER }}
-                remote_key: ${{ secrets.DEPT_KEY }}
+      - name: Deploy to Remote Server via rsync
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avzr --delete --omit-dir-times
+          path: dist/
+          remote_path: ${{ vars.REMOTE_PATH }}
+          remote_host: ${{ vars.REMOTE_HOST }}
+          remote_user: ${{ vars.REMOTE_USER }}
+          remote_key: ${{ secrets.DEPT_KEY }}
