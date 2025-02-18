@@ -1,6 +1,7 @@
 import { Drawer, List, ListItemButton } from "@mui/material";
 import { useState } from "react";
 import { Dropdown, DropdownWithSubheadings } from "./Dropdown";
+import { createUrl } from "../../utils/url";
 
 const NavSidebar = () => {
     const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ const NavSidebar = () => {
                     }}
                     component="nav"
                 >
-                    <ListItemButton href="/sorin-istrail">
+                    <ListItemButton href={createUrl("/sorin-istrail")}>
                         Sorin Istrail
                     </ListItemButton>
                     <DropdownWithSubheadings

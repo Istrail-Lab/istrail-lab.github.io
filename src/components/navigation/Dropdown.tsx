@@ -8,6 +8,7 @@ import {
     ListSubheader,
 } from "@mui/material";
 import { useState } from "react";
+import { createUrl } from "../../utils/url";
 
 interface DropdownProps {
     dropdownHeading: string;
@@ -28,7 +29,7 @@ export const Dropdown = ({ dropdownHeading, dropdownLinks }: DropdownProps) => {
             <Collapse in={open}>
                 <List component="div" disablePadding>
                     {Object.entries(dropdownLinks).map(([name, link]) => (
-                        <ListItemButton href={link} key={name} sx={{ pl: 4 }}>
+                        <ListItemButton href={createUrl(link)} key={name} sx={{ pl: 4 }}>
                             <ListItemText primary={name} />
                         </ListItemButton>
                     ))}
@@ -66,7 +67,7 @@ export const DropdownWithSubheadings = ({
                     >
                         {Object.entries(links).map(([name, link]) => (
                             <ListItemButton
-                                href={link}
+                                href={createUrl(link)}
                                 key={name}
                                 sx={{ pl: 4 }}
                             >
