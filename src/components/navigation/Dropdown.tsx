@@ -28,11 +28,14 @@ export const Dropdown = ({ dropdownHeading, dropdownLinks }: DropdownProps) => {
             </ListItemButton>
             <Collapse in={open}>
                 <List component="div" disablePadding>
-                    {Object.entries(dropdownLinks).map(([name, link]) => (
-                        <ListItemButton href={createUrl(link)} key={name} sx={{ pl: 4 }}>
-                            <ListItemText primary={name} />
-                        </ListItemButton>
-                    ))}
+                    {Object.entries(dropdownLinks).map(([name, link]) => {
+                        const href = typeof link === 'string' ? createUrl(link) : '';
+                        return (
+                            <ListItemButton href={href} key={name} sx={{ pl: 4 }}>
+                                <ListItemText primary={name} />
+                            </ListItemButton>
+                        );
+                    })}
                 </List>
             </Collapse>
         </>
@@ -65,15 +68,18 @@ export const DropdownWithSubheadings = ({
                         disablePadding
                         subheader={<ListSubheader>{subheading}</ListSubheader>}
                     >
-                        {Object.entries(links).map(([name, link]) => (
-                            <ListItemButton
-                                href={createUrl(link)}
-                                key={name}
-                                sx={{ pl: 4 }}
-                            >
-                                <ListItemText primary={name} />
-                            </ListItemButton>
-                        ))}
+                        {Object.entries(links).map(([name, link]) => {
+                            const href = typeof link === 'string' ? createUrl(link) : '';
+                            return (
+                                <ListItemButton
+                                    href={href}
+                                    key={name}
+                                    sx={{ pl: 4 }}
+                                >
+                                    <ListItemText primary={name} />
+                                </ListItemButton>
+                            );
+                        })}
                     </List>
                 ))}
             </Collapse>

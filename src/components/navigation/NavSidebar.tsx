@@ -38,6 +38,9 @@ const NavSidebar = () => {
                     <ListItemButton href={createUrl("/sorin-istrail")}>
                         Sorin Istrail
                     </ListItemButton>
+                    <ListItemButton href={createUrl("/media-coverage")}>
+                        Media Coverage
+                    </ListItemButton>
                     <DropdownWithSubheadings
                         dropdownHeading="Research"
                         dropdownLinks={{
@@ -126,17 +129,17 @@ const NavSidebar = () => {
                                 "/in-memoriam/alberto-apostolico",
                         }}
                     />
-                    <ListItemButton href="/sorinfest">
+                    <ListItemButton href={createUrl("/sorinfest")}>
                         SorinFest
                     </ListItemButton>
-                    <ListItemButton href="/romania-celebrates-sorin">
+                    <ListItemButton href={createUrl("/romania-celebrates-sorin")}>
                         Romania Celebrates Sorin
                     </ListItemButton>
-                    <ListItemButton href="/essays">Essays</ListItemButton>
-                    <ListItemButton href="/publications">
+                    <ListItemButton href={createUrl("/essays")}>Essays</ListItemButton>
+                    <ListItemButton href={createUrl("/publications")}>
                         Publications
                     </ListItemButton>
-                    <ListItemButton href="/media-coverage">
+                    <ListItemButton href={createUrl("/media-coverage")}>
                         Media
                     </ListItemButton>
                 </List>
