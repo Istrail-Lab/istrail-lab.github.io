@@ -25,14 +25,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install, build, and upload Astro site for GitHub Pages
+      - name: Install, build Astro site for GitHub Pages
         uses: withastro/action@v2
 
-      - name: Upload primary site artifact
+      - name: Rename build folder for GitHub Pages
+        run: mv dist dist-pages
+
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-artifact@v4
         with:
-          name: primary-site-build-${{ github.run_id }}
-          path: dist
+          name: github-pages-build-${{ github.run_id }}
+          path: dist-pages
 
   # Build job for Remote Server deployment
   build-remote:
@@ -44,16 +47,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install, build, and upload Astro site for Remote Server
+      - name: Install, build Astro site for Remote Server
         uses: withastro/action@v2
 
-      - name: Upload remote site artifact
+      - name: Rename build folder for Remote Deployment
+        run: mv dist dist-remote
+
+      - name: Upload Remote artifact
         uses: actions/upload-artifact@v4
         with:
-          name: remote-site-build-${{ github.run_id }}
-          path: dist
+          name: remote-build-${{ github.run_id }}
+          path: dist-remote
 
-  # Deploy to GitHub Pages using the primary build
+  # Deploy to GitHub Pages using the GitHub Pages build
   deploy-github-pages:
     needs: build-github-pages
     runs-on: ubuntu-latest
@@ -61,34 +67,34 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download primary site artifact
+      - name: Download GitHub Pages artifact
         uses: actions/download-artifact@v4
         with:
-          name: primary-site-build-${{ github.run_id }}
-          path: dist
+          name: github-pages-build-${{ github.run_id }}
+          path: dist-pages
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          folder: dist
+          folder: dist-pages
 
-  # Deploy to the Remote Server via rsync using the remote build
+  # Deploy to the Remote Server via rsync using the Remote build
   deploy-remote:
     needs: build-remote
     runs-on: ubuntu-latest
     steps:
-      - name: Download remote site artifact
+      - name: Download Remote artifact
         uses: actions/download-artifact@v4
         with:
-          name: remote-site-build-${{ github.run_id }}
-          path: dist
+          name: remote-build-${{ github.run_id }}
+          path: dist-remote
 
       - name: Deploy to Remote Server via rsync
         uses: burnett01/rsync-deployments@7.0.2
         with:
           switches: -avzr --delete --omit-dir-times
-          path: dist/
+          path: dist-remote/
           remote_path: ${{ vars.REMOTE_PATH }}
           remote_host: ${{ vars.REMOTE_HOST }}
           remote_user: ${{ vars.REMOTE_USER }}
