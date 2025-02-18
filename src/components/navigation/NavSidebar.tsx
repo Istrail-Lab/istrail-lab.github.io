@@ -1,7 +1,7 @@
 import { Drawer, List, ListItemButton } from "@mui/material";
 import { useState } from "react";
 import { Dropdown, DropdownWithSubheadings } from "./Dropdown";
-import { createUrl } from "../../utils/url";
+import { createUrl } from "../../config/site";
 
 const NavSidebar = () => {
     const [open, setOpen] = useState(false);

@@ -2,15 +2,23 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
-// Use environment variables to set the site URL and base path.
-const site = process.env.ASTRO_SITE || "https://istrail-laboratory.github.io";
-const base = process.env.ASTRO_BASE || "/";
+// Function to normalize base URL
+function normalizeBase(base) {
+  if (!base) return '/';
+  return base.endsWith('/') ? base : `${base}/`;
+}
 
-// For Brown CS deployment, if the site includes cs.brown.edu, use the full path as base
-const isBrownCS = site.includes('cs.brown.edu');
-if (isBrownCS && !base.includes('/people/sistrail')) {
+// Get environment variables
+const site = process.env.ASTRO_SITE || "https://istrail-laboratory.github.io";
+let base = process.env.ASTRO_BASE || "/";
+
+// For Brown CS deployment, use the full path as base
+if (site.includes('cs.brown.edu')) {
   base = '/people/sistrail/';
 }
+
+// Normalize the base URL
+base = normalizeBase(base);
 
 export default defineConfig({
   site,

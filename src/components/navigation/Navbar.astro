@@ -1,12 +1,13 @@
 ---
 import NavSidebar from "./NavSidebar";
+import Link from "../common/Link.astro";
 ---
 
 <div class="w-full flex items-center bg-base-300 px-2 py-3">
     <div class="flex-1 px-2 mx-2">
-        <a
+        <Link
             class="no-underline text-black font-bold text-xl px-2 py-2 rounded-lg hover:bg-[#1F293733]"
-            href={import.meta.env.BASE_URL}>Istrail Lab</a
+            href="/">Istrail Lab</Link
         >
     </div>
     <NavSidebar client:only="react" />

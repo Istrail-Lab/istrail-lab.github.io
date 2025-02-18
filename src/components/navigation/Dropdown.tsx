@@ -8,7 +8,7 @@ import {
     ListSubheader,
 } from "@mui/material";
 import { useState } from "react";
-import { createUrl } from "../../utils/url";
+import { createUrl } from "../../config/site";
 
 interface DropdownProps {
     dropdownHeading: string;

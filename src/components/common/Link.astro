@@ -1,0 +1,19 @@
+---
+import { createUrl } from '../../config/site';
+
+interface Props {
+  href: string;
+  class?: string;
+  [key: string]: any;
+}
+
+const { href, class: className, ...props } = Astro.props;
+
+// Only transform internal links (those that don't start with http/https)
+const isExternal = href.startsWith('http://') || href.startsWith('https://');
+const finalHref = isExternal ? href : createUrl(href);
+---
+
+<a href={finalHref} class={className} {...props}>
+  <slot />
+</a>
