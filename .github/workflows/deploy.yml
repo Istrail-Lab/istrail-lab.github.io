@@ -31,7 +31,7 @@ jobs:
       - name: Upload primary site artifact
         uses: actions/upload-artifact@v4
         with:
-          name: primary-site-build
+          name: primary-site-build-${{ github.run_id }}
           path: dist
 
   # Build job for Remote Server deployment
@@ -50,7 +50,7 @@ jobs:
       - name: Upload remote site artifact
         uses: actions/upload-artifact@v4
         with:
-          name: remote-site-build
+          name: remote-site-build-${{ github.run_id }}
           path: dist
 
   # Deploy to GitHub Pages using the primary build
@@ -64,7 +64,7 @@ jobs:
       - name: Download primary site artifact
         uses: actions/download-artifact@v4
         with:
-          name: primary-site-build
+          name: primary-site-build-${{ github.run_id }}
           path: dist
 
       - name: Deploy to GitHub Pages
@@ -81,7 +81,7 @@ jobs:
       - name: Download remote site artifact
         uses: actions/download-artifact@v4
         with:
-          name: remote-site-build
+          name: remote-site-build-${{ github.run_id }}
           path: dist
 
       - name: Deploy to Remote Server via rsync
