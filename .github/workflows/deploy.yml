@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build for GitHub Pages deployment
+  # Build job for GitHub Pages deployment
   build-github-pages:
     runs-on: ubuntu-latest
     env:
@@ -27,19 +27,14 @@ jobs:
 
       - name: Install, build, and upload Astro site for GitHub Pages
         uses: withastro/action@v2
-        # Optional: add additional inputs if needed:
-        # with:
-        #   path: .
-        #   node-version: 16
-        #   package-manager: yarn
 
       - name: Upload primary site artifact
         uses: actions/upload-artifact@v4
         with:
           name: primary-site-build
-          path: dist  # Astro outputs the built site to "dist"
+          path: dist
 
-  # Build for Remote deployment
+  # Build job for Remote Server deployment
   build-remote:
     runs-on: ubuntu-latest
     env:
@@ -76,9 +71,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          folder: dist  # Deploy the contents of the "dist" folder
+          folder: dist
 
-  # Deploy to your remote server via rsync using the remote build
+  # Deploy to the Remote Server via rsync using the remote build
   deploy-remote:
     needs: build-remote
     runs-on: ubuntu-latest
