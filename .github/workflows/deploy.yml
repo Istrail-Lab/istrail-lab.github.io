@@ -10,85 +10,72 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  # Build job for GitHub Pages deployment
-  build-github-pages:
+  # Single build job that creates both versions
+  build:
     runs-on: ubuntu-latest
-    env:
-      ASTRO_SITE: "https://istrail-laboratory.github.io"
-      ASTRO_BASE: "/"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install, build Astro site for GitHub Pages
-        uses: withastro/action@v2
+      # Build for GitHub Pages
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-      - name: Rename build folder for GitHub Pages
-        run: mv dist dist-pages
+      - name: Install dependencies
+        run: npm ci
 
+      # Build for GitHub Pages
+      - name: Build for GitHub Pages
+        env:
+          ASTRO_SITE: "https://istrail-laboratory.github.io"
+          ASTRO_BASE: "/"
+        run: npm run build
+      
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist-pages
+          path: dist
 
-  # Build job for Remote Server deployment
-  build-remote:
-    runs-on: ubuntu-latest
-    env:
-      ASTRO_SITE: "https://cs.brown.edu/people/sistrail/"
-      ASTRO_BASE: "/"
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install, build Astro site for Remote Server
-        uses: withastro/action@v2
-
-      - name: Rename build folder for Remote Deployment
-        run: mv dist dist-remote
-
+      # Build for Remote Server
+      - name: Clean and rebuild for Remote Server
+        env:
+          ASTRO_SITE: "https://cs.brown.edu/people/sistrail"
+          ASTRO_BASE: "/"
+        run: |
+          rm -rf dist
+          npm run build
+      
       - name: Upload Remote artifact
         uses: actions/upload-artifact@v4
         with:
-          name: remote-build-${{ github.run_id }}
-          path: dist-remote
+          name: remote-build
+          path: dist
+          retention-days: 1
 
-  # Deploy to GitHub Pages using the GitHub Pages build
+  # Deploy to GitHub Pages
   deploy-github-pages:
-    needs: build-github-pages
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: dist-pages
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          folder: dist-pages
 
-  # Deploy to the Remote Server via rsync using the Remote build
+  # Deploy to Remote Server
   deploy-remote:
-    needs: build-remote
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download Remote artifact
         uses: actions/download-artifact@v4
         with:
-          name: remote-build-${{ github.run_id }}
+          name: remote-build
           path: dist-remote
 
       - name: Deploy to Remote Server via rsync
