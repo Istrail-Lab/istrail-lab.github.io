@@ -21,6 +21,7 @@ if (site.includes('cs.brown.edu')) {
 base = normalizeBase(base);
 
 export default defineConfig({
+  integrations: [tailwind(), react()],
   site,
   base,
   integrations: [

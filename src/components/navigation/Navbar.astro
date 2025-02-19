@@ -3,12 +3,16 @@ import NavSidebar from "./NavSidebar";
 import Link from "../common/Link.astro";
 ---
 
-<div class="w-full flex items-center bg-base-300 px-2 py-3">
-    <div class="flex-1 px-2 mx-2">
-        <Link
-            class="no-underline text-black font-bold text-xl px-2 py-2 rounded-lg hover:bg-[#1F293733]"
-            href="/">Istrail Lab</Link
-        >
-    </div>
-    <NavSidebar client:only="react" />
+<div class="w-full flex items-center bg-base-300 px-2 py-3 relative z-50">
+  <div class="flex-1 px-2 mx-2">
+    <Link
+      class="no-underline text-black font-bold text-xl px-2 py-2 rounded-lg hover:bg-[#1F293733]"
+      href="/"
+    >
+      Istrail Lab
+    </Link>
+  </div>
+  <div class="flex items-center">
+    <NavSidebar client:load />
+  </div>
 </div>

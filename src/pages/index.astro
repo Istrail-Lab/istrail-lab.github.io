@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ResearchAccordion from "../components/ResearchAccordion";
 import JournalCard from "../components/JournalCard";
+import HomeQuickLinks from "../components/HomeQuickLinks";
 
 import genomeAssemblies from "../assets/journals/pnas_101_7.gif";
 import cisReg from "../assets/journals/pnas_102_14.gif";
@@ -18,6 +19,7 @@ images.reverse();
 ---
 
 <Layout title="Istrail Lab">
+    <HomeQuickLinks client:only="react" />
     <h2 class="text-xl font-bold md:text-3xl text-center p-8">
         Welcome to the Istrail Laboratory
     </h2>

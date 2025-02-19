@@ -1,6 +1,6 @@
 ---
 export interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -12,21 +12,21 @@ import "../styles/globals.css";
 
 <!DOCTYPE html>
 <html lang="en" class="h-full">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-    </head>
-    <body class="flex flex-col h-full">
-        <Navbar />
-        <div class="flex-1">
-            <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
-                <slot />
-            </main>
-        </div>
-        <Footer />
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col h-full">
+    <Navbar />
+    <div class="flex-1">
+      <main style="max-width: min(100ch, 100% - 4rem)" class="mx-auto">
+        <slot />
+      </main>
+    </div>
+    <Footer />
+  </body>
 </html>

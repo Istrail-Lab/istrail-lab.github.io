@@ -10,7 +10,7 @@ export const Link = (props: HTMLProps<HTMLAnchorElement>) => {
 
 const QuickLinks = () => {
     return (
-        <aside className="xl:flex flex-col gap-4 py-20 fixed hidden left-[5%] w-48">
+        <aside className="xl:flex flex-col gap-4 py-20 fixed hidden left-[2%] w-44 z-10">
             <h3 className="text-lg font-bold">Quick Links</h3>
             <Link href="/sorin-istrail">Sorin Istrail</Link>
             <Link href="/sorinfest">SorinFest</Link>
