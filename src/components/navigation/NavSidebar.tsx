@@ -1,4 +1,3 @@
-import { Drawer, List, ListItemButton } from "@mui/material";
 import { useState } from "react";
 import { Dropdown, DropdownWithSubheadings } from "./Dropdown";
 import { createUrl } from "../../config/site";
@@ -26,21 +25,46 @@ const NavSidebar = () => {
           ></path>
         </svg>
       </button>
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <List
-          sx={{
-            width: "100%",
-            maxWidth: 360,
-            bgcolor: "background.paper",
-          }}
-          component="nav"
-        >
-          <ListItemButton href={createUrl("/sorin-istrail")}>
-            Sorin Istrail
-          </ListItemButton>
-          <ListItemButton href={createUrl("/media-coverage")}>
-            Media Coverage
-          </ListItemButton>
+      {open && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setOpen(false)} />
+          <div className="fixed right-0 top-0 bottom-0 w-80 bg-white shadow-lg">
+            <div className="flex flex-col h-full overflow-y-auto">
+              <div className="flex justify-end p-4">
+                <button
+                  onClick={() => setOpen(false)}
+                  className="p-2 rounded-lg hover:bg-gray-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <nav className="flex-1 px-4 pb-4">
+
+                <a
+                  href={createUrl("/sorin-istrail")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Sorin Istrail
+                </a>
+                <a
+                  href={createUrl("/media-coverage")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Media Coverage
+                </a>
           <DropdownWithSubheadings
             dropdownHeading="Research"
             dropdownLinks={{
@@ -119,21 +143,41 @@ const NavSidebar = () => {
               "Alberto Apostolico": "/in-memoriam/alberto-apostolico",
             }}
           />
-          <ListItemButton href={createUrl("/sorinfest")}>
-            SorinFest
-          </ListItemButton>
-          <ListItemButton href={createUrl("/romania-celebrates-sorin")}>
-            Romania Celebrates Sorin
-          </ListItemButton>
-          <ListItemButton href={createUrl("/essays")}>Essays</ListItemButton>
-          <ListItemButton href={createUrl("/publications")}>
-            Publications
-          </ListItemButton>
-          <ListItemButton href={createUrl("/media-coverage")}>
-            Media
-          </ListItemButton>
-        </List>
-      </Drawer>
+                <a
+                  href={createUrl("/sorinfest")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  SorinFest
+                </a>
+                <a
+                  href={createUrl("/romania-celebrates-sorin")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Romania Celebrates Sorin
+                </a>
+                <a
+                  href={createUrl("/essays")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Essays
+                </a>
+                <a
+                  href={createUrl("/publications")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Publications
+                </a>
+                <a
+                  href={createUrl("/media-coverage")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Media
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
