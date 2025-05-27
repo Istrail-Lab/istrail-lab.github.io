@@ -2,7 +2,7 @@
 
 ## Opening the Project
 
-Every time you open this project, open a new terminal by putting your cursor at the top of your screen, clicking terminal, then clicking new terminal. When the prompt comes up, run the command:
+Every time you open this project, open a new terminal by putting your cursor at the top of your screen, clicking terminal, then clicking new terminal. When the prompt comes up at the bottom of your screen, run the command:
 
 git pull
 
