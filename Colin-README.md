@@ -12,7 +12,7 @@ npm run dev
 
 And command-click the link that pops up in the terminal. This will take you to a hosted version of the website that makes live updates.
 
-Every time you want to "deploy" edits you've made to the actual website, click the three-network-nodes on the left side of your screen (the three dots that are connected by some wavy lines). Enter a message for what you've changed, then click commit, then click sync changes. Say yes to any prompt that pops up. This is true on both Windsurf and VSCode.
+Every time you want to "deploy" edits you've made to the actual website, click the three-network-nodes on the left side of your screen (the three dots that are connected by some wavy lines). Enter a message for what you've changed, then click commit, then click sync changes. Say yes to any prompt that pops up.
 
 ## File Organization
 
