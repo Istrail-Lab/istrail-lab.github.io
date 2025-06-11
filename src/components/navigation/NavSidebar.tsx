@@ -117,9 +117,6 @@ const NavSidebar = () => {
                 "Brown University Symposium 2010": "/lectures/von-neumann-2010",
                 // "Donald Knuth at Brown": "",
               },
-              "Solomon Marcus Lectures": {
-                "Lectures 1 - 8": "/lectures/solomon-marcus",
-              },
               Youtube: {
                 "Istrail Laboratory": "/lectures/youtube",
               },
@@ -154,6 +151,12 @@ const NavSidebar = () => {
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
                 >
                   Romania Celebrates Sorin
+                </a>
+                <a
+                  href={createUrl("/lectures/solomon-marcus")}
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  Solomon Marcus Lectures
                 </a>
                 <a
                   href={createUrl("/essays")}
