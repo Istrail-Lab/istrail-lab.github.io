@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import YouTubeEmbed from "../components/video/YouTubeEmbed.astro";
 import { Link } from "@/components/QuickLinks";
 import Carousel from "@/components/Carousel";
+import negruzziVideo from "../assets/romania-celebrates/negreuzzi/negruzzi.MOV";
 
 // Import all images from the Iasi ceremony directory
 const iasiPhotos = (await Astro.glob("../assets/romania-celebrates/iasi/*")).map(
@@ -10,6 +11,13 @@ const iasiPhotos = (await Astro.glob("../assets/romania-celebrates/iasi/*")).map
 );
 
 const romaniaEvents = [
+    {
+        id: "sorin-awarded-negruzzi-national-prize",
+        title: "Negruzzi National Prize",
+        description: "TBA",
+        videoId: "negruzziVideo",
+        hasPhotos: true
+    },
     {
         id: "honorary-citizen-iasi",
         title: "Honorary Citizen of Iași",
@@ -85,6 +93,16 @@ const interviews = [
                            class="text-blue-600 hover:text-blue-800 underline mb-4 inline-block">
                             {event.linkText}
                         </a>
+                    )}
+                    {event.localVideo && (
+                        <video
+                            class="mt-6 w-full rounded-lg shadow"
+                            controls
+                            preload="metadata"
+                        >
+                            <source src={event.localVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     )}
                     {event.videoId && (
                         <div class="mt-6">
