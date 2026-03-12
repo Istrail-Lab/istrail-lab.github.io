@@ -1495,7 +1495,7 @@ export const publications: Publication[] = [
         volume: "115",
         pages: "333-347",
         year: 1981,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/chomsky-schut.pdf",
+        pdf: "public/papers/publications/chomsky_schut.pdf",
         tags: ["formal-languages"],
     },
     {
@@ -1546,7 +1546,7 @@ export const publications: Publication[] = [
         volume: "71",
         pages: "289-303",
         year: 1979,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/afixedpoint",
+        pdf: "public/papers/publications/afixedpoint.pdf",
         tags: ["formal-languages"],
     },
     {
