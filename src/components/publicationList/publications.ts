@@ -1383,7 +1383,7 @@ export const publications: Publication[] = [
         number: "3",
         pages: "280-289",
         year: 1989,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/an arithmetical hierarchy in propositional dynamic logic.pdf",
+        pdf: "/public/papers/publications/1-s2.0-0890540189900333-main.pdf",
         doi: "10.1016/0890-5401(89)90030-3",
         tags: ["bisimulation"],
     },
@@ -1395,7 +1395,7 @@ export const publications: Publication[] = [
         number: "4",
         pages: "329-341",
         year: 1988,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/1-s2.0-0304397582900809-main.pdf",
+        pdf: "public/papers/publications_4F41988.pdf",
         doi: "10.1016/0304-3975(88)90063-5",
         tags: ["graph-theory"],
     },
@@ -1406,7 +1406,7 @@ export const publications: Publication[] = [
         publisher: "ACM Press",
         pages: "453-491",
         year: 1988,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/p491-istrail.pdf",
+        pdf: "public/papers/publications/p491-istrail.pdf",
         tags: ["universal-traversing-sequnece"],
     },
     {
@@ -1416,7 +1416,7 @@ export const publications: Publication[] = [
         publisher: "ACM Press",
         pages: "388-397",
         year: 1987,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/TR-90-21.pdf",
+        pdf: "public/papers/publications/TR-90-21.pdf",
         tags: ["graph-theory"],
     },
     {
@@ -1426,7 +1426,7 @@ export const publications: Publication[] = [
         volume: "26",
         pages: "83-103",
         year: 1983,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/1-s2.0-0304397583900804-main.pdf",
+        pdf: "public/papers/publications/1-s2.0-0304397583900804-main.pdf",
         tags: ["formal-languages"],
     },
     {
@@ -1456,7 +1456,7 @@ export const publications: Publication[] = [
         volume: "21",
         pages: "341-349",
         year: 1982,
-        pdf: "http://www.brown.edu/Research/Istrail_Lab/archive/papers/1-s2.0-0304397582900809-main.pdf",
+        pdf: "public/papers/publications/1-s2.0-0304397582900809-main.pdf",
         tags: ["formal-languages"],
     },
     {
