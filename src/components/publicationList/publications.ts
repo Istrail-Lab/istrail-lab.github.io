@@ -1383,7 +1383,7 @@ export const publications: Publication[] = [
         number: "3",
         pages: "280-289",
         year: 1989,
-        pdf: "/public/papers/publications/1-s2.0-0890540189900333-main.pdf",
+        pdf: "/papers/publications/1-s2.0-0890540189900333-main.pdf",
         doi: "10.1016/0890-5401(89)90030-3",
         tags: ["bisimulation"],
     },
