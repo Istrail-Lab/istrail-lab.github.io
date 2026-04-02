@@ -81,7 +81,8 @@ jobs:
       - name: Deploy to Remote Server via rsync
         uses: burnett01/rsync-deployments@7.0.2
         with:
-          switches: -avzr --delete --omit-dir-times
+          # switches: -avzr --delete --omit-dir-times
+          switches: -avzr --delete --omit-dir-times --ignore-errors
           path: dist-remote/
           remote_path: ${{ vars.REMOTE_PATH }}
           remote_host: ${{ vars.REMOTE_HOST }}
