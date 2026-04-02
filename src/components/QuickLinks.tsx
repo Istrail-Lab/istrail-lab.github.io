@@ -13,6 +13,7 @@ const QuickLinks = () => {
         <aside className="xl:flex flex-col gap-4 py-20 fixed hidden left-[2%] w-44 z-10">
             <h3 className="text-lg font-bold">Quick Links</h3>
             <Link href="/sorin-istrail">Sorin Istrail</Link>
+            <Link href="/sorin-istrail/biography">Biography</Link>
             <Link href="/sorinfest">SorinFest</Link>
             <Link href="/sorin-istrail/teaching">Teaching</Link>
             <Link href="/sorin-istrail/honors">Honors & Awards</Link>

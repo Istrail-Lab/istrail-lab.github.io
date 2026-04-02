@@ -59,6 +59,10 @@ const NavSidebar = () => {
                 >
                   Sorin Istrail
                 </a>
+                <a href={createUrl("/sorin-istrail/biography")} 
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  Biography
+                </a>
                 <a
                   href={createUrl("/media-coverage")}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
