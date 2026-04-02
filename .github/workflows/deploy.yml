@@ -82,7 +82,7 @@ jobs:
         uses: burnett01/rsync-deployments@7.0.2
         with:
           # switches: -avzr --delete --omit-dir-times
-          switches: -avzr --delete --omit-dir-times --ignore-errors
+          switches: -avzr --delete --omit-dir-times --exclude='archive/'
           path: dist-remote/
           remote_path: ${{ vars.REMOTE_PATH }}
           remote_host: ${{ vars.REMOTE_HOST }}
