@@ -23,6 +23,7 @@
         "astro": "^2.6.6",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",
+        "katex": "^0.17.0",
         "lucide-react": "^0.271.0",
         "pdfjs-dist": "^3.4.120",
         "react": "^18.2.0",
